@@ -1,17 +1,32 @@
 {
-  "name": "中文樂",
+  "name": "中文樂 Chinese Fun",
   "short_name": "中文樂",
-  "description": "Traditional Chinese for young children, with Cantonese voice",
-  "lang": "zh-HK",
-  "start_url": "./",
+  "description": "Traditional Chinese (Cantonese) learning games for young children",
+  "start_url": "./index.html",
   "scope": "./",
   "display": "fullscreen",
   "orientation": "any",
   "background_color": "#FFE07A",
   "theme_color": "#FFE07A",
+  "lang": "zh-HK",
   "icons": [
-    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
-    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
-    { "src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
   ]
 }
