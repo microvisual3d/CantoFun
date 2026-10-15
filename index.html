@@ -369,6 +369,33 @@ button{font:inherit;color:inherit}
 .mzcar{position:absolute;display:grid;place-items:center;transition:left .3s,top .3s;pointer-events:none}.mzcar svg{width:86%;height:auto}.mzcar.flip svg{transform:scaleX(-1)}
 .mzpad{display:grid;grid-template-columns:repeat(3,auto);grid-template-rows:auto auto;gap:8px;justify-content:center}.mzbtn{display:flex;flex-direction:column;align-items:center;padding:4px 18px}.mzbtn .emo{font-size:30px}.mzbtn .zh{font-size:20px}
 .mz-up{grid-column:2;grid-row:1}.mz-left{grid-column:1;grid-row:2}.mz-down{grid-column:2;grid-row:2}.mz-right{grid-column:3;grid-row:2}
+.hhint{position:absolute;z-index:8;pointer-events:none;transform:translate(-20%,-10%);transition:opacity .3s}
+.hhand{display:block;font-size:clamp(54px,9vh,80px);filter:drop-shadow(0 4px 6px rgba(0,0,0,.35));opacity:.85}
+.hhring{position:absolute;left:0;top:-6px;width:44px;height:44px;margin-left:-6px;border-radius:50%;border:4px solid #FFFFFF;opacity:0;box-shadow:0 0 0 2px rgba(0,0,0,.25)}
+.hh-tap .hhand{animation:hhtap .9s ease-in-out infinite}.hh-tap .hhring{animation:hhring .9s ease-out infinite}
+@keyframes hhtap{0%,100%{translate:0 0}40%{translate:0 10px;scale:.9}}@keyframes hhring{0%,35%{opacity:0;scale:.4}45%{opacity:.9;scale:.6}100%{opacity:0;scale:1.6}}
+.hh-hold .hhand{animation:hhhold 1.8s ease-in-out infinite}.hh-hold .hhring{animation:hhhr 1.8s ease-out infinite}
+@keyframes hhhold{0%{translate:0 0}20%,85%{translate:0 10px;scale:.9}100%{translate:0 0}}@keyframes hhhr{0%,20%{opacity:0;scale:.4}30%{opacity:.9;scale:.6}85%{opacity:.6;scale:1.8}100%{opacity:0;scale:1.8}}
+.hh-rub .hhand{animation:hhrub .7s ease-in-out infinite alternate}@keyframes hhrub{from{translate:-40px 8px}to{translate:40px 8px}}
+.tl-truck.hold{pointer-events:auto;cursor:pointer;touch-action:none;transition:filter .2s}.tl-truck.pressed{filter:drop-shadow(0 0 14px #FFE14D)}
+.tl-holdtxt{position:absolute;left:50%;top:-6px;transform:translateX(-50%);background:#FFFFFF;border:3px solid #23263A;border-radius:12px;padding:0 10px;font-size:22px;color:#23263A}
+.ct-catch{position:absolute;top:84%;width:clamp(120px,22%,240px);transform:translate(-50%,-35%);pointer-events:none;z-index:3}.ct-catch svg{width:100%;display:block}
+.ct-fall{position:absolute;transform:translateX(-50%);font-size:clamp(40px,7.5vh,64px);line-height:1;pointer-events:none;z-index:2}
+.g-net .mfield{background:linear-gradient(#9AD7F5 0 72%,#7CCB5A 72%)}
+.nt-bld{position:absolute;left:4%;right:4%;top:2%;height:30%;background:#D98A6A;border:4px solid #23263A;border-radius:6px 6px 0 0;display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:repeat(3,1fr);gap:10% 5%;padding:1.5% 3%;pointer-events:none}.nt-bld i{background:#BFE8FF;border:3px solid #23263A;border-radius:4px}
+.g-stars .mfield{background:linear-gradient(#2A2350,#5B4A9C)}.st-moon{position:absolute;right:5%;top:5%;font-size:60px;pointer-events:none}
+.g-dance .mfield{background:linear-gradient(#FFE3EF 0 72%,#F2C2D6 72%)}
+.dc-stage{position:absolute;left:32%;right:32%;top:62%;height:7%;background:#E94F9A;border:4px solid #23263A;border-radius:50%}
+.dc-girl{position:absolute;left:50%;top:4%;height:62%;transform:translateX(-50%);aspect-ratio:216/300;pointer-events:none}.dc-girl svg{height:100%;width:100%;display:block}
+.dc-pads{position:absolute;left:4%;right:4%;bottom:3%;display:flex;gap:2%;justify-content:center}
+.dc-pad{flex:1;max-width:22%;border:4px solid #23263A;border-radius:22px;box-shadow:0 6px 0 #23263A;display:flex;flex-direction:column;align-items:center;padding:6px;cursor:pointer;color:#23263A;transition:filter .15s,translate .15s}
+.dc-pad .emo{font-size:clamp(30px,6vh,48px)}.dc-pad .zh{font-size:clamp(20px,3.4vh,28px)}.dc-pad.lit{filter:brightness(1.3) drop-shadow(0 0 14px #FFFFFF);translate:0 4px}
+.g-dressup .mfield{background:linear-gradient(#FFF1F7,#FFE3EF)}
+.du-model{position:absolute;left:50%;bottom:1%;height:62%;aspect-ratio:1;transform:translateX(-50%);pointer-events:none}.du-model svg{width:100%;height:100%;display:block}
+.du-card{position:absolute;left:50%;top:2%;transform:translateX(-50%);width:clamp(130px,20%,210px);background:#FFFFFF;border:4px solid #23263A;border-radius:18px;padding:4px 6px;text-align:center;pointer-events:none}
+.du-ttl{font-size:18px;color:#23263A}.du-want svg{width:86%;display:block;margin:0 auto}.du-lbl{font-size:clamp(18px,3vh,24px);color:#E8203A;min-height:1em}
+.du-rack{position:absolute;top:5%;bottom:5%;display:flex;flex-direction:column;gap:2.5%;justify-content:center;width:17%}.du-rack.left{left:3%}.du-rack.right{right:3%}
+.du-btn{flex:1;max-height:22%;background:#FFFFFF;border:4px solid #23263A;border-radius:18px;box-shadow:0 5px 0 #23263A;display:flex;align-items:center;justify-content:center;gap:6px;cursor:pointer;padding:4px}.du-btn svg{height:80%;width:auto;max-width:60%}.du-btn .zh{font-size:clamp(16px,2.8vh,24px);color:#23263A}
 /* ---------- parent ---------- */
 .parent{overflow-y:auto;gap:16px;color:var(--ink)}
 .parent h2{margin:0;font-size:28px}
@@ -742,7 +769,7 @@ const WORDS=[
  {c:'人',jp:'jan4',en:'person',pic:'🧍',avoid:['女','子']},
  {c:'口',jp:'hau2',en:'mouth',pic:'👄',hint:'嘴'},
  {c:'手',jp:'sau2',en:'hand',pic:'✋',avoid:['力']},
- {c:'目',jp:'muk6',en:'eye',pic:'👁️',hint:'眼睛'},
+ {c:'眼',jp:'ngaan5',en:'eye',pic:'👁️',hint:'眼睛',art:'目'},
  {c:'耳',jp:'ji5',en:'ear',pic:'👂',hint:'耳仔'},
  {c:'心',jp:'sam1',en:'heart',pic:'❤️'},
  {c:'力',jp:'lik6',en:'strength',pic:'💪',avoid:['手']},
@@ -792,7 +819,7 @@ const RAD=r=>RADS.find(x=>x.r===r);
  ['衫','saam1','shirt, top','衤'],['褲','fu3','trousers','衤'],['裙','kwan4','skirt, dress','衤'],['襪','mat6','socks','衤']
 ].forEach(([c,jp,en,rad,hint])=>WORDS.push({c,jp,en,rad,hint,pic:'❓',lvl:2}));
 [['腳','goek3','foot, leg'],['面','min6','face'],['頭髮','tau4 faat3','hair'],['額頭','ngaak6 tau4','forehead'],['身體','san1 tai2','body'],['鼻','bei6','nose','鼻哥'],
- ['眼','ngaan5','eye','眼睛'],['眉毛','mei4 mou4','eyebrow'],['牙','ngaa4','tooth, teeth','牙齒'],['脷','lei6','tongue'],['下巴','haa6 paa4','chin'],['頸','geng2','neck'],['腦','nou5','brain']].forEach(([c,jp,en,hint])=>WORDS.push({c,jp,en,hint,topic:'身體 body',pic:'❓',lvl:2}));
+ ['眉毛','mei4 mou4','eyebrow'],['牙','ngaa4','tooth, teeth','牙齒'],['脷','lei6','tongue'],['下巴','haa6 paa4','chin'],['頸','geng2','neck'],['腦','nou5','brain']].forEach(([c,jp,en,hint])=>WORDS.push({c,jp,en,hint,topic:'身體 body',pic:'❓',lvl:2}));
 const L2SET=new Set(WORDS.filter(w=>w.lvl===2).map(w=>w.c));
 const NOTRACE=new Set(); /* HK writes 艹 with 4 strokes; stroke data is the 3-stroke form */
 
@@ -940,6 +967,7 @@ function load(){
 }
 function save(){memStore=S;try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
 let S=load();S.strokeFix=S.strokeFix||{};
+if(!S.eye5){S.profiles.forEach(p=>{if(p.words&&p.words['目']&&!p.words['眼']){p.words['眼']=p.words['目'];}if(p.words)delete p.words['目'];if(p.stickers)p.stickers=p.stickers.map(c=>c==='目'?'眼':c);});S.eye5=1;} /* v2.0: Level 1 eye is now 眼 */
 if(!S.lv5){S.profiles.forEach(p=>{if(p.level===4)p.level=5;});S.lv5=1;} /* v2.0: old Level 4 (sentences) is now Level 5 */
 let curId=null, screen='profiles', parentTab=0, restShown=false;
 const cur=()=>S.profiles.find(p=>p.id===curId);
@@ -2235,8 +2263,9 @@ const topbar=(title,back='home')=>{const p=cur();return `<div class="topbar"><bu
 
 /* ================= LEARNING LOGIC ================= */
 let BS=0;
-function withBonus(scr,fn){if(BS>=bonusNeed()&&screen===scr&&cur()){BS=0;showBonus(fn);}else fn();}
-function recordAnswer(c,first){BS=first?BS+1:0;const p=cur(),w=ws(p,c);w.seen++;w.last=Date.now();
+function waitSpeech(fn){const t0=Date.now();const tick=()=>{let busy=false;try{busy=speechSynthesis.speaking||speechSynthesis.pending;}catch(e){}if(!busy||Date.now()-t0>6000)fn();else setTimeout(tick,150);};setTimeout(tick,120);}
+function withBonus(scr,fn){waitSpeech(()=>{if(BS>=bonusNeed()&&screen===scr&&cur()){BS=0;showBonus(fn);}else fn();});}
+function recordAnswer(c,first){if(first)BS++;const p=cur(),w=ws(p,c);w.seen++;w.last=Date.now();
   if(first){w.ok++;w.box=Math.min(4,w.box+1);}else{w.bad++;w.box=Math.max(0,w.box-1);}
   if(w.box>=2&&!p.stickers.includes(c)){p.stickers.push(c);setTimeout(()=>{toast('New sticker! '+c);sfx('star');},900);}
   save();}
@@ -2317,19 +2346,19 @@ function endMission(){const p=cur(),truck=p.theme==='truck';p.missions++;p.stars
   overlay(`<span class="bigemo emo">${truck?'🏠💦':'🌙✨'}</span><h2 class="zh">${truck?'火熄咗！':'晚安，公主！'}</h2><p>${truck?'Fire is out. Hero!':'What a lovely day!'} ⭐ +${M.earned}</p><div class="row"><button class="btn big" data-act="home">🏠 Home</button><button class="btn big primary" data-act="mission">🔁 Again</button></div>`);
   sfx('fanfare');speak(truck?'火熄咗！好叻呀！':'晚安，公主！好叻呀！');setTimeout(()=>{const m=$('.modal');if(m)burst(m,24);},200);});}
 function showBonus(after){const p=cur();sfx('star');
-  overlay(`<span class="bigemo emo">🎉</span><h2 class="zh">好叻呀！</h2><p>${bonusNeed()} in a row! Bonus game time.</p><div class="row"><button class="btn big primary" data-act="bonusGo">${p.theme==='truck'?'💦':'✨'} Play</button></div>`);
+  overlay(`<span class="bigemo emo">🎉</span><h2 class="zh">好叻呀！</h2><p>${bonusNeed()} correct answers! Bonus game time.</p><div class="row"><button class="btn big primary" data-act="bonusGo">${p.theme==='truck'?'💦':'✨'} Play</button></div>`);
   bonusAfter=after;speak('好叻呀！玩遊戲啦！');}
 let bonusAfter=null;
 
 /* ---------- minigame (fun only, 20 seconds) ---------- */
-function miniClassic(done){closeOverlay();const p=cur(),truck=p.theme==='truck';let score=0,left=20,alive=true;
+function miniClassic(done){closeOverlay();const p=cur(),truck=p.theme==='truck';let score=0,left=30,alive=true;
   const el=document.createElement('div');el.className='mini m-'+p.theme;
   const BL=Array.from({length:6},(_,i)=>({l:4+i*16,w:13,h:28+Math.round(Math.random()*30)}));const blds=truck?BL.map(b=>`<div class="bld" style="left:${b.l}%;width:${b.w}%;height:${b.h}%"></div>`).join(''):`<div class="castle emo">🏰</div>`;
   el.innerHTML=`<div class="mbar"><span class="emo" style="font-size:34px">⏱️</span><div class="mtime"><i id="mt"></i></div><div class="mscore" id="ms">0</div></div><div class="mfield" id="mf">${blds}<div class="hero-mini" id="mh">${truck?avatar('truck'):princessWandSVG()}</div></div>`;
   document.body.appendChild(el);setTempo(150);
   const field=el.querySelector('#mf');if(truck){const fh=field.clientHeight||500,maxR=Math.max(4,Math.floor((fh*.62-14)/34));field.querySelectorAll('.bld').forEach((d,i)=>{const r=3+Math.floor(Math.random()*(maxR-2)),hp=r*34+14;BL[i].h=hp/fh*100;d.style.height=hp+'px';});}
-  function spawn(){if(!alive)return;const b=document.createElement('button');b.className='target emo';b.textContent=truck?'🔥':pick(['⭐','💎','🌸','🦋','🍓']);
-    let x,y;if(truck){const bd=pick(BL);x=bd.l+bd.w*(.2+Math.random()*.6);y=70-bd.h+bd.h*(.15+Math.random()*.7);}else{x=8+Math.random()*84;y=8+Math.random()*58;}b.style.left=x+'%';b.style.top=y+'%';field.appendChild(b);setTimeout(()=>{if(!b.classList.contains('hit'))b.remove();},truck?2200:1900);}
+  const T0=Date.now();function spawn(){if(!alive)return;const b=document.createElement('button');b.className='target emo';b.textContent=truck?'🔥':pick(['⭐','💎','🌸','🦋','🍓']);
+    let x,y;if(truck){const bd=pick(BL);x=bd.l+bd.w*(.2+Math.random()*.6);y=70-bd.h+bd.h*(.15+Math.random()*.7);}else{x=8+Math.random()*84;y=8+Math.random()*58;}b.style.left=x+'%';b.style.top=y+'%';field.appendChild(b);setTimeout(()=>{if(!b.classList.contains('hit'))b.remove();},Math.max(1150,(truck?2200:1900)-(Date.now()-T0)*.03));}
   field.addEventListener('pointerdown',e=>{const b=e.target.closest('.target');if(!b||b.classList.contains('hit')||!alive)return;b.classList.add('hit');score++;el.querySelector('#ms').textContent=score;
     if(truck){sfx('splash');const fr=field.getBoundingClientRect(),hr=el.querySelector('#mh').getBoundingClientRect(),br=b.getBoundingClientRect();
       const x0=hr.left-fr.left+hr.width*.62,y0=hr.top-fr.top+hr.height*.18,x1=br.left+br.width/2-fr.left,y1=br.top+br.height/2-fr.top;
@@ -2337,8 +2366,8 @@ function miniClassic(done){closeOverlay();const p=cur(),truck=p.theme==='truck';
       setTimeout(()=>{b.textContent='💨';},360);}
     else{sfx('sparkle');const fr=field.getBoundingClientRect(),hr=el.querySelector('#mh').getBoundingClientRect(),br=b.getBoundingClientRect();waterStream(field,hr.left-fr.left+hr.width*.94,hr.top-fr.top+hr.height*.46,br.left+br.width/2-fr.left,br.top+br.height/2-fr.top,MAGIC);setTimeout(()=>{b.textContent='✨';burst(b,6);},360);}
     setTimeout(()=>b.remove(),500);});
-  const sp=setInterval(spawn,truck?700:620);spawn();
-  const tk=setInterval(()=>{left-=.1;el.querySelector('#mt').style.width=Math.max(0,left/20*100)+'%';if(left<=0)finish();},100);
+  let sp=0;const loopSp=()=>{if(!alive)return;spawn();sp=setTimeout(loopSp,Math.max(360,(truck?700:620)-(Date.now()-T0)*.012));};loopSp();handHint(field,'tap',truck?[50,40]:[50,32]);
+  const tk=setInterval(()=>{left-=.1;el.querySelector('#mt').style.width=Math.max(0,left/30*100)+'%';if(left<=0)finish();},100);
   function finish(){if(!alive)return;alive=false;clearInterval(sp);clearInterval(tk);setTempo(104);const gain=Math.min(5,Math.ceil(score/3));p.stars+=gain;p.minigames++;save();
     const r=document.createElement('div');r.className='overlay';r.innerHTML=`<div class="modal"><span class="bigemo emo">${truck?'🧯':'👑'}</span><h2>${score}</h2><p>${truck?'fires put out!':'sparkles collected!'} ⭐ +${gain}</p><div class="row"><button class="btn big primary" id="mback">Keep going ▶️</button></div></div>`;
     el.appendChild(r);sfx('fanfare');r.querySelector('#mback').addEventListener('click',()=>{el.remove();bumpStars();done&&done();});}
@@ -2397,7 +2426,7 @@ function gameEnd(emo,zh,en,again,stars=3){const p=cur();p.stars+=stars;save();bu
   sfx('fanfare');speak('好叻呀！');setTimeout(()=>{const m=$('.modal');if(m)burst(m,20);},200);}
 
 /* ---------- body game: touch the body part ---------- */
-const BODY=[{c:'目',part:'eyes'},{c:'耳',part:'ears'},{c:'口',part:'mouth'},{c:'手',part:'hands'},{c:'心',part:'heart'}];
+const BODY=[{c:'眼',part:'eyes'},{c:'耳',part:'ears'},{c:'口',part:'mouth'},{c:'手',part:'hands'},{c:'心',part:'heart'}];
 const BODY2=[{c:'腳',part:'feet'},{c:'面',part:'face'},{c:'頭髮',part:'hair'},{c:'額頭',part:'forehead'},{c:'身體',part:'body'},{c:'鼻',part:'nose'}];
 let B=null;
 function buddySVG(theme,L=1){const T=theme==='truck',skin='#FFE1CC',ink='#23263A',cloth=T?'#E63B2E':'#F06BA8',leg=T?'#3D4A6B':skin,shoe=T?ink:'#E94F9A';
@@ -2566,8 +2595,8 @@ drive:api=>{const f=api.field;
   f.addEventListener('pointerdown',down);
   function spawn(){const d=dims(),k=Math.random(),kind=k<.55?'star':k<.75?'drop':'cone',o={kind,lane:Math.floor(Math.random()*3),x:d.W+40,el:document.createElement('div')};
     o.el.className='mobj emo';o.el.textContent={star:'⭐',drop:'💧',cone:'🚧'}[kind];o.el.style.fontSize=Math.round(d.lh*.55)+'px';f.appendChild(o.el);objs.push(o);}
-  function loop(now){if(!api.alive())return;const dt=Math.min(.05,(now-last)/1000);last=now;const d=dims(),el=(now-t0)/1000,sp=d.W*(.3+.012*el),s=d.lh*.55,tl=d.W*.04,tw=d.lh*1.55;
-    if(now>=next){spawn();next=now+Math.max(520,950-el*20)+Math.random()*300;}
+  function loop(now){if(!api.alive())return;const dt=Math.min(.05,(now-last)/1000);last=now;const d=dims(),el=(now-t0)/1000,sp=d.W*(.3+.024*el),s=d.lh*.55,tl=d.W*.04,tw=d.lh*1.55;
+    if(now>=next){spawn();next=now+Math.max(380,950-el*22)+Math.random()*260;}
     objs.forEach(o=>{if(o.done)return;o.x-=sp*dt;o.el.style.transform=`translate(${(o.x-s/2).toFixed(1)}px,${(d.top+d.lh*(o.lane+.5)-s*.6).toFixed(1)}px)`;
       if(o.lane===lane&&o.x>tl+tw*.15&&o.x<tl+tw*.95){o.done=true;
         if(o.kind==='cone'){tr.classList.remove('bump');void tr.offsetWidth;tr.classList.add('bump');sfx('buzz');o.el.classList.add('fly');}
@@ -2575,7 +2604,7 @@ drive:api=>{const f=api.field;
         setTimeout(()=>o.el.remove(),550);}
       else if(o.x<-60){o.done=true;o.el.remove();}});
     objs=objs.filter(o=>!o.done);raf=requestAnimationFrame(loop);}
-  raf=requestAnimationFrame(loop);api.hint('揀條路！','Tap a lane: grab stars, dodge cones');
+  raf=requestAnimationFrame(loop);api.demo('tap',[55,62]);api.hint('揀條路！','Tap a lane: grab stars, dodge cones');
   return{stop:()=>{cancelAnimationFrame(raf);f.removeEventListener('pointerdown',down);},gain:s=>Math.ceil(s/3),emo:'🚒⭐',msg:'stars collected!'};},
 
 cats:api=>{const f=api.field,TX=[18,50,82];
@@ -2597,20 +2626,20 @@ cats:api=>{const f=api.field,TX=[18,50,82];
     if(hold&&now>=arrive)L=Math.min(mx,L+b.H*.5*dt);else if(!hold&&!busy)L=Math.max(0,L-b.H*1.4*dt);
     lad.style.bottom=b.bot+'px';lad.style.height=L+'px';lad.style.left=TX[at]+'%';raf=requestAnimationFrame(loop);}
   timers.push(setTimeout(spawnCat,200),setTimeout(spawnCat,700));raf=requestAnimationFrame(loop);
-  api.hint('按住有貓仔嘅樹！','Hold the tree, let go when the ladder reaches the kitten');
+  api.demo('hold',[50,42]);api.hint('按住有貓仔嘅樹！','Hold the tree, let go when the ladder reaches the kitten');
   return{stop:()=>{cancelAnimationFrame(raf);timers.forEach(clearTimeout);f.removeEventListener('pointerdown',down);window.removeEventListener('pointerup',up);window.removeEventListener('pointercancel',up);},gain:s=>Math.min(5,s),emo:'🐱🚒',msg:'kittens rescued!'};},
 
 dragon:api=>{const f=api.field;
   f.insertAdjacentHTML('beforeend',`<div class="castle emo" style="opacity:.95">🏰</div><div class="hero-mini" id="mh" style="left:14%;transform:none">${princessWandSVG()}</div>`);
   const castle=f.querySelector('.castle'),hero=f.querySelector('#mh');let ds=[],raf=0,last=performance.now(),t0=last,next=last+300;
   function spawn(){const el=document.createElement('div'),fromL=Math.random()<.5;el.className='dg-dragon emo';el.textContent='🐉';f.appendChild(el);
-    ds.push({el,fromL,sx:fromL?-.08:1.08,sy:.08+Math.random()*.38,t:0,dur:Math.max(2.6,3.8-(performance.now()-t0)/1000*.06),st:'fly',x:0,y:0});}
+    ds.push({el,fromL,sx:fromL?-.08:1.08,sy:.08+Math.random()*.38,t:0,dur:Math.max(1.5,3.8-(performance.now()-t0)/1000*.09),st:'fly',x:0,y:0});}
   const down=e=>{if(!api.alive())return;const el=e.target.closest('.dg-dragon');if(!el)return;const o=ds.find(d=>d.el===el);if(!o||o.st!=='fly')return;o.st='hit';api.add(1);sfx('sparkle');
     const fr=f.getBoundingClientRect(),hr=hero.getBoundingClientRect(),br=el.getBoundingClientRect();waterStream(f,hr.left-fr.left+hr.width*.94,hr.top-fr.top+hr.height*.46,br.left+br.width/2-fr.left,br.top+br.height/2-fr.top,MAGIC);
     setTimeout(()=>{el.classList.add('tamed');burst(el,8);o.st='home';},320);};
   f.addEventListener('pointerdown',down);
   function loop(now){if(!api.alive())return;const dt=Math.min(.05,(now-last)/1000);last=now;const r=f.getBoundingClientRect(),W=r.width,H=r.height;
-    if(now>=next){spawn();next=now+Math.max(700,1250-(now-t0)*.02)+Math.random()*300;}
+    if(now>=next){spawn();next=now+Math.max(450,1250-(now-t0)*.03)+Math.random()*250;}
     ds.forEach(o=>{if(o.st==='fly'){o.t+=dt/o.dur;const t=Math.min(1,o.t);o.x=o.sx+(.5-o.sx)*t;o.y=o.sy+(.6-o.sy)*t+Math.sin(t*9)*.035;
         if(o.t>=1){o.st='away';sfx('soft');castle.animate([{scale:'1'},{scale:'1.08'},{scale:'1'}],{duration:400});}}
       else if(o.st==='home'||o.st==='away'){o.y-=dt*.7;o.x+=(o.fromL?-1:1)*dt*.35;}
@@ -2618,15 +2647,15 @@ dragon:api=>{const f=api.field;
       o.el.style.transform=`translate(${(o.x*W-sz/2).toFixed(1)}px,${(o.y*H-sz/2).toFixed(1)}px) scaleX(${flip})`;
       if(o.y<-.25||o.x<-.3||o.x>1.3){o.gone=true;o.el.remove();}});
     ds=ds.filter(o=>!o.gone);raf=requestAnimationFrame(loop);}
-  raf=requestAnimationFrame(loop);api.hint('用魔法送走條龍！','Tap the dragons: magic sends them home');
+  raf=requestAnimationFrame(loop);api.demo('tap',[62,30]);api.hint('用魔法送走條龍！','Tap the dragons: magic sends them home');
   return{stop:()=>{cancelAnimationFrame(raf);f.removeEventListener('pointerdown',down);},gain:s=>Math.ceil(s/3),emo:'🐉💖',msg:'dragons sent home!'};},
 
-cupcake:api=>{const f=api.field,useWord=lvl()>=3,SX=[18,50,82],slots=[null,null,null],timers=[];let drag=null,sel=null;
+cupcake:api=>{const cT0=performance.now(),f=api.field,useWord=lvl()>=3,SX=[18,50,82],slots=[null,null,null],timers=[];let drag=null,sel=null;
   f.insertAdjacentHTML('beforeend',`<div class="cc-shop"></div><div class="cc-counter"></div>`+CAKES.map((k,i)=>`<div class="cc-cake" data-k="${i}" style="left:${17+i*22}%">${cupSVG(k.c)}</div>`).join(''));
   const order=c=>useWord?`<span class="zh">${CAKES[c].k}</span>`:cupSVG(CAKES[c].c);
   function newCust(i){if(!api.alive()||slots[i])return;const want=Math.floor(Math.random()*4),el=document.createElement('div');el.className='cust';el.style.left=SX[i]+'%';el.style.top='36%';
     el.innerHTML=`<div class="cbub">${order(want)}</div><div class="cface emo">${pick(MFACES)}</div>`;f.appendChild(el);const c={el,want,i};slots[i]=c;if(useWord)speak(CAKES[want].k);
-    c.timer=setTimeout(()=>leave(c),9000);}
+    c.timer=setTimeout(()=>leave(c),Math.max(5000,9000-(performance.now()-cT0)*.12));}
   function leave(c){clearTimeout(c.timer);if(slots[c.i]===c)slots[c.i]=null;c.el.style.opacity=0;timers.push(setTimeout(()=>c.el.remove(),450),setTimeout(()=>newCust(c.i),900+Math.random()*900));}
   function deliver(c,k){if(!c||c.done||!api.alive())return;
     if(k===c.want){c.done=true;api.add(1);sfx('correct');c.el.querySelector('.cface').textContent='😋';c.el.querySelector('.cbub').innerHTML='<span class="emo">💖</span>';burst(c.el,8);timers.push(setTimeout(()=>leave(c),700));}
@@ -2642,7 +2671,7 @@ cupcake:api=>{const f=api.field,useWord=lvl()>=3,SX=[18,50,82],slots=[null,null,
     else if(sel===d.k)clearSel();else{clearSel();sel=d.k;d.cake.classList.add('sel');sfx('pop');}};
   f.addEventListener('pointerdown',down);window.addEventListener('pointermove',move);window.addEventListener('pointerup',up);window.addEventListener('pointercancel',up);
   timers.push(setTimeout(()=>newCust(0),300),setTimeout(()=>newCust(1),1100),setTimeout(()=>newCust(2),1900));
-  api.hint(useWord?'睇吓佢要咩顏色！':'佢哋想要邊個蛋糕？',useWord?'Read the colour, drag that cupcake':'Drag the cupcake each customer wants');
+  api.demo('drag',[39,86],[50,40]);api.hint(useWord?'睇吓佢要咩顏色！':'佢哋想要邊個蛋糕？',useWord?'Read the colour, drag that cupcake':'Drag the cupcake each customer wants');
   return{stop:()=>{timers.forEach(clearTimeout);slots.forEach(s=>s&&clearTimeout(s.timer));if(drag&&drag.ghost)drag.ghost.remove();f.removeEventListener('pointerdown',down);window.removeEventListener('pointermove',move);window.removeEventListener('pointerup',up);window.removeEventListener('pointercancel',up);},gain:s=>Math.ceil(s/2),emo:'🧁💖',msg:'cupcakes delivered!'};}
 };
 /* ---------- v2.0 minigames, set 2 ---------- */
@@ -2667,26 +2696,29 @@ wash:api=>{const f=api.field;f.insertAdjacentHTML('beforeend',`<div class="ws-tr
     if(!blobs.length&&api.alive()&&!resetting){resetting=true;sfx('star');tr.classList.add('shine');timers.push(setTimeout(()=>{tr.classList.remove('shine');resetting=false;if(api.alive())splat();},700));}}
   const down=e=>{if(!api.alive())return;rub=true;rubAt(e.clientX,e.clientY);},move=e=>{if(rub&&api.alive())rubAt(e.clientX,e.clientY);},up=()=>{rub=false;};
   f.addEventListener('pointerdown',down);f.addEventListener('pointermove',move);window.addEventListener('pointerup',up);window.addEventListener('pointercancel',up);
-  splat();api.hint('幫消防車沖涼！','Rub the mud off the fire truck');
+  splat();api.demo('rub',[50,50]);api.hint('幫消防車沖涼！','Rub the mud off the fire truck');
   return{stop:()=>{timers.forEach(clearTimeout);f.removeEventListener('pointerdown',down);f.removeEventListener('pointermove',move);window.removeEventListener('pointerup',up);window.removeEventListener('pointercancel',up);},gain:s=>Math.ceil(s/3),emo:'🚒🫧',msg:'mud spots washed!'};},
 
 lights:api=>{const f=api.field;
-  f.insertAdjacentHTML('beforeend',`<div class="tl-city" id="tlc"></div><div class="tl-road" id="tlr"></div><div class="tl-post"><div class="tl-box"><i class="tl-lamp r"></i><i class="tl-lamp a"></i><i class="tl-lamp g"></i></div></div><div class="tl-truck" id="tlt">${avatar('truck')}</div>`);
-  const box=f.querySelector('.tl-box'),road=f.querySelector('#tlr'),city=f.querySelector('#tlc'),trk=f.querySelector('#tlt');let state='g',timer=0,pos=0;
-  function set(s){state=s;box.dataset.s=s;if(s==='g')speak('綠燈，行！');if(s==='r')speak('紅燈，停！');
-    const d=s==='g'?1800+Math.random()*1700:s==='a'?800:1500+Math.random()*1500;timer=setTimeout(()=>{if(api.alive())set(s==='g'?'a':s==='a'?'r':'g');},d);}
-  const down=()=>{if(!api.alive())return;
-    if(state==='g'){api.add(1);pos+=40;road.style.backgroundPosition=(-pos)+'px 0';city.style.backgroundPosition=(-pos*.4)+'px 0';sfx('pop');trk.animate([{translate:'0 0'},{translate:'14px 0'},{translate:'0 0'}],{duration:220});}
-    else if(state==='r'){sfx('buzz');wiggleEl(trk);api.add(-1);api.hint('紅燈！停！','Red light: stop!');}
-    else sfx('soft');};
-  f.addEventListener('pointerdown',down);set('g');api.hint('綠燈行，紅燈停！','Tap to drive on green, stop on red');
-  return{stop:()=>{clearTimeout(timer);f.removeEventListener('pointerdown',down);},gain:s=>Math.ceil(s/4),emo:'🚦🚒',msg:'green-light taps!'};},
+  f.insertAdjacentHTML('beforeend',`<div class="tl-city" id="tlc"></div><div class="tl-road" id="tlr"></div><div class="tl-post"><div class="tl-box"><i class="tl-lamp r"></i><i class="tl-lamp a"></i><i class="tl-lamp g"></i></div></div><div class="tl-truck hold" id="tlt">${avatar('truck')}<span class="tl-holdtxt zh">按住</span></div>`);
+  const box=f.querySelector('.tl-box'),road=f.querySelector('#tlr'),city=f.querySelector('#tlc'),trk=f.querySelector('#tlt');let state='g',timer=0,pos=0,hold=false,acc=0,redT=0,raf=0,last=performance.now();const t0=last;
+  function set(s){state=s;box.dataset.s=s;if(s==='g')speak('綠燈，行！');if(s==='r'){speak('紅燈，停！');redT=0;}
+    const k=Math.max(.5,1-(performance.now()-t0)/60000);const d=s==='g'?(1800+Math.random()*1700)*k:s==='a'?800:(1500+Math.random()*1500)*k;timer=setTimeout(()=>{if(api.alive())set(s==='g'?'a':s==='a'?'r':'g');},d);}
+  const down=e=>{if(!api.alive())return;hold=true;trk.classList.add('pressed');if(state==='r'){redT=0;}};const up=()=>{hold=false;trk.classList.remove('pressed');};
+  trk.addEventListener('pointerdown',down);window.addEventListener('pointerup',up);window.addEventListener('pointercancel',up);
+  function loop(now){if(!api.alive())return;const dt=Math.min(.05,(now-last)/1000);last=now;
+    if(hold&&state==='g'){pos+=260*dt;road.style.backgroundPosition=(-pos)+'px 0';city.style.backgroundPosition=(-pos*.4)+'px 0';acc+=dt*3;if(acc>=1){acc-=1;api.add(1);sfx('pop');}trk.style.translate=(Math.sin(now/60)*2)+'px 0';}
+    else if(hold&&state==='r'){redT-=dt;if(redT<=0){redT=.8;sfx('buzz');wiggleEl(trk);api.add(-1);api.hint('紅燈！放手！','Red light: let go!');}trk.style.translate='0 0';}
+    else trk.style.translate='0 0';
+    raf=requestAnimationFrame(loop);}
+  raf=requestAnimationFrame(loop);set('g');api.demo('hold',[30,78]);api.hint('綠燈按住架車，紅燈放手！','Hold the truck on green, let go on red');
+  return{stop:()=>{clearTimeout(timer);cancelAnimationFrame(raf);trk.removeEventListener('pointerdown',down);window.removeEventListener('pointerup',up);window.removeEventListener('pointercancel',up);},gain:s=>Math.min(5,Math.ceil(s/8)),emo:'🚦🚒',msg:'green-light metres!'};},
 
 garden:api=>{const f=api.field,FL=['🌷','🌸','🌻','🌼','🌹'],POS=[[24,60],[46,60],[68,60],[89,60],[35,83],[57,83],[79,83]];
   f.insertAdjacentHTML('beforeend',`<div class="gd-sun emo">☀️</div><div class="gd-grass"></div><div class="gd-girl" id="mh">${plainBuddy('princess')}</div>`);
   const hero=f.querySelector('#mh'),fl=POS.map(([x,y])=>{const el=document.createElement('div');el.className='gd-fl emo';el.style.left=x+'%';el.style.top=y+'%';el.textContent=pick(FL);f.appendChild(el);return{el,st:'ok'};});
-  let timer=0;function droop(){if(!api.alive())return;const ok=fl.filter(o=>o.st==='ok');if(ok.length&&fl.length-ok.length<4){const o=pick(ok);o.st='droop';o.el.textContent='🥀';o.el.classList.add('droop');sfx('soft');}
-    timer=setTimeout(droop,700+Math.random()*600);}
+  let timer=0;const gT0=performance.now();function droop(){if(!api.alive())return;const ok=fl.filter(o=>o.st==='ok');if(ok.length&&fl.length-ok.length<4){const o=pick(ok);o.st='droop';o.el.textContent='🥀';o.el.classList.add('droop');sfx('soft');}
+    timer=setTimeout(droop,Math.max(320,800-(performance.now()-gT0)*.016)+Math.random()*450);}
   const down=e=>{if(!api.alive())return;const el=e.target.closest('.gd-fl');if(!el)return;const o=fl.find(q=>q.el===el);if(!o||o.st!=='droop')return;o.st='wet';
     const fr=f.getBoundingClientRect(),hr=hero.getBoundingClientRect(),br=el.getBoundingClientRect();
     const can=document.createElement('div');can.className='gd-can';can.innerHTML=CANSVG;f.appendChild(can);const cw=br.width*1.15,tx=br.left-fr.left-cw*.95,ty=br.top-fr.top-cw*.85;
@@ -2696,7 +2728,7 @@ garden:api=>{const f=api.field,FL=['🌷','🌸','🌻','🌼','🌹'],POS=[[24,
     setTimeout(()=>can.remove(),1150);
     setTimeout(()=>{o.el.classList.remove('droop');o.el.textContent=pick(FL);o.el.animate([{scale:'.6'},{scale:'1.35'},{scale:'1'}],{duration:450});burst(o.el,5);o.st='ok';api.add(1);},950);};
   f.addEventListener('pointerdown',down);timer=setTimeout(droop,400);setTimeout(()=>{if(api.alive())droop();},900);
-  api.hint('幫啲花淋水！','Tap the droopy flowers to water them');
+  api.demo('tap',[46,60]);api.hint('幫啲花淋水！','Tap the droopy flowers to water them');
   return{stop:()=>{clearTimeout(timer);f.removeEventListener('pointerdown',down);},gain:s=>Math.ceil(s/3),emo:'🌷💧',msg:'flowers watered!'};},
 
 potion:api=>{const f=api.field,words=lvl()>=3,timers=[];let rec=[],step=0,busy=false,round=0;
@@ -2717,18 +2749,89 @@ potion:api=>{const f=api.field,words=lvl()>=3,timers=[];let rec=[],step=0,busy=f
       if(step===rec.length){busy=true;timers.push(setTimeout(()=>{api.add(1);sfx('star');speak('嘭！');const r=document.createElement('div');r.className='pt-res emo';r.textContent=pick(POTRES);f.appendChild(r);burst(pot,14);
         timers.push(setTimeout(()=>{r.remove();busy=false;newRecipe();},1300));},550));}}
     else{wiggleEl(b);sfx('wrong');speak(rec[step]);}};
-  f.addEventListener('pointerdown',down);newRecipe();api.hint(words?'讀食譜，煮魔法藥水！':'跟住次序放材料！',words?'Read the recipe, add things in order':'Add the ingredients in order');
+  f.addEventListener('pointerdown',down);newRecipe();api.demo('tap',[62,84]);api.hint(words?'讀食譜，煮魔法藥水！':'跟住次序放材料！',words?'Read the recipe, add things in order':'Add the ingredients in order');
   return{stop:()=>{timers.forEach(clearTimeout);f.removeEventListener('pointerdown',down);},gain:s=>Math.min(5,s*2),emo:'🧪✨',msg:'magic potions made!'};}
 });
 
-function miniNew(done,g){closeOverlay();const p=cur();let score=0,left=20,alive=true;
+const MDUR={potion:45,cupcake:40,cats:40};
+/* ---------- v2.0 minigames, set 3 ---------- */
+MG.truck.push('net');MG.princess.push('stars','dance','dressup');
+Object.assign(MDUR,{dance:40,dressup:40});
+function catcherGame(api,o){const f=api.field;f.insertAdjacentHTML('beforeend',o.bg+`<div class="ct-catch" id="ctc">${o.catcher}</div>`);
+  const cat=f.querySelector('#ctc');let cx=50,items=[],raf=0,last=performance.now(),t0=last,next=last+500;
+  const setX=x=>{cx=Math.max(8,Math.min(92,x));cat.style.left=cx+'%';};setX(50);
+  const mv=e=>{if(!api.alive())return;const r=f.getBoundingClientRect();setX((e.clientX-r.left)/r.width*100);};
+  f.addEventListener('pointerdown',mv);f.addEventListener('pointermove',e=>{if(e.buttons||e.pointerType!=='mouse')mv(e);});
+  function spawn(el){const k=o.pick(el),d=document.createElement('div');d.className='ct-fall emo';d.innerHTML=k.html;f.appendChild(d);items.push({d,k,x:o.x0?o.x0():8+Math.random()*84,y:o.y0||-6,vy:(o.v0+el*o.dv)*(.85+Math.random()*.3),done:false});}
+  function loop(now){if(!api.alive())return;const dt=Math.min(.05,(now-last)/1000);last=now;const el=(now-t0)/1000,r=f.getBoundingClientRect(),cw=cat.offsetWidth/r.width*100;
+    if(now>=next){spawn(el);next=now+Math.max(o.minGap,o.gap-el*o.dgap)+Math.random()*300;}
+    items.forEach(it=>{if(it.done)return;it.y+=it.vy*dt;it.d.style.left=it.x+'%';it.d.style.top=it.y+'%';
+      if(it.y>=o.catchY&&it.y<o.catchY+6&&Math.abs(it.x-cx)<cw*.55){it.done=true;o.hit(it,cat);setTimeout(()=>it.d.remove(),600);}
+      else if(it.y>o.floorY){it.done=true;o.miss(it);setTimeout(()=>it.d.remove(),700);}});
+    items=items.filter(it=>!it.done||it.d.isConnected);raf=requestAnimationFrame(loop);}
+  raf=requestAnimationFrame(loop);api.demo('drag',[30,o.catchY+4],[70,o.catchY+4]);
+  return ()=>{cancelAnimationFrame(raf);f.removeEventListener('pointerdown',mv);};}
+const NETSVG=`<svg viewBox="0 0 120 40" aria-hidden="true"><ellipse cx="60" cy="18" rx="56" ry="14" fill="#E63B2E" stroke="${K}" stroke-width="4"/><ellipse cx="60" cy="16" rx="46" ry="9" fill="#FFFFFF" stroke="${K}" stroke-width="2"/><path d="M20 16 H100 M40 9 V23 M60 7 V25 M80 9 V23" stroke="#C9D3DF" stroke-width="2"/><path d="M14 22 V38 M106 22 V38" stroke="${K}" stroke-width="4"/></svg>`;
+const BASKETSVG=`<svg viewBox="0 0 120 60" aria-hidden="true"><path d="M30 20 Q60 -14 90 20" fill="none" stroke="${K}" stroke-width="6"/><path d="M30 20 Q60 -14 90 20" fill="none" stroke="#C98B4A" stroke-width="3"/><path d="M8 20 H112 L100 56 H20 Z" fill="#E0A75E" stroke="${K}" stroke-width="4" stroke-linejoin="round"/><path d="M14 32 H106 M18 44 H102" stroke="#B5671A" stroke-width="3"/><path d="M8 20 H112" stroke="#FF7AB6" stroke-width="6"/></svg>`;
+Object.assign(MINIS,{
+net:api=>{const f=api.field;
+  const stop=catcherGame(api,{bg:`<div class="nt-bld">${Array.from({length:18},()=>'<i></i>').join('')}</div><div class="nt-grass"></div>`,catcher:NETSVG,
+    pick:()=>({html:'🐱'}),v0:22,dv:.9,gap:1250,dgap:22,minGap:520,catchY:78,floorY:92,y0:20,x0:()=>12+Math.floor(Math.random()*6)*15.2,
+    hit:(it,c)=>{api.add(1);sfx('star');burst(it.d,6);it.d.textContent='😻';it.d.animate([{translate:'0 0'},{translate:'0 -120px',opacity:1},{translate:'0 -160px',opacity:0}],{duration:600,fill:'forwards'});c.animate([{scale:'1 1'},{scale:'1.1 .8'},{scale:'1 1'}],{duration:250});},
+    miss:it=>{sfx('soft');it.d.textContent='😺';it.d.animate([{translate:'0 0',opacity:1},{translate:'60px 0',opacity:0}],{duration:700,fill:'forwards'});}});
+  api.hint('拉張網，接住貓仔！','Slide the net to catch the kittens');
+  return{stop,gain:s=>Math.ceil(s/3),emo:'🐱🛟',msg:'kittens caught!'};},
+stars:api=>{
+  const stop=catcherGame(api,{bg:`<div class="st-moon emo">🌙</div>`,catcher:BASKETSVG,
+    pick:el=>{const r=Math.random();return r<.18?{html:'🌧️',bad:true}:r<.28?{html:'🌟',big:true}:{html:'⭐'};},v0:24,dv:1.1,gap:800,dgap:14,minGap:380,catchY:78,floorY:92,
+    hit:(it,c)=>{if(it.k.bad){api.add(-1);sfx('buzz');wiggleEl(c);api.hint('落雨喇！','Oops, rain!');it.d.style.opacity=0;}else{api.add(it.k.big?3:1);sfx(it.k.big?'fanfare':'star');burst(c,it.k.big?10:4);it.d.style.opacity=0;}},
+    miss:it=>{it.d.animate([{opacity:1},{opacity:0}],{duration:500,fill:'forwards'});}});
+  api.hint('用籃接星星，避開雨雲！','Catch the stars, dodge the rain clouds');
+  return{stop,gain:s=>Math.min(5,Math.ceil(s/5)),emo:'⭐🧺',msg:'stars caught!'};},
+dance:api=>{const f=api.field,MOVES=[['clap','拍手','👏','#FF7AB6'],['spin','轉圈','🔄','#9B7BFF'],['jump','跳','⬆️','#61C3F2'],['wave','揮手','👋','#FFC83D']];
+  f.insertAdjacentHTML('beforeend',`<div class="dc-stage"></div><div class="dc-girl" id="dcg">${plainBuddy('princess')}</div><div class="dc-pads">${MOVES.map(([k,z,e,c])=>`<button class="dc-pad" data-k="${k}" style="background:${c}"><span class="emo">${e}</span><span class="zh">${z}</span></button>`).join('')}</div>`);
+  const girl=f.querySelector('#dcg'),pads=[...f.querySelectorAll('.dc-pad')];let seq=[],inp=0,busy=true,timers=[];
+  const anim={clap:[{scale:'1'},{scale:'1.12 .92'},{scale:'1'},{scale:'1.12 .92'},{scale:'1'}],spin:[{scale:'1 1'},{scale:'-1 1'},{scale:'1 1'}],jump:[{translate:'0 0'},{translate:'0 -26%'},{translate:'0 0'}],wave:[{rotate:'0deg'},{rotate:'-10deg'},{rotate:'10deg'},{rotate:'-6deg'},{rotate:'0deg'}]};
+  const doMove=(k,spd)=>{girl.animate(anim[k],{duration:spd});const p=pads.find(x=>x.dataset.k===k);p.classList.add('lit');setTimeout(()=>p.classList.remove('lit'),spd*.8);if(SND.ctx&&S.settings.sfx)bell({clap:79,spin:83,jump:86,wave:76}[k],SND.ctx.currentTime,.4,.4,SND.sfx);};
+  function show(){busy=true;inp=0;const spd=Math.max(420,800-seq.length*50);api.hint('睇住公主跳舞！','Watch the princess dance!');
+    seq.forEach((k,i)=>timers.push(setTimeout(()=>{if(!api.alive())return;doMove(k,spd);speak(MOVES.find(m=>m[0]===k)[1]);},700+i*(spd+300))));
+    timers.push(setTimeout(()=>{if(!api.alive())return;busy=false;api.hint('到你喇！','Your turn: copy her moves');},700+seq.length*(spd+300)));}
+  const grow=()=>{seq.push(pick(MOVES)[0]);show();};
+  const down=e=>{const p=e.target.closest('.dc-pad');if(!p||busy||!api.alive())return;const k=p.dataset.k;doMove(k,450);speak(MOVES.find(m=>m[0]===k)[1]);
+    if(k===seq[inp]){inp++;if(inp===seq.length){busy=true;api.add(seq.length);sfx('correct');burst(girl,10);timers.push(setTimeout(grow,900));}}
+    else{busy=true;sfx('wrong');wiggleEl(girl);api.hint('再睇一次！','Watch again!');timers.push(setTimeout(show,900));}};
+  f.addEventListener('pointerdown',down);seq=[pick(MOVES)[0],pick(MOVES)[0]];show();api.demo('tap',[38,84]);
+  return{stop:()=>{timers.forEach(clearTimeout);f.removeEventListener('pointerdown',down);},gain:s=>Math.min(5,Math.ceil(s/3)),emo:'💃👑',msg:'dance moves copied!'};},
+dressup:api=>{const f=api.field,words=lvl()>=3,DR=[['紅色','#E8203A'],['藍色','#3D8BFF'],['黃色','#FFD23F'],['綠色','#2BB673']],AC=[['皇冠','tiara'],['花','flower'],['蝴蝶結','bow'],['帽','hat']];
+  const model=(col,acc,s=1)=>`<svg viewBox="0 0 100 100" aria-hidden="true">${kid(50,98,s,{hair:'girl',shirt:col||'#FFFFFF',pants:'#FFE3EF',extra:(col?`<path d="M-13 -32 L-24 -4 Q0 2 24 -4 L13 -32 Z" fill="${col}" ${sk(2)}/>`:'')+ACCSVG[acc||'none']})}</svg>`;
+  let cur={},want={},timers=[];
+  f.insertAdjacentHTML('beforeend',`<div class="du-card"><div class="du-ttl zh">要咁樣！</div><div class="du-want" id="duw"></div><div class="du-lbl zh" id="dul"></div></div><div class="du-model" id="dum"></div>
+    <div class="du-rack left">${DR.map(([z,c])=>`<button class="du-btn" data-t="d" data-v="${c}" data-z="${z}"><svg viewBox="0 0 60 60"><path d="M22 6 H38 L40 18 L54 54 H6 L20 18 Z" fill="${c}" stroke="${K}" stroke-width="3" stroke-linejoin="round"/></svg>${words?`<span class="zh">${z}</span>`:''}</button>`).join('')}</div>
+    <div class="du-rack right">${AC.map(([z,a])=>`<button class="du-btn" data-t="a" data-v="${a}" data-z="${z}"><svg viewBox="-20 -100 40 40">${ACCSVG[a]}</svg><span class="zh">${z}</span></button>`).join('')}</div>`);
+  const draw=()=>{f.querySelector('#dum').innerHTML=model(cur.d,cur.a,1.1);};
+  function newWant(){let d,a;do{d=pick(DR);a=pick(AC);}while(d[1]===want.d&&a[1]===want.a);want={d:d[1],a:a[1],z:d[0]+'裙，'+a[0]};cur={};draw();
+    f.querySelector('#duw').innerHTML=model(want.d,want.a,1);f.querySelector('#dul').textContent=words?want.z:'';speak(want.z);}
+  const down=e=>{const b=e.target.closest('.du-btn');if(!b||!api.alive()||cur.locked)return;if(b.dataset.t==='d')cur.d=b.dataset.v;else cur.a=b.dataset.v;sfx('pop');speak(b.dataset.z);draw();
+    if(cur.d===want.d&&cur.a===want.a){cur.locked=true;api.add(1);sfx('correct');burst(f.querySelector('#dum'),12);speak('好靚呀！');timers.push(setTimeout(newWant,1300));}};
+  f.addEventListener('pointerdown',down);newWant();api.demo('tap',[9,40]);api.hint('幫公主揀衫，要同張卡一樣！','Dress the princess to match the card');
+  return{stop:()=>{timers.forEach(clearTimeout);f.removeEventListener('pointerdown',down);},gain:s=>Math.min(5,s),emo:'👗👑',msg:'outfits matched!'};}
+});
+const ACCSVG={none:'',tiara:`<path d="M-10 -76 L-8 -87 L-3 -80 L0 -90 L3 -80 L8 -87 L10 -76 Z" fill="#FFD23F" stroke="${K}" stroke-width="1.6" stroke-linejoin="round"/><circle cx="0" cy="-84" r="1.8" fill="#FF7AB6"/>`,
+ flower:[-12,-6,0,6,12].map((x,i)=>`<circle cx="${x}" cy="${-78-(i%2)*2}" r="3.6" fill="${['#FF7AB6','#FFD23F','#FFFFFF','#FFD23F','#FF7AB6'][i]}" stroke="${K}" stroke-width="1.2"/>`).join(''),
+ bow:`<path d="M8 -80 L-2 -86 L-2 -74 Z M8 -80 L18 -86 L18 -74 Z" fill="#FF4D6D" stroke="${K}" stroke-width="1.6" stroke-linejoin="round"/><circle cx="8" cy="-80" r="2.6" fill="#FF4D6D" stroke="${K}" stroke-width="1.4"/>`,
+ hat:`<ellipse cx="0" cy="-76" rx="20" ry="4.5" fill="#F2D28A" stroke="${K}" stroke-width="1.6"/><path d="M-10 -76 Q-10 -92 0 -92 Q10 -92 10 -76 Z" fill="#F2D28A" stroke="${K}" stroke-width="1.6"/><path d="M-10 -79 H10" stroke="#9B7BFF" stroke-width="3"/>`};
+
+function handHint(field,kind,a,b){const h=document.createElement('div');h.className='hhint hh-'+kind;h.innerHTML='<span class="hhring"></span><span class="hhand">👆</span>';h.style.left=a[0]+'%';h.style.top=a[1]+'%';field.appendChild(h);
+  if(kind==='drag'&&b)h.animate([{left:a[0]+'%',top:a[1]+'%'},{left:a[0]+'%',top:a[1]+'%',offset:.15},{left:b[0]+'%',top:b[1]+'%',offset:.75},{left:b[0]+'%',top:b[1]+'%'}],{duration:1500,iterations:3});
+  const kill=()=>{h.style.opacity=0;setTimeout(()=>h.remove(),300);field.removeEventListener('pointerdown',kill);};field.addEventListener('pointerdown',kill);setTimeout(kill,kind==='drag'?4500:3600);}
+function miniNew(done,g){closeOverlay();const p=cur(),DUR=MDUR[g]||30;let score=0,left=DUR,alive=true;
   const el=document.createElement('div');el.className='mini m-'+p.theme+' g-'+g;
   el.innerHTML=`<div class="mbar"><span class="emo" style="font-size:34px">⏱️</span><div class="mtime"><i id="mt"></i></div><div class="mscore" id="ms">0</div></div><div class="mfield" id="mf"></div>`;
   document.body.appendChild(el);setTempo(150);const field=el.querySelector('#mf');
   const api={field,alive:()=>alive,add:(n=1)=>{if(!alive)return;score=Math.max(0,score+n);el.querySelector('#ms').textContent=score;},
-    hint:(zh,en)=>{field.querySelectorAll('.mhint').forEach(h=>h.remove());const h=document.createElement('div');h.className='mhint';h.innerHTML=`<span class="zh">${zh}</span> <span class="en">${en}</span>`;field.appendChild(h);speak(zh);setTimeout(()=>{h.style.opacity=0;},2600);setTimeout(()=>h.remove(),3200);}};
+    demo:(k,a,b)=>handHint(field,k,a,b),hint:(zh,en)=>{field.querySelectorAll('.mhint').forEach(h=>h.remove());const h=document.createElement('div');h.className='mhint';h.innerHTML=`<span class="zh">${zh}</span> <span class="en">${en}</span>`;field.appendChild(h);speak(zh);setTimeout(()=>{h.style.opacity=0;},2600);setTimeout(()=>h.remove(),3200);}};
   const game=MINIS[g](api);
-  const tk=setInterval(()=>{left-=.1;el.querySelector('#mt').style.width=Math.max(0,left/20*100)+'%';if(left<=0)finish();},100);
+  const tk=setInterval(()=>{left-=.1;el.querySelector('#mt').style.width=Math.max(0,left/DUR*100)+'%';if(left<=0)finish();},100);
   function finish(){if(!alive)return;alive=false;clearInterval(tk);try{game.stop();}catch(e){}setTempo(104);const gain=Math.min(5,game.gain(score));p.stars+=gain;p.minigames++;save();
     const r=document.createElement('div');r.className='overlay';r.innerHTML=`<div class="modal"><span class="bigemo emo">${game.emo}</span><h2>${score}</h2><p>${game.msg} ⭐ +${gain}</p><div class="row"><button class="btn big primary" id="mback">Keep going ▶️</button></div></div>`;
     el.appendChild(r);sfx('fanfare');r.querySelector('#mback').addEventListener('click',()=>{el.remove();bumpStars();done&&done();});}
@@ -2841,7 +2944,7 @@ function pickL4W(n=6){const p=cur(),fresh=L4W.filter(w=>!learnt(p,w.c)).slice(0,
   while(fresh.length+rest.length<n&&pool.length){const tot=pool.reduce((a,w)=>a+weight(p,w),0);let r=Math.random()*tot,ch=pool[pool.length-1];for(const w of pool){r-=weight(p,w);if(r<=0){ch=w;break;}}rest.push(ch);pool=pool.filter(w=>w!==ch);}
   return [...fresh,...shuffle(rest)];}
 function startWords(){WD={qs:pickL4W(6),i:0,first:true,locked:false,optsFor:-1,phaseFor:-1};go('words');}
-function recordWord(c,first){BS=first?BS+1:0;const p=cur(),s=ws(p,c);s.seen++;s.got=1;s.last=Date.now();
+function recordWord(c,first){if(first)BS++;const p=cur(),s=ws(p,c);s.seen++;s.got=1;s.last=Date.now();
   if(first){s.ok++;s.box=Math.min(4,s.box+1);}else{s.bad++;s.box=Math.max(0,s.box-1);}save();}
 function rWords(){const p=cur(),w=WD.qs[WD.i];if(WD.phaseFor!==WD.i){WD.phase=learnt(p,w.c)?'quiz':'learn';WD.phaseFor=WD.i;}
   if(WD.phase==='learn')return `<div class="screen words">${topbarDots(WD.i,WD.qs.length)}<div class="wstage"><div class="wpic">${picHTML(w)}</div><div class="wcard"><span class="wnew">🆕 生字 New word</span>${sbox(w,srow([w.c]))}<p class="wmeta">${esc(w.en)}</p><button class="btn big primary" data-act="wgot">識咗 ▶</button></div></div></div>`;
@@ -2992,7 +3095,7 @@ document.addEventListener('visibilitychange',()=>{if(!SND.ctx)return;if(document
 let rz;window.addEventListener('resize',()=>{clearTimeout(rz);rz=setTimeout(()=>{if(screen==='trace')initWriter();},300);});
 
 if('serviceWorker' in navigator&&(location.protocol==='https:'||location.hostname==='localhost')){navigator.serviceWorker.register('sw.js').catch(()=>{});}
-try{if(navigator.storage&&navigator.storage.persist)navigator.storage.persist();}catch(e){} /* ask the browser not to clear saved progress */
+try{if(navigator.storage&&navigator.storage.persist)navigator.storage.persist();}catch(e){}
 go('profiles');
 </script>
 </body>
