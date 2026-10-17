@@ -396,6 +396,8 @@ button{font:inherit;color:inherit}
 .du-ttl{font-size:18px;color:#23263A}.du-want svg{width:86%;display:block;margin:0 auto}.du-lbl{font-size:clamp(18px,3vh,24px);color:#E8203A;min-height:1em}
 .du-rack{position:absolute;top:5%;bottom:5%;display:flex;flex-direction:column;gap:2.5%;justify-content:center;width:17%}.du-rack.left{left:3%}.du-rack.right{right:3%}
 .du-btn{flex:1;max-height:22%;background:#FFFFFF;border:4px solid #23263A;border-radius:18px;box-shadow:0 5px 0 #23263A;display:flex;align-items:center;justify-content:center;gap:6px;cursor:pointer;padding:4px}.du-btn svg{height:80%;width:auto;max-width:60%}.du-btn .zh{font-size:clamp(16px,2.8vh,24px);color:#23263A}
+.mglist{display:flex;flex-wrap:wrap;gap:8px}
+.dc-girl{aspect-ratio:120/160!important}.dc-clap{position:absolute;left:50%;top:55%;transform:translate(-50%,-50%);font-size:clamp(30px,6vh,52px);pointer-events:none;animation:dcclap .4s ease-out forwards}@keyframes dcclap{from{scale:.4;opacity:1}to{scale:1.6;opacity:0}}
 /* ---------- parent ---------- */
 .parent{overflow-y:auto;gap:16px;color:var(--ink)}
 .parent h2{margin:0;font-size:28px}
@@ -2580,6 +2582,9 @@ const MAGIC={lay:[['#FF7AB6',.35,18],['#FFC1E3',.9,10],['#FFF7C2',.95,4]],drop:[
 const starD=r=>{let d='';for(let i=0;i<10;i++){const a=-Math.PI/2+i*Math.PI/5,rr=i%2?r*.45:r;d+=(i?'L':'M')+(Math.cos(a)*rr).toFixed(1)+' '+(Math.sin(a)*rr).toFixed(1);}return d+'Z';};
 /* ---------- v2.0 minigames: take turns per child (fixed order, never the same twice in a row) ---------- */
 const MG={truck:['spray','drive','cats'],princess:['sparkle','dragon','cupcake']};
+const MGNAME={spray:'射水 Spray',drive:'消防車出動 Drive',cats:'救貓貓 Kittens',wash:'洗車 Wash',lights:'紅綠燈 Traffic lights',net:'接住佢 Safety net',sparkle:'泡泡 Sparkles',dragon:'魔法送龍 Dragons',cupcake:'杯子蛋糕 Cupcakes',garden:'花園澆花 Garden',potion:'魔法藥水 Potion',stars:'接星星 Catch stars',dance:'皇家跳舞 Royal dance',dressup:'打扮 Dress-up'};
+function runMini(g,done){if(g==='spray'||g==='sparkle')return miniClassic(done);miniNew(done,g);}
+const mgPanel=p=>`<div class="panel"><h3>🎮 Play a minigame now</h3><p class="note">Unlock any of ${esc(p.name)}'s minigames straight away. Needs a harder sum (×) so the children can't do it themselves.</p><div class="mglist">${(MG[p.theme]||[]).map(g=>`<button class="btn small" data-act="mgunlock" data-g="${g}">🔒 ${MGNAME[g]||g}</button>`).join('')}</div></div>`;
 function startMinigame(done){const p=cur(),list=MG[p.theme]||MG.truck,i=(p.mgIdx||0)%list.length,g=list[i];p.mgIdx=(i+1)%list.length;save();
   if(g==='spray'||g==='sparkle')return miniClassic(done);miniNew(done,g);}
 const CAKES=[{k:'紅色',c:'#E8203A'},{k:'藍色',c:'#3D8BFF'},{k:'黃色',c:'#FFD23F'},{k:'綠色',c:'#2BB673'}];
@@ -2771,6 +2776,15 @@ function catcherGame(api,o){const f=api.field;f.insertAdjacentHTML('beforeend',o
     items=items.filter(it=>!it.done||it.d.isConnected);raf=requestAnimationFrame(loop);}
   raf=requestAnimationFrame(loop);api.demo('drag',[30,o.catchY+4],[70,o.catchY+4]);
   return ()=>{cancelAnimationFrame(raf);f.removeEventListener('pointerdown',mv);};}
+function dancerSVG(){return `<svg viewBox="0 0 120 160" aria-hidden="true"><path d="M38 40 Q34 92 44 104 L76 104 Q86 92 82 40 Z" fill="#6B3E2E" ${sk(3)}/>
+  <rect x="50" y="128" width="8" height="18" rx="3" fill="${SKIN}" ${sk(2)}/><rect x="62" y="128" width="8" height="18" rx="3" fill="${SKIN}" ${sk(2)}/><ellipse cx="53" cy="148" rx="8" ry="4" fill="#FF7AB6" ${sk(2)}/><ellipse cx="67" cy="148" rx="8" ry="4" fill="#FF7AB6" ${sk(2)}/>
+  <path d="M48 62 H72 L74 90 H46 Z" fill="#F06BA8" ${sk(2.6)}/><path d="M46 88 H74 L94 132 Q60 140 26 132 Z" fill="#F06BA8" ${sk(2.6)}/><path d="M34 126 Q60 134 86 126" fill="none" stroke="#FFD23F" stroke-width="3"/><path d="M46 90 H74" stroke="#FFD23F" stroke-width="3"/>
+  <g class="dcArmL" style="transform-box:view-box;transform-origin:48px 66px;transform:rotate(16deg)"><rect x="44" y="64" width="8" height="26" rx="4" fill="${SKIN}" ${sk(2.4)}/><circle cx="48" cy="92" r="5.5" fill="${SKIN}" ${sk(2.4)}/><path d="M43 64 H53 L53 72 H43 Z" fill="#F06BA8" ${sk(2)}/></g>
+  <g class="dcArmR" style="transform-box:view-box;transform-origin:72px 66px;transform:rotate(-16deg)"><rect x="68" y="64" width="8" height="26" rx="4" fill="${SKIN}" ${sk(2.4)}/><circle cx="72" cy="92" r="5.5" fill="${SKIN}" ${sk(2.4)}/><path d="M67 64 H77 L77 72 H67 Z" fill="#F06BA8" ${sk(2)}/></g>
+  <rect x="55" y="54" width="10" height="10" fill="${SKIN}" ${sk(2)}/><circle cx="60" cy="38" r="20" fill="${SKIN}" ${sk(3)}/>
+  <path d="M40 40 Q38 16 60 16 Q82 16 80 40 Q74 26 60 26 Q46 26 40 40 Z" fill="#6B3E2E" ${sk(2.4)}/>
+  <path d="M48 18 L50 6 L55 13 L60 3 L65 13 L70 6 L72 18 Z" fill="#FFD23F" ${sk(2)}/><circle cx="60" cy="11" r="2" fill="#FF7AB6"/>
+  <circle cx="53" cy="39" r="2.4" fill="${K}"/><circle cx="67" cy="39" r="2.4" fill="${K}"/><circle cx="53.8" cy="38.2" r=".8" fill="#FFF"/><circle cx="67.8" cy="38.2" r=".8" fill="#FFF"/><path d="M54 47 Q60 52 66 47" fill="none" ${sk(2)}/><circle cx="48" cy="45" r="3" fill="#FF9EB5" opacity=".7"/><circle cx="72" cy="45" r="3" fill="#FF9EB5" opacity=".7"/></svg>`;}
 const NETSVG=`<svg viewBox="0 0 120 40" aria-hidden="true"><ellipse cx="60" cy="18" rx="56" ry="14" fill="#E63B2E" stroke="${K}" stroke-width="4"/><ellipse cx="60" cy="16" rx="46" ry="9" fill="#FFFFFF" stroke="${K}" stroke-width="2"/><path d="M20 16 H100 M40 9 V23 M60 7 V25 M80 9 V23" stroke="#C9D3DF" stroke-width="2"/><path d="M14 22 V38 M106 22 V38" stroke="${K}" stroke-width="4"/></svg>`;
 const BASKETSVG=`<svg viewBox="0 0 120 60" aria-hidden="true"><path d="M30 20 Q60 -14 90 20" fill="none" stroke="${K}" stroke-width="6"/><path d="M30 20 Q60 -14 90 20" fill="none" stroke="#C98B4A" stroke-width="3"/><path d="M8 20 H112 L100 56 H20 Z" fill="#E0A75E" stroke="${K}" stroke-width="4" stroke-linejoin="round"/><path d="M14 32 H106 M18 44 H102" stroke="#B5671A" stroke-width="3"/><path d="M8 20 H112" stroke="#FF7AB6" stroke-width="6"/></svg>`;
 Object.assign(MINIS,{
@@ -2789,10 +2803,16 @@ stars:api=>{
   api.hint('用籃接星星，避開雨雲！','Catch the stars, dodge the rain clouds');
   return{stop,gain:s=>Math.min(5,Math.ceil(s/5)),emo:'⭐🧺',msg:'stars caught!'};},
 dance:api=>{const f=api.field,MOVES=[['clap','拍手','👏','#FF7AB6'],['spin','轉圈','🔄','#9B7BFF'],['jump','跳','⬆️','#61C3F2'],['wave','揮手','👋','#FFC83D']];
-  f.insertAdjacentHTML('beforeend',`<div class="dc-stage"></div><div class="dc-girl" id="dcg">${plainBuddy('princess')}</div><div class="dc-pads">${MOVES.map(([k,z,e,c])=>`<button class="dc-pad" data-k="${k}" style="background:${c}"><span class="emo">${e}</span><span class="zh">${z}</span></button>`).join('')}</div>`);
+  f.insertAdjacentHTML('beforeend',`<div class="dc-stage"></div><div class="dc-girl" id="dcg">${dancerSVG()}</div><div class="dc-pads">${MOVES.map(([k,z,e,c])=>`<button class="dc-pad" data-k="${k}" style="background:${c}"><span class="emo">${e}</span><span class="zh">${z}</span></button>`).join('')}</div>`);
   const girl=f.querySelector('#dcg'),pads=[...f.querySelectorAll('.dc-pad')];let seq=[],inp=0,busy=true,timers=[];
-  const anim={clap:[{scale:'1'},{scale:'1.12 .92'},{scale:'1'},{scale:'1.12 .92'},{scale:'1'}],spin:[{scale:'1 1'},{scale:'-1 1'},{scale:'1 1'}],jump:[{translate:'0 0'},{translate:'0 -26%'},{translate:'0 0'}],wave:[{rotate:'0deg'},{rotate:'-10deg'},{rotate:'10deg'},{rotate:'-6deg'},{rotate:'0deg'}]};
-  const doMove=(k,spd)=>{girl.animate(anim[k],{duration:spd});const p=pads.find(x=>x.dataset.k===k);p.classList.add('lit');setTimeout(()=>p.classList.remove('lit'),spd*.8);if(SND.ctx&&S.settings.sfx)bell({clap:79,spin:83,jump:86,wave:76}[k],SND.ctx.currentTime,.4,.4,SND.sfx);};
+  const aL=girl.querySelector('.dcArmL'),aR=girl.querySelector('.dcArmR'),R0L='rotate(16deg)',R0R='rotate(-16deg)';
+  const arms=(l,r,spd,ease='ease-in-out')=>{aL.animate(l.map(t=>({transform:t})),{duration:spd,easing:ease});aR.animate(r.map(t=>({transform:t})),{duration:spd,easing:ease});};
+  const clapFx=(spd)=>[.25,.75].forEach(t=>setTimeout(()=>{const c=document.createElement('div');c.className='dc-clap emo';c.textContent='✨';girl.appendChild(c);setTimeout(()=>c.remove(),400);if(SND.ctx&&S.settings.sfx)bell(96,SND.ctx.currentTime,.12,.35,SND.sfx);},spd*t));
+  const MOVE={clap:spd=>{const IN_L='rotate(-34deg)',IN_R='rotate(34deg)';arms([R0L,IN_L,R0L,IN_L,R0L],[R0R,IN_R,R0R,IN_R,R0R],spd);clapFx(spd);},
+    wave:spd=>{arms([R0L,R0L],[R0R,'rotate(-150deg)','rotate(-118deg)','rotate(-150deg)','rotate(-118deg)','rotate(-150deg)',R0R],spd);girl.animate([{rotate:'0deg'},{rotate:'-3deg'},{rotate:'3deg'},{rotate:'0deg'}],{duration:spd});},
+    jump:spd=>{girl.animate([{translate:'0 0'},{translate:'0 4%',offset:.15},{translate:'0 -24%',offset:.5},{translate:'0 0',offset:.85},{translate:'0 0'}],{duration:spd,easing:'ease-out'});arms([R0L,'rotate(150deg)',R0L],[R0R,'rotate(-150deg)',R0R],spd);},
+    spin:spd=>{girl.animate([{scale:'1 1'},{scale:'-1 1'},{scale:'1 1'},{scale:'-1 1'},{scale:'1 1'}],{duration:spd});arms([R0L,'rotate(70deg)',R0L],[R0R,'rotate(-70deg)',R0R],spd);}};
+  const doMove=(k,spd)=>{MOVE[k](spd);const p=pads.find(x=>x.dataset.k===k);p.classList.add('lit');setTimeout(()=>p.classList.remove('lit'),spd*.8);if(SND.ctx&&S.settings.sfx)bell({clap:79,spin:83,jump:86,wave:76}[k],SND.ctx.currentTime,.4,.4,SND.sfx);};
   function show(){busy=true;inp=0;const spd=Math.max(420,800-seq.length*50);api.hint('睇住公主跳舞！','Watch the princess dance!');
     seq.forEach((k,i)=>timers.push(setTimeout(()=>{if(!api.alive())return;doMove(k,spd);speak(MOVES.find(m=>m[0]===k)[1]);},700+i*(spd+300))));
     timers.push(setTimeout(()=>{if(!api.alive())return;busy=false;api.hint('到你喇！','Your turn: copy her moves');},700+seq.length*(spd+300)));}
@@ -2983,6 +3003,7 @@ function rParent(){const p=S.profiles[parentTab],st=S.settings;
   <div class="stat"><b>${p.missions}</b><span>Missions finished</span></div>
   <div class="stat"><b>${p.traced}</b><span>Characters traced</span></div>
  </div></div>
+ ${mgPanel(p)}
  ${recPanel()}
  <div class="panel"><h3>Vocabulary check</h3>${vc.length?`<p class="warn">${vc.length} problem(s): ${vc.map(([a,b])=>esc(a)+' → '+esc(b)).join('; ')}</p>`:'<p class="note">✓ Every word used in a Level 4 sentence or answer choice is taught on its own first. Sentences unlock once their new words are learnt in 生字.</p>'}</div>
  <div class="panel"><h3>Minutes per day</h3><div class="bars">${days.map(d=>`<div>${d.m}<i style="height:${Math.round(d.m/mx*100)}%"></i>${d.k.slice(8)}/${d.k.slice(5,7)}</div>`).join('')}</div></div>
@@ -3009,16 +3030,20 @@ function rParent(){const p=S.profiles[parentTab],st=S.settings;
 
 /* ---------- gate & rest ---------- */
 let G=null;
-function showGate(onPass){const a=6+Math.floor(Math.random()*7),b=5+Math.floor(Math.random()*8);G={ans:a+b,entry:'',onPass};
-  overlay(`<p style="margin-top:0">Grown-ups only</p><div class="gatebox">${a} + ${b} = <span id="ge">?</span></div><div class="keypad">${[1,2,3,4,5,6,7,8,9].map(n=>`<button class="btn" data-act="gk" data-k="${n}">${n}</button>`).join('')}<button class="btn" data-act="gk" data-k="x" aria-label="Cancel">✖️</button><button class="btn" data-act="gk" data-k="0">0</button><button class="btn" data-act="gk" data-k="b" aria-label="Delete">⌫</button></div>`);}
-function gateKey(k){if(!G)return;if(k==='x'){G=null;closeOverlay();if(restShown&&cur()){restShown=false;showRest();}return;}if(k==='b')G.entry=G.entry.slice(0,-1);else if(G.entry.length<3)G.entry+=k;
+function showGate(onPass,hard){let a,b,ans,op;if(hard){a=12+Math.floor(Math.random()*17);b=3+Math.floor(Math.random()*7);ans=a*b;op='×';}else{a=6+Math.floor(Math.random()*7);b=5+Math.floor(Math.random()*8);ans=a+b;op='+';}G={ans,entry:'',onPass};
+  overlay(`<p style="margin-top:0">Grown-ups only</p><div class="gatebox">${a} ${op} ${b} = <span id="ge">?</span></div><div class="keypad">${[1,2,3,4,5,6,7,8,9].map(n=>`<button class="btn" data-act="gk" data-k="${n}">${n}</button>`).join('')}<button class="btn" data-act="gk" data-k="x" aria-label="Cancel">✖️</button><button class="btn" data-act="gk" data-k="0">0</button><button class="btn" data-act="gk" data-k="b" aria-label="Delete">⌫</button></div>`);}
+function gateKey(k){if(!G)return;if(k==='x'){G=null;closeOverlay();if(restShown){restShown=false;if(cur())showRest();else showFamRest();}return;}if(k==='b')G.entry=G.entry.slice(0,-1);else if(G.entry.length<3)G.entry+=k;
   $('#ge').textContent=G.entry||'?';if(G.entry.length>=String(G.ans).length){if(+G.entry===G.ans){const f=G.onPass;G=null;closeOverlay();f();}else{G.entry='';sfx('wrong');setTimeout(()=>{const e=$('#ge');if(e)e.textContent='?';},300);}}}
-function overLimit(p){const lim=S.settings.limit;if(!lim)return false;const k=dayKey();return (p.time[k]||0)>=(lim+(p.bonusMin[k]||0))*60;}
+function overLimit(p){const lim=S.settings.limit;if(!lim)return false;const k=dayKey();return ((p.time[k]||0)+((p.ptime||{})[k]||0))>=(lim+(p.bonusMin[k]||0))*60;}
 function showRest(){if(restShown)return;restShown=true;const p=cur();
   const o=overlay(`<div class="art">${avatar(p.theme)}</div><h2 class="zh">休息吓！</h2><p>Time for a rest. See you tomorrow!</p><div class="row"><button class="btn big" data-act="restSwitch">👋 Bye</button><button class="btn big" data-act="restMore">🔒 +10 min</button></div>`);
   o.id='ov';speak('休息吓啦！聽日見！');}
-setInterval(()=>{if(screen==='race'&&R&&!document.hidden){const k=dayKey();R.ids.forEach(id=>{const q=S.profiles.find(x=>x.id===id);if(q)q.time[k]=(q.time[k]||0)+1;});return;}const p=cur();if(!p||document.hidden||restShown||!['home','mission','trace','memory','stickers','body','pop','fork','sort','build','read','fill','tf'].includes(screen))return;
-  const k=dayKey();p.time[k]=(p.time[k]||0)+1;if(p.time[k]%10===0)save();if(overLimit(p)){save();showRest();}},1000);
+const FAMSCR=['fest','story','fquiz','play','songs','song','polite','shapes','shg'];
+const famOver=()=>{const lim=S.settings.limit;if(!lim)return false;const k=dayKey();return ((S.ftime||{})[k]||0)>=(lim+((S.fbonus||{})[k]||0))*60;};
+function showFamRest(){if(restShown)return;restShown=true;const o=overlay(`<span class="bigemo emo">🌙</span><h2 class="zh">休息吓！</h2><p>Story and play time is used up for today.</p><div class="row"><button class="btn big" data-act="restSwitch">👋 Bye</button><button class="btn big" data-act="restMoreFam">🔒 +10 min</button></div>`);o.id='ov';speak('休息吓啦！聽日見！');}
+setInterval(()=>{if(document.hidden)return;const k=dayKey();if(screen==='race'&&R){R.ids.forEach(id=>{const q=S.profiles.find(x=>x.id===id);if(q)q.time[k]=(q.time[k]||0)+1;});return;}if(restShown)return;const p=cur();
+  if(p&&!['profiles','parent'].includes(screen)){if(screen==='panda'){p.ptime=p.ptime||{};p.ptime[k]=(p.ptime[k]||0)+1;}else p.time[k]=(p.time[k]||0)+1;if((p.time[k]+((p.ptime||{})[k]||0))%10===0)save();if(overLimit(p)){save();showRest();}return;}
+  if(!p&&FAMSCR.includes(screen)){S.ftime=S.ftime||{};S.ftime[k]=(S.ftime[k]||0)+1;if(S.ftime[k]%10===0)save();if(famOver()){save();showFamRest();}}},1000);
 
 /* ================= EVENTS ================= */
 const ACT={
@@ -3063,6 +3088,8 @@ const ACT={
  reset:(d,el)=>{if(el.dataset.armed){const p=S.profiles[parentTab];S.profiles[parentTab]=newProfile(p.id,p.name,p.theme);save();go('parent');toast('Progress reset');}else{el.dataset.armed='1';el.textContent='Tap again to confirm';el.classList.add('primary');setTimeout(()=>{if(el.isConnected){delete el.dataset.armed;el.textContent='Reset '+S.profiles[parentTab].name;el.classList.remove('primary');}},3000);}},
  gk:d=>gateKey(d.k),
  restSwitch:()=>{restShown=false;closeOverlay();ACT.profiles();},
+ mgunlock:d=>showGate(()=>{const p=S.profiles[parentTab];curId=p.id;restShown=false;go('home');setTimeout(()=>runMini(d.g,()=>{}),300);},true),
+ restMoreFam:()=>{showGate(()=>{const k=dayKey();S.fbonus=S.fbonus||{};S.fbonus[k]=(S.fbonus[k]||0)+10;save();restShown=false;toast('+10 minutes');});restShown=true;},
  restMore:()=>{const p=cur();showGate(()=>{const k=dayKey();p.bonusMin[k]=(p.bonusMin[k]||0)+10;save();restShown=false;toast('+10 minutes');});restShown=true;},
  read:()=>l4Gate(startRead),readpick:(d,el)=>readPick(+d.k,el),fill:()=>l4Gate(startFill),fillpick:(d,el)=>fillPick(+d.k,el),tf:()=>l4Gate(startTF),tfans:(d,el)=>tfAns(+d.v,el),
  backup:()=>{try{const b=new Blob([JSON.stringify(S)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='zhongwenle-backup-'+dayKey()+'.json';document.body.appendChild(a);a.click();a.remove();toast('Backup downloaded');}catch(e){toast('Download not available here');}},
