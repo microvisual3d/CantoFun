@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, user-scalable=no">
 <meta name="theme-color" content="#FFE07A">
-<title>中文樂</title>
+<title>CantoFun 中文樂</title>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" type="image/png" href="icon-192.png">
 <link rel="apple-touch-icon" href="icon-192.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="中文樂">
+<meta name="apple-mobile-web-app-title" content="CantoFun">
 <meta name="mobile-web-app-capable" content="yes">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -460,6 +460,23 @@ html,body{touch-action:pan-x pan-y;-webkit-text-size-adjust:100%}button{touch-ac
 .gd-sprout{display:flex;flex-direction:column;align-items:center}.gd-tag{background:#FFFFFF;border:2px solid #23263A;border-radius:10px;line-height:0;padding:2px;margin-top:-4px}.gd-tag svg{width:clamp(28px,5vh,40px);height:clamp(28px,5vh,40px)}.gd-big{width:clamp(70px,13vh,110px);height:clamp(70px,13vh,110px)}
 .dc-pal{position:absolute;top:44%;font-size:clamp(44px,8vh,72px);pointer-events:none}
 .du-rack{overflow-y:auto}.du-btn{max-height:19%}.gd-tag svg{width:clamp(36px,6.5vh,52px);height:clamp(36px,6.5vh,52px)}
+.pnew{background:var(--surface)!important;border-style:dashed!important}.pnew .pav{font-size:64px;display:grid;place-items:center}
+.chbtn{margin:4px auto 0;display:block}
+.chrow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:10px 0}.chopt{width:clamp(110px,18vw,160px);border:4px solid var(--line);border-radius:20px;background:#FFFFFF;box-shadow:0 5px 0 var(--line);padding:6px;cursor:pointer;display:flex;flex-direction:column;align-items:center;color:#23263A}.chopt svg{width:100%;height:clamp(90px,16vh,140px)}.chopt .zh{font-size:22px}
+.suname{font-size:32px;padding:8px 14px;border:4px solid #23263A;border-radius:16px;width:min(80%,360px);text-align:center;margin:10px auto;display:block;font-family:inherit}
+.cntpop{position:absolute;transform:translate(-50%,-100%);font-size:clamp(28px,5vh,42px);color:#FFE14D;font-weight:900;-webkit-text-stroke:2px #23263A;paint-order:stroke;pointer-events:none;z-index:9;animation:cntup 1.2s ease-out forwards}@keyframes cntup{to{translate:0 -50px;opacity:0}}
+.mini.ez .target,.mini.ez .tp-t,.mini.ez .ct-fall,.mini.ez .dg-dragon,.mini.ez .mobj,.mini.ez .ct-cat,.mini.ez .bd-boo{scale:1.4}
+.ezglow{filter:drop-shadow(0 0 10px #FFE14D) drop-shadow(0 0 18px #FFE14D);animation:ezg .8s ease-in-out infinite}@keyframes ezg{50%{filter:drop-shadow(0 0 4px #FFE14D) drop-shadow(0 0 26px #FFD000)}}
+.lqintro{display:flex;gap:16px;justify-content:center;margin:8px 0}.lqintro>div{display:flex;flex-direction:column;align-items:center;background:#FFF8E7;border:3px solid #23263A;border-radius:16px;padding:8px;width:160px}.lqintro svg{width:110px;height:110px}.lqintro b{font-size:28px}.lqintro small{font-size:12px;font-weight:700;color:#6B7290}
+.cfname{font-family:'Baloo 2',system-ui,sans-serif;font-weight:800;color:#E8203A;font-size:.62em;letter-spacing:.5px}
+.pqgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px;padding:12px 4px}
+.pqtile{border:4px solid var(--line);border-radius:20px;background:var(--surface);box-shadow:0 5px 0 var(--line);padding:12px 8px;display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer;color:var(--ink)}.pqtile .zh{font-size:clamp(20px,3.2vmin,26px)}.pqtile small{font-weight:800;color:var(--muted)}.pqtile.lock{opacity:.45}
+.pqstage{flex:1;min-height:0;display:flex;gap:24px;align-items:center;justify-content:center;flex-wrap:wrap}
+.pqpic{width:min(34vw,42vh,300px);aspect-ratio:1;background:var(--surface);border:4px solid var(--line);border-radius:26px;display:grid;place-items:center}.pqpic .pic{width:88%;height:88%}
+.pqright{display:flex;flex-direction:column;align-items:center;gap:14px;max-width:520px}
+.pqsent{font-size:clamp(28px,5vh,44px);text-align:center;line-height:1.4}.pqblank{display:inline-block;min-width:1.6em;padding:0 8px;margin:0 4px;border-bottom:4px dashed var(--line);color:#9AA5B8}.pqblank.on{color:#E8203A;border-bottom-style:solid}
+.pqopts{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}.pqopt{min-width:clamp(96px,14vh,140px);font-size:clamp(32px,6vh,52px);border:4px solid var(--line);border-radius:20px;background:#FFFFFF;box-shadow:0 6px 0 var(--line);padding:8px 16px;cursor:pointer;color:#23263A}.pqopt.right{background:#C8F7C5}
+.pqrule{font-size:24px;line-height:1.5}
 /* ---------- parent ---------- */
 .parent{overflow-y:auto;gap:16px;color:var(--ink)}
 .parent h2{margin:0;font-size:28px}
@@ -985,7 +1002,7 @@ const OLDCH=new Set(WORDS.filter(w=>w.lvl<5).flatMap(w=>[...w.c]));
 const NEW4=[...new Set(WORDS.filter(w=>w.lvl===5).flatMap(w=>[...w.c]))].filter(ch=>!OLDCH.has(ch));
 Object.assign(L4MEAN,{'何':'Ho (family name)','嘉':'Ka (in a name)','榮':'Wing (in a name)','穎':'Wing (in a name)','琳':'Lam (in a name)'});
 /* ================= v2.0: Level 4 word bank (生字) — every sentence word is taught on its own first ================= */
-const APPVER='2.8';
+const APPVER='3.0';
 const L4W=[
  ['我','ngo5','I, me','我好開心'],['好','hou2','very, good','我好開心'],['開心','hoi1 sam1','happy','我好開心'],
  ['去','heoi3','go','我去學校'],['坐','co5','sit, ride in','我坐巴士'],['食','sik6','eat','我食蘋果'],
@@ -1012,11 +1029,22 @@ function vocabCheck(){const known=new Set([...WORDS.filter(w=>w.lvl!==5).map(w=>
   L4W.forEach(x=>{if(!artFor(x.art))out.push([x.c,'no picture']);});return out;}
 const BONUSN=[5,6,7,8,8];const bonusNeed=()=>[5,6,6,7,7,8,8,8][LORD.indexOf(lvl())]||6;
 
-const PRAISE=['好叻呀！','好嘢！','勁呀！','做得好！'];
+const PRAISE=['好叻呀！','好嘢！','好勁呀！','做得好！'];
 const ALIVE={'火':'flame','水':'drip','日':'spin','心':'beat'};
 
 /* ================= STORAGE ================= */
 const KEY='zizilok-v1';
+let SU=null;
+const CHARS=['truck','princess','doctor','dentist'];
+const charRow=(act,except)=>`<div class="chrow">${CHARS.filter(t=>t!==except).map(t=>`<button class="chopt" data-act="${act}" data-t="${t}">${avatar(t)}<span class="zh">${THf(t).name.split(' ')[0]}</span></button>`).join('')}</div>`;
+function suStart(p,isNew){SU={p,isNew,step:'age'};if(!isNew&&/消防車|小公主/.test(p.name))p.name='';suShow();}
+function suShow(){const p=SU.p;
+  if(SU.step==='age')overlay(`<h2 class="zh">幾多歲？</h2><p>How old is this player?</p><div class="row"><button class="btn big primary" data-act="suage" data-a="2-4">2–4 歲</button><button class="btn big primary" data-act="suage" data-a="5-7">5–7 歲</button></div>`);
+  else if(SU.step==='name'){overlay(`<h2 class="zh">你叫咩名？</h2><p>Type the player's name</p><input id="suname" class="suname" maxlength="14" value="${esc(p.name||'')}" autocomplete="off"><div class="row"><button class="btn big primary" data-act="suname">OK ✓</button></div>`);setTimeout(()=>{const i=$('#suname');if(i)i.focus();},200);}
+  else overlay(`<h2 class="zh">揀角色！</h2><p>Pick a character (you can change any time)</p>${charRow('suchar')}`);
+  speak(SU.step==='age'?'幾多歲？':SU.step==='name'?'你叫咩名？':'揀角色！');}
+function chShow(){const p=cur();overlay(`<h2 class="zh">換角色</h2><p>Pick a character. Your levels and stars stay the same.</p>${charRow('chset')}`);speak('揀角色！');}
+function charNudge(){const p=cur();if(!p||(p.cuse||0)<12||document.querySelector('.overlay'))return;p.cuse=0;save();setTimeout(()=>{if(screen!=='home')return;overlay(`<h2 class="zh">試吓其他角色？</h2><p>You've played lots as ${esc(THf(p.theme).name)}. Try a different one for new games!</p>${charRow('chset',p.theme)}<div class="row"><button class="btn big" data-act="chno">唔使喇 No thanks</button></div>`);speak('試吓其他角色？');},700);}
 function newProfile(id,name,theme){return{id,name,theme,stars:0,bestStreak:0,words:{},time:{},bonusMin:{},missions:0,minigames:0,traced:0,stickers:[],level:1};}
 function defaults(){return{v:1,settings:{music:true,sfx:true,limit:20,rate:.85},profiles:[newProfile('a','Fire truck 消防車','truck'),newProfile('b','Princess 小公主','princess')]};}
 let memStore=null;
@@ -1031,6 +1059,7 @@ function load(){
 }
 function save(){memStore=S;try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
 let S=load();S.strokeFix=S.strokeFix||{};
+if(!S.chr28){S.profiles.forEach(p=>{if(p.id==='a')p.theme='doctor';if(p.id==='b')p.theme='dentist';});S.chr28=1;}
 if(!S.eye5){S.profiles.forEach(p=>{if(p.words&&p.words['目']&&!p.words['眼']){p.words['眼']=p.words['目'];}if(p.words)delete p.words['目'];if(p.stickers)p.stickers=p.stickers.map(c=>c==='目'?'眼':c);});S.eye5=1;} /* v2.0: Level 1 eye is now 眼 */
 if(!S.lv5){S.profiles.forEach(p=>{if(p.level===4)p.level=5;});S.lv5=1;} /* v2.0: old Level 4 (sentences) is now Level 5 */
 let curId=null, screen='profiles', parentTab=0, restShown=false;
@@ -2361,6 +2390,60 @@ LORD.splice(LORD.indexOf(5),0,13);
  ['弟弟好大聲',['弟弟','好','大聲'],'dai4 dai2 hou2 daai6 seng1','Little brother is very loud.',2,['細聲','大力'],'大聲']
 ].forEach(([c,words,jp,en,gi,alt,art])=>{if(!WORDS.some(w=>w.c===c))WORDS.push({c,words,jp,en,art,gap:{i:gi,opts:[words[gi],...alt]},topic:'句子 sentence',pic:'❓',lvl:5});});
 
+/* ---------- v2.10 兩定二？ counting (兩) vs numbers (二) ---------- */
+const twoOf=k=>`<g transform="translate(-2 20) scale(.52)">${artFor(k)||''}</g><g transform="translate(50 20) scale(.52)">${artFor(k)||''}</g>`;
+const numCard=t=>`<rect x="10" y="22" width="80" height="56" rx="10" fill="#FFFFFF" ${s2()}/><text x="50" y="64" text-anchor="middle" font-size="34" font-weight="900" fill="#3D8BFF">${t}</text>`;
+const calCard=(t,sub)=>`<rect x="16" y="14" width="68" height="74" rx="8" fill="#FFFFFF" ${s2()}/><rect x="16" y="14" width="68" height="18" rx="6" fill="#E8203A"/><text x="50" y="${sub?58:68}" text-anchor="middle" font-size="${sub?20:30}" font-weight="900" fill="#23263A">${t}</text>${sub?`<text x="50" y="80" text-anchor="middle" font-size="12" font-weight="800" fill="#6B7290">${sub}</text>`:''}`;
+const LQ=[['兩隻貓',twoOf('貓')],['兩個蘋果',twoOf('蘋果')],['兩架巴士',twoOf('巴士')],['兩條魚',twoOf('魚')],['兩杯水',twoOf('水杯')],['兩隻狗',twoOf('狗')],
+ ['十二',numCard('12')],['二十',numCard('20')],['一二三',numCard('1 2 3')],['二月',calCard('2月','February')],['星期二',calCard('Tue','Tuesday')],['第二',`<circle cx="50" cy="58" r="26" fill="#C9D3DF" ${s2()}/><text x="50" y="68" text-anchor="middle" font-size="30" font-weight="900" fill="#23263A">2</text><path d="M36 12 L44 34 M64 12 L56 34" stroke="#3D8BFF" stroke-width="8"/>`]];
+const LQEN=['two cats','two apples','two buses','two fish','two cups of water','two dogs','twelve','twenty','one, two, three','February','Tuesday','second (2nd)'];
+const LQW=LQ.map(([c,art],i)=>{ART['LQ'+i]=art;return{c,art:'LQ'+i,en:LQEN[i]};});
+function liangStart(){const p=cur();if(modeLeft('liangyi')>0){lockMsg('liangyi');return;}
+  const go2=()=>{FMG={mode:'l',qs:shuffle(LQW).slice(0,8),i:0,first:true,lock:false};go('famg');};
+  if(!p.lqIntro){p.lqIntro=1;save();overlay(`<h2 class="zh">兩定二？</h2><div class="lqintro"><div><svg viewBox="0 0 100 100">${twoOf('貓')}</svg><b class="zh">兩隻貓</b><small>Counting things → 兩</small></div><div><svg viewBox="0 0 100 100">${numCard('12')}</svg><b class="zh">十二</b><small>Saying a number → 二</small></div></div><div class="row"><button class="btn big primary" data-act="lqgo">開始 Start</button></div>`);speak('數嘢用兩，兩隻貓。講數字用二，十二。');LQGO=go2;}else go2();}
+let LQGO=null;
+/* ================= v3.0 🤔 二揀一: confusable pairs, spread across levels ================= */
+const PQ=[
+ {id:'zao',lvl:1,t:'早晨定早唞？',o:['早晨','早唞'],r:'朝早講早晨，夜晚瞓覺講早唞。',re:'Morning → 早晨 · bedtime → 早唞',q:[['🌅','起身喇！講：＿','早晨'],['🌙🛏️','瞓覺喇！講：＿','早唞'],['🏫☀️','朝早見到老師：＿','早晨'],['😴','夜晚同爸爸講：＿','早唞'],['🍳','朝早食早餐：＿','早晨']]},
+ {id:'daisai',lvl:1,t:'大定細？',o:['大','細'],r:'講嘢用「細」：隻老鼠好細。',re:'Spoken Cantonese says 細 for small',q:[['🐘','隻象好＿','大'],['🐭','隻老鼠好＿','細'],['🐜','隻螞蟻好＿','細'],['🚢','隻船好＿','大'],['🏠','間屋好＿','大'],['🐞','隻瓢蟲好＿','細']]},
+ {id:'jau',lvl:1,t:'有定冇？',o:['有','冇'],r:'見到就係有，冇嘢就係冇。',re:'There is → 有 · there isn\'t → 冇',q:[['🍰','碟度＿蛋糕','有'],['🍽️','碟度＿蛋糕','冇'],['☂️','我＿遮','有'],['🙅🌧️','我＿遮','冇'],['🐟🫙','魚缸＿魚','有'],['🫙','魚缸＿魚','冇']]},
+ {id:'dang',lvl:1,t:'開燈定熄燈？',o:['開燈','熄燈'],r:'黑就開燈，瞓覺就熄燈。',re:'Dark → 開燈 · sleep → 熄燈',q:[['🌑','好黑呀！＿','開燈'],['🛌🌙','瞓覺喇，＿','熄燈'],['📖','夜晚睇書要＿','開燈'],['🚪👋','出門口要＿','熄燈']]},
+ {id:'sik',lvl:11,t:'食定飲？',o:['食','飲'],r:'廣東話：食藥、飲湯！',re:'Cantonese: 食藥 (eat medicine), 飲湯 (drink soup)',q:[['art:飯','我＿飯','食'],['art:水杯','我＿水','飲'],['💊','我＿藥','食'],['art:湯','我＿湯','飲'],['art:牛奶','我＿牛奶','飲'],['art:蘋果','我＿蘋果','食'],['art:粥','我＿粥','食']]},
+ {id:'tai',lvl:11,t:'睇定聽？',o:['睇','聽'],r:'用眼就係睇，用耳就係聽。',re:'Eyes → 睇 · ears → 聽',q:[['📺','我＿電視','睇'],['🎵','我＿歌','聽'],['📖','我＿書','睇'],['👂📻','我＿收音機','聽'],['🎬','我＿戲','睇']]},
+ {id:'co',lvl:11,t:'坐定企？',o:['坐','企'],r:'喺櫈度係坐，用腳企直係企。',re:'On a chair → 坐 · standing → 企',q:[['🪑','我＿喺櫈度','坐'],['🧍','我＿喺度排隊','企'],['🚌🪑','上巴士搵位＿','坐'],['🧍🧍🧍','大家＿好！','企']]},
+ {id:'haang',lvl:11,t:'行定跑？',o:['行','跑'],r:'慢慢係行，快快係跑。',re:'Slow → 行 · fast → 跑',q:[['🐢','烏龜＿得好慢','行'],['🐇','兔仔＿得好快','跑'],['🏃','比賽要＿','跑'],['🚶','過馬路慢慢＿','行']]},
+ {id:'doze',lvl:2,t:'多謝定唔該？',o:['多謝','唔該'],r:'收到禮物講多謝；人哋幫你做嘢講唔該。',re:'A gift → 多謝 · help or service → 唔該',q:[['🎁','收到禮物：＿！','多謝'],['🚪','叔叔幫我開門：＿！','唔該'],['🍽️','侍應拎飯嚟：＿！','唔該'],['🎂','婆婆送蛋糕：＿！','多謝'],['🧸','姐姐幫我執玩具：＿！','唔該'],['💌','收到生日卡：＿！','多謝']]},
+ {id:'sai',lvl:2,t:'洗定沖？',o:['洗','沖'],r:'洗手、洗面；沖涼、沖廁所。',re:'洗 hands and face · 沖 a shower, the toilet',q:[['🧼','＿手','洗'],['🚿','＿涼','沖'],['🫧','＿面','洗'],['🚽','＿廁所','沖'],['🍽️','＿碗','洗']]},
+ {id:'zo',lvl:2,t:'左定右？',o:['左','右'],r:'⬅️ 係左，➡️ 係右。',re:'⬅️ left · ➡️ right',q:[['⬅️','向＿行','左'],['➡️','向＿行','右'],['⬅️🚗','架車轉＿','左'],['🚗➡️','架車轉＿','右']]},
+ {id:'zoek',lvl:12,t:'着定戴？',o:['着','戴'],r:'衫、褲、鞋、襪用着；帽、眼鏡、口罩、手錶用戴。',re:'Clothes and shoes → 着 · hat, glasses, mask, watch → 戴',q:[['art:恤衫','＿衫','着'],['art:帽子','＿帽','戴'],['art:眼鏡','＿眼鏡','戴'],['art:口罩','＿口罩','戴'],['art:波鞋','＿鞋','着'],['⌚','＿手錶','戴'],['art:襪','＿襪','着']]},
+ {id:'daa',lvl:12,t:'打波定踢波？',o:['打','踢'],r:'用手係打，用腳係踢。',re:'Hands → 打 · feet → 踢',q:[['🏀','＿籃球','打'],['⚽','＿足球','踢'],['🏸','＿羽毛球','打'],['🏓','＿乒乓波','打'],['🥅⚽','我去＿波','踢']]},
+ {id:'jit',lvl:12,t:'熱定辣？',o:['熱','辣'],r:'好燙係熱，辣椒係辣。',re:'Hot temperature → 熱 · spicy → 辣',q:[['🍜♨️','碗湯好＿','熱'],['🌶️','隻辣椒好＿','辣'],['☀️','天氣好＿','熱'],['🍛🌶️','咖喱好＿','辣'],['🔥','火好＿','熱']]},
+ {id:'sib',lvl:3,t:'哥哥定弟弟？',o:['哥哥','弟弟'],r:'大過你：哥哥、家姐；細過你：弟弟、妹妹。',re:'Older → 哥哥/家姐 · younger → 弟弟/妹妹',q:[['👦','佢八歲，我五歲。佢係我＿','哥哥',['哥哥','弟弟']],['👶','佢兩歲，我五歲。佢係我＿','弟弟',['哥哥','弟弟']],['👧','佢九歲，我五歲。佢係我＿','家姐',['家姐','妹妹']],['👧🏻','佢三歲，我五歲。佢係我＿','妹妹',['家姐','妹妹']]]},
+ {id:'gung',lvl:3,t:'爺爺定公公？',o:['爺爺','公公'],r:'爸爸嘅爸媽：爺爺、嫲嫲；媽媽嘅爸媽：公公、婆婆。',re:'Dad\'s parents → 爺爺/嫲嫲 · Mum\'s parents → 公公/婆婆',q:[['art:爺爺','爸爸嘅爸爸係＿','爺爺',['爺爺','公公']],['art:婆婆','媽媽嘅媽媽係＿','婆婆',['嫲嫲','婆婆']],['art:嫲嫲','爸爸嘅媽媽係＿','嫲嫲',['嫲嫲','婆婆']],['art:公公','媽媽嘅爸爸係＿','公公',['爺爺','公公']]]},
+ {id:'gou',lvl:3,t:'高定長？',o:['高','長'],r:'向上係高，打橫係長。',re:'Up → 高 · along → 長',q:[['🦒','長頸鹿好＿','高'],['🚂🚃🚃','火車好＿','長'],['🏢','大廈好＿','高'],['🐍','條蛇好＿','長'],['🌳','棵樹好＿','高']]},
+ {id:'mw',lvl:4,t:'隻、個、架、條、杯、對',o:['隻','個','架'],r:'動物用隻，車用架，長嘅用條，一杯水，一對鞋。',re:'Measure words: animals 隻 · vehicles 架 · long things 條 · cup 杯 · pair 對',q:[['art:貓','一＿貓','隻',['隻','個','架']],['art:蘋果','一＿蘋果','個',['隻','個','條']],['art:巴士','一＿巴士','架',['架','隻','杯']],['art:魚','一＿魚','條',['條','個','對']],['art:水杯','一＿水','杯',['杯','架','隻']],['art:波鞋','一＿鞋','對',['對','條','個']],['✈️','一＿飛機','架',['架','條','隻']]]},
+ {id:'hai',lvl:4,t:'係定唔係？',o:['係','唔係'],r:'啱就講係，唔啱就講唔係。',re:'Right → 係 · wrong → 唔係',q:[['art:蘋果','呢個＿蘋果','係'],['art:香蕉','呢個＿蘋果','唔係'],['art:貓','呢隻＿貓','係'],['art:狗','呢隻＿貓','唔係'],['art:巴士','呢架＿巴士','係']]},
+ {id:'lai',lvl:13,t:'嚟定去？',o:['嚟','去'],r:'行向我係嚟，行走係去。',re:'Towards me → 嚟 · away → 去',q:[['🙋‍♀️👈','媽媽叫我過＿','嚟'],['🏫','我＿學校','去'],['👋🏠','快啲＿我屋企玩','嚟'],['🛝','我哋＿公園','去']]},
+ {id:'maai',lvl:13,t:'買定賣？',o:['買','賣'],r:'畀錢攞嘢係買，攞錢畀嘢係賣。',re:'Pay and get → 買 · sell → 賣',q:[['🛒','我去超市＿嘢','買'],['🥬👩','姨姨喺街市＿菜','賣'],['🍦💰','我用錢＿雪糕','買'],['🍞👨‍🍳','麵包舖＿麵包','賣']]},
+ {id:'ze',lvl:13,t:'借定還？',o:['借','還'],r:'攞嚟用係借，用完畀返係還。',re:'Borrow → 借 · give back → 還',q:[['📚','我喺圖書館＿書','借'],['📚↩️','睇完要＿書','還'],['✏️🙏','可唔可以＿支筆畀我？','借'],['🧸↩️','玩完＿返畀佢','還']]},
+ {id:'deoi',lvl:5,t:'對唔住定唔緊要？',o:['對唔住','唔緊要'],r:'做錯事講對唔住；人哋道歉你答唔緊要。',re:'You did wrong → 對唔住 · accepting a sorry → 唔緊要',q:[['💥🧍','我撞到人：＿','對唔住'],['🙇','朋友話對唔住，我答：＿','唔緊要'],['🧸💔','我整爛玩具：＿','對唔住'],['🦶😣','佢踩到我隻腳，話對唔住，我講：＿','唔緊要'],['🥤💦','我倒瀉杯水：＿','對唔住']]}];
+const pqPic=p=>p.startsWith('art:')?`<svg viewBox="0 0 100 100" class="pic" aria-hidden="true">${artFor(p.slice(4))||''}</svg>`:`<svg viewBox="0 0 100 100" class="pic" aria-hidden="true"><text x="50" y="${[...p].length>3?60:64}" text-anchor="middle" font-size="${Math.max(26,64-([...p].length>2?12*([...p].length/2-1):0))}">${p}</text></svg>`;
+const pqOpen=(p,pq)=>LORD.indexOf(pq.lvl)<=LORD.indexOf(p.level||1);
+let PQS=null;
+function rPairs(){const p=cur();return `<div class="screen pairs">${fbar('🤔 二揀一 Which one?','home')}<div class="fscroll"><div class="pqgrid">${PQ.map((q,i)=>{const open=pqOpen(p,q),best=((p.pqBest||{})[q.id]);return `<button class="pqtile ${open?'':'lock'}" data-act="pqgo" data-i="${i}"><span class="zh">${q.t}</span><small>${open?(best?'⭐ '+best+'/6':'Level '+(LORD.indexOf(q.lvl)+1)):'🔒 Level '+(LORD.indexOf(q.lvl)+1)}</small></button>`;}).join('')}</div></div></div>`;}
+function pqStart(i){const p=cur(),q=PQ[i];if(!pqOpen(p,q)){sfx('soft');toast('🔒 Level '+(LORD.indexOf(q.lvl)+1));return;}const key='pq_'+q.id;if(modeLeft(key)>0){lockMsg(key);return;}
+  let items=shuffle(q.q.slice());while(items.length<6)items=items.concat(shuffle(q.q.slice()));PQS={q,items:items.slice(0,6),i:0,first:true,ok:0,lock:false};
+  p.pqIntro=p.pqIntro||{};if(!p.pqIntro[q.id]){p.pqIntro[q.id]=1;save();overlay(`<h2 class="zh">${q.t}</h2><p class="zh pqrule">${q.r}</p><p>${q.re}</p><div class="row"><button class="btn big primary" data-act="pqbegin">開始 Start</button></div>`);speak(q.r);}else go('pairq');}
+function rPairq(){const s=PQS,it=s.items[s.i],opts=it[3]||s.q.o;s.opts=s.opts&&s.for===s.i?s.opts:shuffle(opts.slice());s.for=s.i;const [pre,post]=it[1].split('＿');
+  return `<div class="screen pairq">${topbarDots(s.i,s.items.length)}<div class="pqstage"><div class="pqpic">${pqPic(it[0])}</div><div class="pqright"><div class="pqsent zh">${esc(pre)}<span class="pqblank" id="pqb">？</span>${esc(post||'')}</div><button class="btn speak2" data-act="pqsay" aria-label="Hear it">🔊</button>
+  <div class="pqopts">${s.opts.map((o,k)=>`<button class="pqopt zh" data-act="pqpick" data-k="${k}">${o}</button>`).join('')}</div><button class="btn small" data-act="pqrule">💡 ${s.q.t}</button></div></div></div>`;}
+const pqSay=()=>{const it=PQS.items[PQS.i];speak(it[1].replace('＿','，咩呢？').replace('：，',''));};
+function pqPick(k,el){const s=PQS;if(!s||s.lock)return;const it=s.items[s.i],o=s.opts[k];
+  if(o!==it[2]){s.first=false;sfx('wrong');wiggleEl(el);speak(s.q.r);return;}
+  s.lock=true;if(s.first){s.ok++;cur().stars++;}recordAnswer(it[2],s.first);bumpStars();el.classList.add('right');const b=$('#pqb');if(b){b.textContent=o;b.classList.add('on');}sfx('correct');burst(el,8);speak(it[1].replace('＿',o));
+  setTimeout(()=>{s.lock=false;s.i++;s.first=true;withBonus('pairq',()=>{if(s.i>=s.items.length){const p=cur();p.pqBest=p.pqBest||{};p.pqBest[s.q.id]=Math.max(p.pqBest[s.q.id]||0,s.ok);save();gameEnd('🤔⭐',s.ok>=5?'分得好清楚！':'好叻！再玩多次！',`${s.ok} of 6 right first time`,'pq_'+s.q.id);}else go('pairq');});},1900);}
+
+
 /* ================= v2.4 🗺️ 地方 Places: map units, linked to known characters ================= */
 const PK='#23263A',ps=(w=3)=>`stroke="${PK}" stroke-width="${w}" stroke-linejoin="round" stroke-linecap="round"`;
 const PICON={
@@ -2629,7 +2712,7 @@ function unitFrontier(p,L){const us=unitsOf(L),i=us.findIndex(u=>!unitPassed(p,u
 function selUnit(p,L){p.unit=p.unit||{};let v=p.unit[L];const f=unitFrontier(p,L);if(v==null||v>f)v=f;return v;}
 function inUnitW(p,w){if(!p||!w.lvl)return true;const us=unitsOf(w.lvl),i=us.findIndex(u=>u.includes(w));return i<0||i<=selUnit(p,w.lvl);}
 function unitCheck(){const p=cur();if(!p)return;const L=lvl(),f=unitFrontier(p,L);p.uf=p.uf||{};if(p.uf[L]!=null&&f>p.uf[L]){p.unit=p.unit||{};p.unit[L]=f;setTimeout(()=>{toast('🎉 單元 '+f+' 完成！單元 '+(f+1)+' 開咗！');sfx('fanfare');speak('單元完成！好叻呀！');},1200);}p.uf[L]=f;}
-const unitsHTML=p=>{const L=lvl(),us=unitsOf(L),f=unitFrontier(p,L),sel=selUnit(p,L);return `<div class="units"><span class="lvl-label">單元</span>${us.map((u,i)=>{const st=i<f?'done':i===f?'cur':'lock';return `<button class="unit ${st} ${i===sel?'on':''}" data-act="unitsel" data-u="${i}" aria-label="Unit ${i+1}">${st==='lock'?'🔒':st==='done'?'✓':i+1}</button>`;}).join('')}</div><div class="famrow"><button class="btn small famb" data-act="fam">🌳 字族</button><button class="btn small famb" data-act="places">🗺️ 地方</button></div>`;};
+const unitsHTML=p=>{const L=lvl(),us=unitsOf(L),f=unitFrontier(p,L),sel=selUnit(p,L);return `<div class="units"><span class="lvl-label">單元</span>${us.map((u,i)=>{const st=i<f?'done':i===f?'cur':'lock';return `<button class="unit ${st} ${i===sel?'on':''}" data-act="unitsel" data-u="${i}" aria-label="Unit ${i+1}">${st==='lock'?'🔒':st==='done'?'✓':i+1}</button>`;}).join('')}</div><div class="famrow"><button class="btn small famb" data-act="fam">🌳 字族</button><button class="btn small famb" data-act="places">🗺️ 地方</button><button class="btn small famb" data-act="pairs">🤔 二揀一</button></div>`;};
 /* ---------- 字族 character families ---------- */
 const famKnown=p=>WORDS.filter(w=>(w.lvl===1||w.lvl===2)&&[...w.c].length===1&&p.words[w.c]&&p.words[w.c].ok>0).map(w=>w.c);
 const famWords=ch=>WORDS.filter(w=>((w.lvl>=1&&w.lvl<=4)||w.lvl===11||w.lvl===12||w.lvl===13||w.topic==='地方 places')&&[...w.c].length>1&&w.c.includes(ch)&&artFor(w.art||w.c));
@@ -2637,7 +2720,7 @@ const goldW=(c,ch)=>[...c].map(x=>x===ch?`<b class="gold">${x}</b>`:x).join('');
 let FAM={ch:null};
 function rFam(){const p=cur(),ks=famKnown(p).filter(ch=>famWords(ch).length);if(!FAM.ch||!ks.includes(FAM.ch))FAM.ch=ks[0]||null;const ch=FAM.ch;
   return `<div class="screen fam">${fbar('🌳 字族 Character families','home')}
-  <div class="famtop"><button class="btn big primary" data-act="famb">🧩 砌詞 Build a word</button><button class="btn big" data-act="famm">❓ 缺字 Missing character</button></div>
+  <div class="famtop"><button class="btn big primary" data-act="famb">🧩 砌詞 Build a word</button><button class="btn big" data-act="famm">❓ 缺字 Missing character</button><button class="btn big" data-act="xialuo">⬇️ 下定落？</button><button class="btn big" data-act="liangyi">2️⃣ 兩定二？</button></div>
   ${ks.length?`<div class="famwrap"><div class="famchars">${ks.map(c=>`<button class="famchip ${c===ch?'on':''}" data-act="famch" data-c="${c}"><span class="zh">${c}</span><small>${famWords(c).length}</small></button>`).join('')}</div>
   <div class="fampanel"><div class="famhead"><span class="zh famchar">${ch}</span><span class="famsay zh">你識呢個字！</span></div><div class="famgrid">${famWords(ch).map(w=>`<button class="famcard" data-act="famsay" data-c="${w.c}">${picHTML(w)}<span class="zh">${goldW(w.c,ch)}</span><small>${esc(w.en)}</small></button>`).join('')}</div></div></div>`
   :`<p class="note" style="text-align:center">Learn some Level 1 characters first, then their word families appear here.</p>`}</div>`;}
@@ -2645,7 +2728,7 @@ let FMG=null;
 function famPool(p){const ks=new Set(famKnown(p));return WORDS.filter(w=>(w.lvl>=1&&w.lvl<=4||w.lvl===11||w.lvl===12)&&[...w.c].length>=2&&[...w.c].length<=3&&[...w.c].some(x=>ks.has(x))&&artFor(w.art||w.c));}
 function famStart(mode){const p=cur(),pool=famPool(p);if(pool.length<4){toast('先學多啲字！ Learn a few more characters first');speak('先學多啲字！');return;}
   FMG={mode,qs:shuffle(pool).slice(0,6),i:0,first:true,lock:false};go('famg');}
-function famSetup(){const p=cur(),w=FMG.qs[FMG.i],ks=famKnown(p),chars=[...w.c];FMG.built=[];if(FMG.mode==='x'){FMG.miss=chars.findIndex(x=>x==='下'||x==='落');FMG.tiles=shuffle(['下','落']);FMG.for=FMG.i;return;}
+function famSetup(){const p=cur(),w=FMG.qs[FMG.i],ks=famKnown(p),chars=[...w.c];FMG.built=[];if(FMG.mode==='l'){FMG.miss=chars.findIndex(x=>x==='兩'||x==='二');FMG.tiles=shuffle(['兩','二']);FMG.for=FMG.i;return;}if(FMG.mode==='x'){FMG.miss=chars.findIndex(x=>x==='下'||x==='落');FMG.tiles=shuffle(['下','落']);FMG.for=FMG.i;return;}
   const extra=shuffle([...new Set(famKnown(p).concat(WORDS.filter(x=>x.lvl===1).map(x=>x.c)))].filter(x=>!chars.includes(x))).slice(0,FMG.mode==='b'?2:2);
   if(FMG.mode==='b')FMG.tiles=shuffle([...chars,...extra]);
   else{const ki=chars.findIndex(x=>ks.includes(x));FMG.miss=ki<0?0:ki;FMG.tiles=shuffle([chars[FMG.miss],...extra]);}FMG.for=FMG.i;}
@@ -2659,7 +2742,7 @@ function fgPick(k,el){if(!FMG||FMG.lock)return;const w=FMG.qs[FMG.i],chars=[...w
   sfx('pop');speak(t);if(FMG.mode==='b'){FMG.built.push(t);el.disabled=true;el.style.visibility='hidden';const sl=document.querySelectorAll('.fgslot')[FMG.built.length-1];if(sl){sl.textContent=t;sl.classList.add('on');}if(FMG.built.length<chars.length)return;}
   else{const sl=document.querySelectorAll('.fgslot')[FMG.miss];if(sl){sl.textContent=t;sl.classList.add('on');}}
   FMG.lock=true;recordAnswer(w.c,FMG.first);if(FMG.first)cur().stars++;bumpStars();const pic=$('.fgpic');if(pic){pic.animate([{scale:'1'},{scale:'1.15'},{scale:'1'}],{duration:500});burst(pic,10);}sfx('correct');const pr=pick(PRAISE);praiseFx(pr);speak(pr+' '+w.c);
-  setTimeout(()=>{FMG.lock=false;FMG.i++;FMG.first=true;withBonus('famg',()=>{if(FMG.i>=FMG.qs.length)gameEnd(FMG.mode==='x'?'⬇️✨':'🌳✨',FMG.mode==='x'?'下同落分得好清楚！':'字族高手！',FMG.mode==='x'?'You know 下 and 落!':'Word family master!',FMG.mode==='b'?'famb':FMG.mode==='x'?'xialuo':'famm');else go('famg');});},1700);}
+  setTimeout(()=>{FMG.lock=false;FMG.i++;FMG.first=true;withBonus('famg',()=>{if(FMG.i>=FMG.qs.length)gameEnd(FMG.mode==='l'?'2️⃣✨':FMG.mode==='x'?'⬇️✨':'🌳✨',FMG.mode==='l'?'兩同二分得好清楚！':FMG.mode==='x'?'下同落分得好清楚！':'字族高手！',FMG.mode==='l'?'You know 兩 and 二!':FMG.mode==='x'?'You know 下 and 落!':'Word family master!',FMG.mode==='b'?'famb':FMG.mode==='x'?'xialuo':FMG.mode==='l'?'liangyi':'famm');else go('famg');});},1700);}
 
 function weight(p,w){const s=p.words[w.c];if(!s||!s.seen)return 3;return [4,3,2,1,.5][s.box];}
 function pickWords(n,maxNew=3,filt){const p=cur();let pool=WORDS.filter(w=>w.lvl===lvl()&&(!filt||filt(w))&&(w.lvl!==5||sentReady(p,w))&&inUnitW(p,w)),out=[],newCount=0;
@@ -2674,18 +2757,18 @@ function go(name){screen=name;closeOverlay();const p=cur();
   if(P&&P.raf){cancelAnimationFrame(P.raf);P.raf=0;}
   setWorld(p&&!['profiles','parent','race','sfix'].includes(name)?BASE(p.theme):'both');
   if(name!=='trace'&&T.writer){T.writer=null;}
-  app.innerHTML=({profiles:rProfiles,home:rHome,mission:rMission,trace:rTrace,memory:rMemory,stickers:rStickers,parent:rParent,sfix:rSfix,read:rRead,fill:rFill,tf:rTF,sort:rSort,build:rBuild,body:rBody,pop:rPop,fork:rFork,race:rRace,words:rWords,fest:rFest,story:rStory,fquiz:rFQuiz,fam:rFam,famg:rFamg,places:rPlaces,freeplay:rFree,play:rPlay,shapes:rShapes,shg:rShg,songs:rSongs,song:rSong,panda:rPanda,polite:rPolite})[name]();
-  const el=app.firstElementChild;if(el){el.classList.add(p?'w-'+BASE(p.theme):'w-none');if(p)el.classList.add('th-'+p.theme);if(name==='home')markLocks();}
+  app.innerHTML=({profiles:rProfiles,home:rHome,mission:rMission,trace:rTrace,memory:rMemory,stickers:rStickers,parent:rParent,sfix:rSfix,read:rRead,fill:rFill,tf:rTF,sort:rSort,build:rBuild,body:rBody,pop:rPop,fork:rFork,race:rRace,words:rWords,fest:rFest,story:rStory,fquiz:rFQuiz,pairs:rPairs,pairq:rPairq,fam:rFam,famg:rFamg,places:rPlaces,freeplay:rFree,play:rPlay,shapes:rShapes,shg:rShg,songs:rSongs,song:rSong,panda:rPanda,polite:rPolite})[name]();
+  const el=app.firstElementChild;if(el){el.classList.add(p?'w-'+BASE(p.theme):'w-none');if(p)el.classList.add('th-'+p.theme);if(name==='home'){markLocks();charNudge();}}
   const en=ENTER[name];if(en)requestAnimationFrame(en);
 }
-const ENTER={places:()=>setTimeout(()=>{if(screen!=='places')return;if(PL2.mode==='explore')plSide('<div class="plcard"><div class="zh plask">撳個地方！</div><div class="note">Tap a place to hear its name</div></div>');else plAsk();},200),famg:()=>setTimeout(()=>{if(FMG&&screen==='famg')speak(FMG.qs[FMG.i].c);},400),shg:()=>setTimeout(shInit,60),polite:()=>setTimeout(()=>{if(PL&&screen==='polite'){const q=POL[PL.q[PL.i]];PL.ready=false;document.querySelectorAll('.plbub').forEach(b=>b.classList.add('locked'));narrate(q.zh,S.settings.storyEn!==false?q.en:null,()=>{if(!PL)return;PL.ready=true;document.querySelectorAll('.plbub').forEach(b=>b.classList.remove('locked'));});}},400),story:()=>setTimeout(()=>{if(FS&&screen==='story')storyNarrate();},400),fquiz:()=>setTimeout(()=>{if(FS&&screen==='fquiz')speak('邊個係'+FS.q[FS.qi].c+'？');},350),words:()=>setTimeout(()=>{if(WD&&screen==='words')speak(WD.qs[WD.i].c);},350),tf:()=>setTimeout(()=>{if(TF&&screen==='tf')speak(TF.qs[TF.i].w.c);},350),sfix:()=>sfDraw(),build:()=>setTimeout(()=>{if(BD&&screen==='build')speak(BD.qs[BD.i].c);},350),sort:()=>sortEnter(),mission:()=>autoSayQ(),trace:()=>initWriter(),body:()=>setTimeout(()=>{if(B&&screen==='body')speak(B.r[B.i].c);},350),pop:()=>popEnter(),fork:()=>setTimeout(()=>{if(F&&screen==='fork')speak(F.qs[F.i].c);},350),race:()=>setTimeout(()=>{if(R&&screen==='race')speak(R.w.c);},350)};
+const ENTER={pairq:()=>setTimeout(()=>{if(PQS&&screen==='pairq')pqSay();},400),places:()=>setTimeout(()=>{if(screen!=='places')return;if(PL2.mode==='explore')plSide('<div class="plcard"><div class="zh plask">撳個地方！</div><div class="note">Tap a place to hear its name</div></div>');else plAsk();},200),famg:()=>setTimeout(()=>{if(FMG&&screen==='famg')speak(FMG.qs[FMG.i].c);},400),shg:()=>setTimeout(shInit,60),polite:()=>setTimeout(()=>{if(PL&&screen==='polite'){const q=POL[PL.q[PL.i]];PL.ready=false;document.querySelectorAll('.plbub').forEach(b=>b.classList.add('locked'));narrate(q.zh,S.settings.storyEn!==false?q.en:null,()=>{if(!PL)return;PL.ready=true;document.querySelectorAll('.plbub').forEach(b=>b.classList.remove('locked'));});}},400),story:()=>setTimeout(()=>{if(FS&&screen==='story')storyNarrate();},400),fquiz:()=>setTimeout(()=>{if(FS&&screen==='fquiz')speak('邊個係'+FS.q[FS.qi].c+'？');},350),words:()=>setTimeout(()=>{if(WD&&screen==='words')speak(WD.qs[WD.i].c);},350),tf:()=>setTimeout(()=>{if(TF&&screen==='tf')speak(TF.qs[TF.i].w.c);},350),sfix:()=>sfDraw(),build:()=>setTimeout(()=>{if(BD&&screen==='build')speak(BD.qs[BD.i].c);},350),sort:()=>sortEnter(),mission:()=>autoSayQ(),trace:()=>initWriter(),body:()=>setTimeout(()=>{if(B&&screen==='body')speak(B.r[B.i].c);},350),pop:()=>popEnter(),fork:()=>setTimeout(()=>{if(F&&screen==='fork')speak(F.qs[F.i].c);},350),race:()=>setTimeout(()=>{if(R&&screen==='race')speak(R.w.c);},350)};
 function rProfiles(){return `<div class="screen profiles">
- <header class="ptop"><h1 class="title zh">中文樂</h1><p class="sub">Who's playing today?</p>
+ <header class="ptop"><h1 class="title"><span class="zh">中文樂</span> <span class="cfname">CantoFun</span></h1><p class="sub">Who's playing today?</p>
  <div class="corner"><button class="btn small mbtn" data-act="music" aria-label="Music">${musicLabel()}</button><button class="btn small" data-act="fullscreen" aria-label="Full screen">⛶</button><button class="btn small" data-act="parent">🔒 Parents</button></div></header>
- <div class="pcards">${S.profiles.map(p=>`<button class="pcard w-${BASE(p.theme)}" data-act="pick" data-id="${p.id}"><div class="pav">${heroAvatar(p.theme)}</div><div class="pname">${esc(p.name)}</div><div class="pmeta"><span>⭐ ${p.stars}</span><span>📒 ${p.stickers.length}</span></div></button>`).join('')}</div><div class="frontrow"><button class="btn big fest-btn" data-act="fest"><span class="emo">📖</span> <span class="zh">節日故事</span> Festival stories</button><button class="btn big play-btn" data-act="play"><span class="emo">🎈</span> <span class="zh">玩樂</span> Play</button></div><button class="btn big" data-act="race"><span class="emo">🏁</span> <span class="zh">比賽</span> Race</button><p class="ver">v${APPVER}</p></div>`;}
+ <div class="pcards">${S.profiles.map(p=>`<button class="pcard w-${BASE(p.theme)}" data-act="pick" data-id="${p.id}"><div class="pav">${heroAvatar(p.theme)}</div><div class="pname">${esc(p.name)}</div><div class="pmeta"><span>⭐ ${p.stars}</span><span>📒 ${p.stickers.length}</span>${p.age?`<span>${p.age} 歲</span>`:''}</div></button>`).join('')}${S.profiles.length<6?`<button class="pcard pnew" data-act="newp"><div class="pav emo">➕</div><div class="pname zh">新玩家</div><div class="pmeta"><span>New player</span></div></button>`:''}</div><div class="frontrow"><button class="btn big fest-btn" data-act="fest"><span class="emo">📖</span> <span class="zh">節日故事</span> Festival stories</button><button class="btn big play-btn" data-act="play"><span class="emo">🎈</span> <span class="zh">玩樂</span> Play</button></div><button class="btn big" data-act="race"><span class="emo">🏁</span> <span class="zh">比賽</span> Race</button><p class="ver">v${APPVER}</p></div>`;}
 function rHome(){const p=cur(),truck=BASE(p.theme)==='truck';return `<div class="screen home">
  <div class="topbar"><button class="btn icon-btn" data-act="profiles" aria-label="Change player">⬅️</button><div class="who">${esc(p.name)}</div><div class="sp"></div><button class="btn small pdpill" data-act="panda" aria-label="Baby panda">🐼 ${mmss(pandaLeft(p))}</button><button class="btn small mbtn" data-act="music" aria-label="Music">${musicLabel()}</button><div class="pill">⭐ <b id="stars">${p.stars}</b></div></div>
- <div class="homegrid"><div class="hero"><button class="herobtn" data-act="herotap" aria-label="Tickle">${heroAvatar(p.theme)}</button>
+ <div class="homegrid"><div class="hero"><button class="herobtn" data-act="herotap" aria-label="Tickle">${heroAvatar(p.theme)}</button><button class="btn small chbtn" data-act="chpick">🔄 換角色</button>
   <div class="levels"><span class="lvl-label">Level</span>${LORD.map((n,i)=>`<button class="lvl ${n===lvl()?'on':''} " data-act="setlvl" data-n="${n}" aria-label="Level ${i+1}">${i+1}</button>`).join('')}</div>${unitsHTML(p)}</div>
   <div class="tiles">
    <button class="tile t-mission" data-act="mission"${lvl()===2?' style="grid-column:span 2"':''}><span class="big emo">${THf(p.theme).mi}</span><span class="txt"><span class="zh">${THf(p.theme).mz}</span><span class="en">${THf(p.theme).me}</span></span></button>
@@ -2710,7 +2793,7 @@ let M=null;
 const STOPS={doctor:['🏠','🚦','🌳','🏪','🚧','🏫','🌉','🏘️','🏥'],dentist:['🛏️','🪥','🥛','🍎','🧸','🚌','🌳','😁','🦷'],truck:['🏢','🚦','🌉','🏙️','🌳','🚧','🏘️','🌲','🔥'],princess:['🛏️','🪥','🥣','🎒','🏫','🛝','🍰','🛁','🌙']};
 const posPct=i=>6+i*(88/8);
 function makeQ(w){if(w.lvl===5)return{w,type:'pic',opts:shuffle([w,...distractors(w)])};const p=cur(),s=p.words[w.c];const type=(!s||!s.seen||s.box===0)?'pic':(Math.random()<.5?'pic':'char');return{w,type,opts:shuffle([w,...distractors(w)])};}
-function startMission(){M={qs:pickWords(8).map(makeQ),i:0,first:true,locked:false,earned:0,streak:0,since:0};go('mission');showIntro();}
+function startMission(){const ws=pickWords(8);for(let k=0;ws.length&&ws.length<8;k++)ws.push(ws[k%ws.length]);M={qs:ws.map(makeQ),i:0,first:true,locked:false,earned:0,streak:0,since:0};go('mission');showIntro();}
 function rMission(){const p=cur(),q=M.qs[M.i];return `<div class="screen mission">
  <div class="topbar"><button class="btn icon-btn" data-act="home" aria-label="Back">⬅️</button><div class="sp"></div><div class="pill streak">${THf(p.theme).st} <b id="streak">${M.streak}</b></div><div class="pill">⭐ <b id="stars">${p.stars}</b></div></div>
  <div class="track">${(STOPS[p.theme]||STOPS[BASE(p.theme)]).map((e,i)=>`<span class="stop emo ${i<=M.i&&i>0?'past':''}" style="left:${posPct(i)}%">${e}</span>`).join('')}<div class="rider" id="rider" style="left:${posPct(M.i)}%">${riderSVG(p.theme)}</div></div>
@@ -2744,17 +2827,21 @@ let bonusAfter=null;
 
 /* ---------- minigame (fun only, 20 seconds) ---------- */
 const fpic=(c,cls='')=>`<svg class="${cls}" viewBox="0 0 100 100" aria-hidden="true">${artFor(c)||''}</svg>`;
+const EZ=()=>{const p=cur();return !!(p&&p.age==='2-4');};
+const setW=(f,k)=>{f.dataset.want=k;f.dataset.wt=Date.now();};
+const born=(el,k)=>{el.dataset.key=k;el.dataset.born=Date.now();};
+function ezTick(f){const w=f.dataset.want,wt=+f.dataset.wt||0,now=Date.now();f.querySelectorAll('[data-key]').forEach(e=>{e.classList.toggle('ezglow',!!w&&e.dataset.key===w&&now-Math.max(+e.dataset.born||0,wt)>3000);});}
 const ZOO=[['🐱','貓仔'],['🐧','企鵝'],['🐼','熊貓'],['🐵','猴子'],['🐶','狗仔'],['🐰','兔仔']];
 const CN=['零','一','兩','三','四','五','六'];
 const wantBadge=(f,html)=>{let b=f.querySelector('.mwant');if(!b){b=document.createElement('div');b.className='mwant';f.appendChild(b);}b.innerHTML=html;b.animate([{scale:'1.3'},{scale:'1'}],{duration:300});};
-function miniClassic(done,force){closeOverlay();const p=cur(),truck=(force||BASE(p.theme))==='truck';let score=0,left=30,alive=true;
+function miniClassic(done,force){closeOverlay();const p=cur(),truck=(force||BASE(p.theme))==='truck',ez=EZ(),DURc=ez?40:30;let score=0,left=DURc,alive=true;
   const el=document.createElement('div');el.className='mini m-'+(truck?'truck':'princess');
   const BL=Array.from({length:6},(_,i)=>({l:4+i*16,w:13,h:28+Math.round(Math.random()*30)}));const blds=truck?BL.map(b=>`<div class="bld" style="left:${b.l}%;width:${b.w}%;height:${b.h}%"></div>`).join(''):`<div class="castle emo">🏰</div>`;
   el.innerHTML=`<div class="mbar"><span class="emo" style="font-size:34px">⏱️</span><div class="mtime"><i id="mt"></i></div><div class="mscore" id="ms">0</div></div><div class="mfield" id="mf">${blds}<div class="hero-mini" id="mh">${truck?avatar('truck'):princessWandSVG()}</div></div>`;
   document.body.appendChild(el);setTempo(150);
   const field=el.querySelector('#mf');if(truck){const fh=field.clientHeight||500,maxR=Math.max(4,Math.floor((fh*.62-14)/34));field.querySelectorAll('.bld').forEach((d,i)=>{const r=3+Math.floor(Math.random()*(maxR-2)),hp=r*34+14;BL[i].h=hp/fh*100;d.style.height=hp+'px';});}
-  let SPW=null,SPN=0;const spWant=()=>{let w;do{w=pick(ZOO);}while(SPW&&w[1]===SPW[1]);SPW=w;wantBadge(field,`救 <span class="emo">${w[0]}</span> ${w[1]}`);speak('救'+w[1]+'！');};
-  const T0=Date.now();function spawn(){if(!alive)return;const b=document.createElement('button');b.className='target emo';if(truck){const an=Math.random()<.45&&SPW?SPW:pick(ZOO);b.dataset.an=an[1];b.innerHTML=`<span class="tan">${an[0]}</span><span>🔥</span>`;}else b.textContent=pick(['⭐','💎','🌸','🦋','🍓']);
+  let SPW=null,SPN=0;const spWant=()=>{let w;do{w=pick(ZOO);}while(SPW&&w[1]===SPW[1]);SPW=w;setW(field,w[1]);wantBadge(field,`救 <span class="emo">${w[0]}</span> ${w[1]}`);speak('救'+w[1]+'！');};
+  const T0=Date.now();function spawn(){if(!alive)return;const b=document.createElement('button');b.className='target emo';if(truck){if(ez&&field.querySelectorAll('.target:not(.hit)').length>=2)return;const an=Math.random()<(ez?.7:.45)&&SPW?SPW:pick(ZOO);b.dataset.an=an[1];born(b,an[1]);b.innerHTML=`<span class="tan">${an[0]}</span><span>🔥</span>`;}else b.textContent=pick(['⭐','💎','🌸','🦋','🍓']);
     let x,y;if(truck){const bd=pick(BL);x=bd.l+bd.w*(.2+Math.random()*.6);y=70-bd.h+bd.h*(.15+Math.random()*.7);}else{x=8+Math.random()*84;y=8+Math.random()*58;}b.style.left=x+'%';b.style.top=y+'%';field.appendChild(b);setTimeout(()=>{if(!b.classList.contains('hit'))b.remove();},truck?Math.max(2400,3300-(Date.now()-T0)*.012):Math.max(1150,1900-(Date.now()-T0)*.03));}
   field.addEventListener('pointerdown',e=>{const b=e.target.closest('.target');if(!b||b.classList.contains('hit')||!alive)return;b.classList.add('hit');
     const right=!truck||b.dataset.an===(SPW&&SPW[1]);if(right){score++;el.querySelector('#ms').textContent=score;}
@@ -2766,8 +2853,8 @@ function miniClassic(done,force){closeOverlay();const p=cur(),truck=(force||BASE
     else{sfx('sparkle');const fr=field.getBoundingClientRect(),hr=el.querySelector('#mh').getBoundingClientRect(),br=b.getBoundingClientRect();waterStream(field,hr.left-fr.left+hr.width*.94,hr.top-fr.top+hr.height*.46,br.left+br.width/2-fr.left,br.top+br.height/2-fr.top,MAGIC);setTimeout(()=>{b.textContent='✨';burst(b,6);},360);}
     setTimeout(()=>b.remove(),500);});
   let sp=0;const loopSp=()=>{if(!alive)return;spawn();sp=setTimeout(loopSp,truck?Math.max(700,950-(Date.now()-T0)*.006):Math.max(360,620-(Date.now()-T0)*.012));};if(truck)spWant();loopSp();handHint(field,'tap',truck?[50,40]:[50,32]);
-  const tk=setInterval(()=>{left-=.1;el.querySelector('#mt').style.width=Math.max(0,left/30*100)+'%';if(left<=0)finish();},100);
-  function finish(){if(!alive)return;alive=false;clearInterval(sp);clearInterval(tk);setTempo(104);const gain=Math.min(5,Math.ceil(score/3));p.stars+=gain;p.minigames++;save();const lb=lbAdd(p,truck?'spray':'sparkle',score);
+  const tk=setInterval(()=>{left-=.1;el.querySelector('#mt').style.width=Math.max(0,left/DURc*100)+'%';if(ez)ezTick(field);if(left<=0)finish();},100);if(ez)el.classList.add('ez');
+  function finish(){if(!alive)return;alive=false;clearInterval(sp);clearInterval(tk);setTempo(104);const gain=Math.min(5,Math.ceil(score/3));p.stars+=gain;p.minigames++;p.cuse=(p.cuse||0)+1;save();const lb=lbAdd(p,truck?'spray':'sparkle',score);
     const r=document.createElement('div');r.className='overlay';r.innerHTML=`<div class="modal"><span class="bigemo emo">${truck?'🧯':'👑'}</span><h2>${score}</h2><p>${truck?'fires put out!':'sparkles collected!'} ⭐ +${gain}</p>${lbHTML(lb)}<div class="row"><button class="btn big primary" id="mback">Keep going ▶️</button></div></div>`;
     el.appendChild(r);sfx('fanfare');r.querySelector('#mback').addEventListener('click',()=>{el.remove();bumpStars();done&&done();});}
 }
@@ -2793,13 +2880,18 @@ function initWriter(){const host=$('#hw'),box=$('#tbox');if(!host||!box||typeof 
   setTimeout(watchThenQuiz,300);}
 function watchThenQuiz(){const w=T.writer;if(!w)return;try{w.cancelQuiz();}catch(e){}speak((T.k||0)>0?traceChars(T.c)[T.k]:(TW(T.c).say||T.c));
   w.animateCharacter({onComplete:()=>setTimeout(()=>{if(T.writer===w)startQuiz();},500)});}
-function startQuiz(){const w=T.writer;if(!w)return;
-  w.quiz({leniency:1.5,showHintAfterMisses:2,markStrokeCorrectAfterMisses:4,onCorrectStroke:()=>sfx('pop'),onMistake:()=>sfx('soft'),onComplete:()=>traceStep()});}
-function traceDone(){const p=cur(),wd=TW(T.c),s=ws(p,T.c);s.traced++;p.traced++;p.stars+=2;BS++;save();bumpStars();setTimeout(()=>withBonus('trace',traceAdvance),2600);
-  sfx('fanfare');const pr=pick(PRAISE);praiseFx(pr);speak(pr+' '+sayOf(wd));
+function startQuiz(){const w=T.writer;if(!w)return;T.hint=new Set();T.mt=[];
+  w.quiz({leniency:1.5,showHintAfterMisses:2,markStrokeCorrectAfterMisses:false,onCorrectStroke:()=>sfx('pop'),
+    onMistake:d=>{sfx('soft');if(d.mistakesOnStroke>=2)T.hint.add(d.strokeNum);const now=Date.now();T.mt=(T.mt||[]).filter(t=>now-t<2000);T.mt.push(now);if(T.mt.length>=3){T.mt=[];scribblePause();}},
+    onComplete:()=>{const ch=traceChars(T.c)[T.k||0],n=(charData(ch)||{strokes:[1]}).strokes.length,messy=T.hint.size>n/2;
+      if(messy&&!T.retried){T.retried=true;T.messy=true;const st=$('#tstep');if(st)st.textContent='再寫一次！';speak('再寫一次！慢慢寫。');setTimeout(()=>{if(T.writer===w)watchThenQuiz();},1400);return;}
+      if(messy)T.messy=true;T.retried=false;traceStep();}});}
+function scribblePause(){const w=T.writer;if(!w)return;try{w.cancelQuiz();}catch(e){}const st=$('#tstep');if(st)st.textContent='✋ 慢慢寫';speak('慢慢寫！睇清楚先。');setTimeout(()=>{if(T.writer===w)watchThenQuiz();},900);}
+function traceDone(){const p=cur(),wd=TW(T.c),s=ws(p,T.c),messy=!!T.messy;T.messy=false;T.retried=false;s.traced++;p.traced++;if(!messy){p.stars+=2;BS++;}save();bumpStars();setTimeout(()=>withBonus('trace',traceAdvance),2600);
+  sfx(messy?'star':'fanfare');const pr=messy?'寫完喇！下次寫靚啲！':pick(PRAISE);praiseFx(pr);speak(pr+' '+sayOf(wd));
   const a=$('#alive');if(a){a.className='alive '+(ALIVE[T.c]||'bounce');a.innerHTML=`<span>${picHTML(wd)}</span>`;void a.offsetWidth;a.classList.add('show');}
   const ch=document.querySelector(`.chip[data-c="${T.c}"]`);if(ch)ch.classList.add('done');burst($('#tbox'),14);}
-function setTraceChar(c){T.c=c;T.k=0;document.querySelectorAll('.chip').forEach(x=>x.classList.toggle('on',x.dataset.c===c));const a=$('#alive');if(a)a.className='alive';initWriter();}
+function setTraceChar(c){T.c=c;T.k=0;T.messy=false;T.retried=false;document.querySelectorAll('.chip').forEach(x=>x.classList.toggle('on',x.dataset.c===c));const a=$('#alive');if(a)a.className='alive';initWriter();}
 
 /* ---------- memory ---------- */
 let MM=null;
@@ -2878,7 +2970,7 @@ function bodyTap(part,el){if(!B||B.locked)return;const q=B.r[B.i],w=W(q.c)||L4W.
 /* ---------- pop game: tap the character you hear ---------- */
 let P=null;
 function startPop(){P={qs:pickWords(8),i:0,first:true,locked:false,raf:0,items:[]};go('pop');}
-function rPop(){const p=cur();return `<div class="screen pop">${topbarDots(P.i,P.qs.length)}${promptBox(P.qs[P.i])}<div class="pfield" id="pfield">${BASE(p.theme)==='truck'?`<div class="phero" id="phero">${riderSVG(p.theme)}</div>`:`<div class="phero ph-princess" id="phero">${princessWandSVG()}</div>`}</div></div>`;}
+function rPop(){const p=cur();return `<div class="screen pop">${topbarDots(P.i,P.qs.length)}${promptBox(P.qs[P.i])}<div class="pfield" id="pfield">${BASE(p.theme)==='truck'?`<div class="phero" id="phero">${riderSVG(p.theme)}</div>`:`<div class="phero ph-princess" id="phero">${p.theme==='princess'?princessWandSVG():riderSVG(p.theme)}</div>`}</div></div>`;}
 function popEnter(){const f=$('#pfield');if(!f||!P)return;const truck=BASE(cur().theme)==='truck',w=P.qs[P.i],opts=shuffle([w,...distractors(w,2)]),lanes=shuffle([34,60,86]);
   P.items=opts.map((o,k)=>{const b=document.createElement('button');b.className='bub '+(truck?'fire':'bubble')+([...o.c].length>1?' wide':'');b.setAttribute('aria-label',o.c);
     b.innerHTML=(truck?`<span class="flame emo">${THf(cur().theme).fire||'🔥'}</span>`:'')+`<span class="bcore">${glyph(o.c)}</span>`;f.appendChild(b);return{el:b,o,x:lanes[k],y:96+k*16,ph:Math.random()*6,dead:false};});
@@ -2989,17 +3081,17 @@ const cupSVG=col=>`<svg viewBox="0 0 60 60" aria-hidden="true"><path d="M14 31 H
 const MFACES=['👧','🧒','👦','👩','👨','👵','👴','🐻','🐰','🐼'];
 const MINIS={
 drive:(api,o={})=>{const f=api.field;const IT=o.items||{star:'⭐',drop:'💧',cone:'🚧'},VOC=!o.items,FOODS=['蘋果','香蕉','叉燒包','雪糕','魚蛋','西瓜','菠蘿包','蛋撻'];let want=pick(FOODS),got=0;
-  const dwant=()=>{wantBadge(f,`接 <svg viewBox="0 0 100 100" aria-hidden="true">${artFor(want)||''}</svg> ${want}`);speak('接'+want+'！');};
+  const dwant=()=>{setW(f,want);wantBadge(f,`接 <svg viewBox="0 0 100 100" aria-hidden="true">${artFor(want)||''}</svg> ${want}`);speak('接'+want+'！');};
   f.insertAdjacentHTML('beforeend',`<div class="dr-cloud emo" style="top:4%;left:18%">☁️</div><div class="dr-cloud emo" style="top:9%;left:62%">☁️</div><div class="dr-road"><i class="dr-line" style="top:33.3%"></i><i class="dr-line" style="top:66.6%"></i></div><div class="dr-truck" id="drt">${o.car||avatar('truck')}</div>`);
   const tr=f.querySelector('#drt');let lane=1,objs=[],raf=0,last=performance.now(),t0=last,next=last+600;
   const dims=()=>{const r=f.getBoundingClientRect(),top=r.height*.28;return{W:r.width,H:r.height,top,lh:(r.height-top)/3};};
   const place=()=>{const d=dims(),w=d.lh*1.55;tr.style.width=w+'px';tr.style.top=(d.top+d.lh*(lane+.5)-w*.32)+'px';};place();
   const down=e=>{if(!api.alive())return;const r=f.getBoundingClientRect(),d=dims();lane=Math.max(0,Math.min(2,Math.floor((e.clientY-r.top-d.top)/d.lh)));place();sfx('pop');};
   f.addEventListener('pointerdown',down);
-  function spawn(){const d=dims(),k=Math.random(),kind=VOC?(k<.75?'food':k<.88?'cone':'sock'):(k<.6?'star':k<.85?'drop':'cone'),o={kind,lane:Math.floor(Math.random()*3),x:d.W+40,el:document.createElement('div')};
+  function spawn(){const d=dims(),k=Math.random(),kind=EZ()?(VOC?'food':(k<.6?'star':'drop')):VOC?(k<.75?'food':k<.88?'cone':'sock'):(k<.6?'star':k<.85?'drop':'cone'),o={kind,lane:Math.floor(Math.random()*3),x:d.W+40,el:document.createElement('div')};
     o.el.className='mobj emo';const sz=Math.round(d.lh*.55);o.el.style.fontSize=sz+'px';
-    if(kind==='food'){o.c=Math.random()<.45?want:pick(FOODS);o.el.innerHTML=`<svg viewBox="0 0 100 100" style="width:${sz*1.2}px;height:${sz*1.2}px;display:block" aria-hidden="true">${artFor(o.c)||''}</svg>`;}else o.el.textContent=kind==='sock'?'🧦':IT[kind];f.appendChild(o.el);objs.push(o);}
-  function loop(now){if(!api.alive())return;const dt=Math.min(.05,(now-last)/1000);last=now;const d=dims(),el=(now-t0)/1000,sp=d.W*(.2+.006*el),s=d.lh*.55,tl=d.W*.04,tw=d.lh*1.55;
+    if(kind==='food'){o.c=Math.random()<(EZ()?.65:.45)?want:pick(FOODS);born(o.el,o.c);o.el.innerHTML=`<svg viewBox="0 0 100 100" style="width:${sz*1.2}px;height:${sz*1.2}px;display:block" aria-hidden="true">${artFor(o.c)||''}</svg>`;}else o.el.textContent=kind==='sock'?'🧦':IT[kind];f.appendChild(o.el);objs.push(o);}
+  function loop(now){if(!api.alive())return;const dt=Math.min(.05,(now-last)/1000);last=now;const d=dims(),el=(now-t0)/1000,sp=d.W*(EZ()?.15:(.2+.006*el)),s=d.lh*.55,tl=d.W*.04,tw=d.lh*1.55;
     if(now>=next){spawn();next=now+Math.max(650,1150-el*10)+Math.random()*260;}
     objs.forEach(o=>{if(o.done)return;o.x-=sp*dt;o.el.style.transform=`translate(${(o.x-s/2).toFixed(1)}px,${(d.top+d.lh*(o.lane+.5)-s*.6).toFixed(1)}px)`;
       if(o.lane===lane&&o.x>tl+tw*.15&&o.x<tl+tw*.95){o.done=true;
@@ -3020,8 +3112,8 @@ cats:api=>{const f=api.field,TX=[18,50,82];
   const base=()=>{const r=f.getBoundingClientRect(),th=trk.getBoundingClientRect().height;return{H:r.height,W:r.width,bot:r.height*.01+th*.72};};
   function spawnCat(){if(!api.alive())return;const free=[0,1,2].filter(i=>!cats[i]);if(!free.length)return;const i=pick(free),fr=f.getBoundingClientRect(),tr=trees[i].getBoundingClientRect(),sz=Math.min(tr.width,tr.height);
     const x=tr.left-fr.left+tr.width/2+(Math.random()-.5)*sz*.35,y=tr.bottom-fr.top-sz*.68+(Math.random()-.5)*sz*.3;
-    const used=cats.filter(Boolean).map(c=>c.an);const kd=pick(ZOO.filter(z=>!used.includes(z[1])));const el=document.createElement('div');el.className='ct-cat emo';el.textContent=kd[0];el.style.left=x+'px';el.style.top=y+'px';f.appendChild(el);cats[i]={el,x,y,an:kd[1]};if(!want||!cats.some(c=>c&&c.an===want))setWant();}
-  let want=null;function setWant(){const here=cats.filter(Boolean);if(!here.length)return;want=pick(here).an;const e=here.find(c=>c.an===want).el.textContent;wantBadge(f,`救 <span class="emo">${e}</span> ${want}`);speak('救'+want+'！');}
+    const used=cats.filter(Boolean).map(c=>c.an);const kd=pick(ZOO.filter(z=>!used.includes(z[1])));const el=document.createElement('div');el.className='ct-cat emo';el.textContent=kd[0];born(el,kd[1]);el.style.left=x+'px';el.style.top=y+'px';f.appendChild(el);cats[i]={el,x,y,an:kd[1]};if(!want||!cats.some(c=>c&&c.an===want))setWant();}
+  let want=null;function setWant(){const here=cats.filter(Boolean);if(!here.length)return;want=pick(here).an;setW(f,want);const e=here.find(c=>c.an===want).el.textContent;wantBadge(f,`救 <span class="emo">${e}</span> ${want}`);speak('救'+want+'！');}
   const wrong=c=>{busy=true;hold=false;sfx('soft');c.el.animate([{rotate:'0deg'},{rotate:'-15deg'},{rotate:'15deg'},{rotate:'0deg'}],{duration:450});speak('我係'+c.an+'！救'+want+'呀！');timers.push(setTimeout(()=>{busy=false;},1000));};
   const down=e=>{if(!api.alive()||busy)return;const r=f.getBoundingClientRect(),px=(e.clientX-r.left)/r.width*100;let i=0;TX.forEach((x,k)=>{if(Math.abs(x-px)<Math.abs(TX[i]-px))i=k;});
     if(!cats[i]){sfx('soft');return;}hold=true;if(at!==i){at=i;L=0;trk.style.left=TX[i]+'%';lad.style.left=TX[i]+'%';arrive=performance.now()+480;}else arrive=performance.now();};
@@ -3038,11 +3130,11 @@ cats:api=>{const f=api.field,TX=[18,50,82];
   return{stop:()=>{cancelAnimationFrame(raf);timers.forEach(clearTimeout);f.removeEventListener('pointerdown',down);window.removeEventListener('pointerup',up);window.removeEventListener('pointercancel',up);},gain:s=>Math.min(5,s),emo:'🐱🚒',msg:'kittens rescued!'};},
 
 dragon:api=>{const f=api.field,DF=['蘋果','香蕉','西瓜','叉燒包','雪糕','蛋糕'],rd=(lvl()>=3&&lvl()!==11);let want=pick(DF),fed=0;
-  const dwant=()=>{wantBadge(f,`餵 ${rd?'':fpic(want)} ${want}`);speak('隻龍想食'+want+'！');};
+  const dwant=()=>{setW(f,want);wantBadge(f,`餵 ${rd?'':fpic(want)} ${want}`);speak('隻龍想食'+want+'！');};
   f.insertAdjacentHTML('beforeend',`<div class="castle emo" style="opacity:.95">🏰</div><div class="hero-mini" id="mh" style="left:14%;transform:none">${princessWandSVG()}</div>`);
   const castle=f.querySelector('.castle'),hero=f.querySelector('#mh');let ds=[],raf=0,last=performance.now(),t0=last,next=last+300;
-  function spawn(){const el=document.createElement('div'),fromL=Math.random()<.5,c=Math.random()<.45?want:pick(DF);el.className='dg-dragon emo';el.innerHTML=`<span class="dgw">${fpic(c)}</span>🐉`;f.appendChild(el);
-    ds.push({el,c,fromL,sx:fromL?-.08:1.08,sy:.08+Math.random()*.38,t:0,dur:Math.max(2.4,4.4-(performance.now()-t0)/1000*.06),st:'fly',x:0,y:0});}
+  function spawn(){if(EZ()&&ds.some(d=>d.st==='fly'))return;const el=document.createElement('div'),fromL=Math.random()<.5,c=Math.random()<(EZ()?.7:.45)?want:pick(DF);born(el,c);el.className='dg-dragon emo';el.innerHTML=`<span class="dgw">${fpic(c)}</span>🐉`;f.appendChild(el);
+    ds.push({el,c,fromL,sx:fromL?-.08:1.08,sy:.08+Math.random()*.38,t:0,dur:EZ()?6:Math.max(2.4,4.4-(performance.now()-t0)/1000*.06),st:'fly',x:0,y:0});}
   const down=e=>{if(!api.alive())return;const el=e.target.closest('.dg-dragon');if(!el)return;const o=ds.find(d=>d.el===el);if(!o||o.st!=='fly')return;o.st='hit';
     if(o.c!==want){sfx('soft');speak('乞嗤！佢唔食'+o.c+'！');el.querySelector('.dgw').innerHTML='✨';el.animate([{scale:'1'},{scale:'1.3'},{scale:'1'}],{duration:300});setTimeout(()=>{o.st='away';},300);return;}
     api.add(1);sfx('sparkle');fed++;speak(pick(['好好食！','多謝公主！']));if(fed%2===0)setTimeout(()=>{if(api.alive()){want=pick(DF.filter(x=>x!==want));dwant();}},900);
@@ -3064,7 +3156,7 @@ dragon:api=>{const f=api.field,DF=['蘋果','香蕉','西瓜','叉燒包','雪�
 cupcake:api=>{const cT0=performance.now(),f=api.field,useWord=(lvl()>=3&&lvl()!==11),SX=[18,50,82],slots=[null,null,null],timers=[];let drag=null,sel=null;
   f.insertAdjacentHTML('beforeend',`<div class="cc-shop"></div><div class="cc-counter"></div>`+CAKES.map((k,i)=>`<div class="cc-cake" data-k="${i}" style="left:${17+i*22}%">${cupSVG(k.c)}</div>`).join(''));
   const order=c=>useWord?`<span class="zh">${CAKES[c].k}</span>`:cupSVG(CAKES[c].c);
-  function newCust(i){if(!api.alive()||slots[i])return;const want=Math.floor(Math.random()*4),el=document.createElement('div');el.className='cust';el.style.left=SX[i]+'%';el.style.top='36%';
+  function newCust(i){if(!api.alive()||slots[i]||(EZ()&&i!==1))return;const want=Math.floor(Math.random()*(EZ()?2:4)),el=document.createElement('div');el.className='cust';el.style.left=SX[i]+'%';el.style.top='36%';
     const an=pick(ZOO);el.innerHTML=`<div class="cbub">${order(want)}</div><div class="cface emo">${an[0]}</div>`;f.appendChild(el);const c={el,want,i};slots[i]=c;speak(an[1]+'要'+CAKES[want].k+'蛋糕！');
     c.timer=setTimeout(()=>leave(c),Math.max(5000,9000-(performance.now()-cT0)*.12));}
   function leave(c){clearTimeout(c.timer);if(slots[c.i]===c)slots[c.i]=null;c.el.style.opacity=0;timers.push(setTimeout(()=>c.el.remove(),450),setTimeout(()=>newCust(c.i),900+Math.random()*900));}
@@ -3099,22 +3191,24 @@ wash:(api,o={})=>{const f=api.field;f.insertAdjacentHTML('beforeend',`<div class
   const tr=f.querySelector('#wst');let blobs=[],rub=false,lastB=0,timers=[],resetting=false;
   function splat(){const n=4+Math.floor(Math.random()*3),sp=o.spots?shuffle(o.spots).slice(0,n):null;for(let i=0;i<n;i++){const b=document.createElement('div');b.className=o.blob||'ws-mud ws-food';const s=o.spots?11:13+Math.random()*5;if(!o.blob){b.dataset.c=pick(o.foods||['雪糕','雞蛋','番茄','西瓜','蛋糕','粥']);b.innerHTML=`<svg viewBox="0 0 100 100" aria-hidden="true">${artFor(b.dataset.c)||''}</svg>`;}
       b.style.width=s+'%';b.style.left=(sp?sp[i][0]:6+Math.random()*80)+'%';b.style.top=(sp?sp[i][1]:12+Math.random()*62)+'%';tr.appendChild(b);blobs.push({el:b,dirt:1});}sfx(o.spots?'soft':'splash');}
-  function rubAt(x,y){blobs.forEach(o=>{if(o.dirt<=0)return;const r=o.el.getBoundingClientRect(),cx=r.left+r.width/2,cy=r.top+r.height/2;
-      if(Math.hypot(x-cx,y-cy)<Math.max(r.width,40)*.9){o.dirt-=.22;o.el.style.opacity=Math.max(0,o.dirt);
-        if(o.dirt<=0){api.add(1);sfx('pop');burst(o.el,4);if(o.el.dataset.c)speak(o.el.dataset.c+'冇咗！');setTimeout(()=>o.el.remove(),200);}}});
+  let want=null,lastNo=0;const SILLY={'襪':'點解牙齒有隻襪㗎？','鉛筆':'牙齒上面有枝鉛筆！'};
+  const bwant=()=>{if(!o.listen)return;const here=[...new Set(blobs.filter(q=>q.dirt>0).map(q=>q.el.dataset.c))];if(!here.length)return;want=pick(here);wantBadge(f,`刷走 <svg viewBox="0 0 100 100" aria-hidden="true">${artFor(want)||''}</svg> ${want}`);speak(SILLY[want]||('刷走'+want+'！'));};
+  function rubAt(x,y){blobs.forEach(q=>{if(q.dirt<=0)return;const r=q.el.getBoundingClientRect(),cx=r.left+r.width/2,cy=r.top+r.height/2;
+      if(Math.hypot(x-cx,y-cy)<Math.max(r.width,40)*.9){if(o.listen&&q.el.dataset.c!==want){const nw=performance.now();if(nw-lastNo>1600){lastNo=nw;sfx('soft');speak('唔係'+q.el.dataset.c+'！刷走'+want+'！');}return;}const o2=q;o2.dirt-=.22;o2.el.style.opacity=Math.max(0,o2.dirt);
+        if(o2.dirt<=0){api.add(1);sfx('pop');burst(o2.el,4);if(o2.el.dataset.c)speak(o2.el.dataset.c+'冇咗！');setTimeout(()=>o2.el.remove(),200);if(o.listen)setTimeout(()=>{if(api.alive())bwant();},900);}}});
     blobs=blobs.filter(o=>o.dirt>0);const now=performance.now();
     if(now-lastB>140){lastB=now;const fr=f.getBoundingClientRect(),bb=document.createElement('div');bb.className='ws-foam emo';bb.textContent='🫧';bb.style.left=(x-fr.left)+'px';bb.style.top=(y-fr.top)+'px';f.appendChild(bb);setTimeout(()=>bb.remove(),800);}
-    if(!blobs.length&&api.alive()&&!resetting){resetting=true;sfx('star');tr.classList.add('shine');timers.push(setTimeout(()=>{tr.classList.remove('shine');resetting=false;if(api.alive())splat();},700));}}
+    if(!blobs.length&&api.alive()&&!resetting){resetting=true;sfx('star');tr.classList.add('shine');timers.push(setTimeout(()=>{tr.classList.remove('shine');resetting=false;if(api.alive()){splat();bwant();}},700));}}
   const down=e=>{if(!api.alive())return;rub=true;rubAt(e.clientX,e.clientY);},move=e=>{if(rub&&api.alive())rubAt(e.clientX,e.clientY);},up=()=>{rub=false;};
   f.addEventListener('pointerdown',down);f.addEventListener('pointermove',move);window.addEventListener('pointerup',up);window.addEventListener('pointercancel',up);
-  splat();api.demo('rub',[50,50]);api.hint(o.hz||'消防車整污糟咗！',o.he||'Rub the food off the fire truck');
+  splat();if(o.listen)setTimeout(()=>{if(api.alive())bwant();},1500);api.demo('rub',[50,50]);api.hint(o.hz||'消防車整污糟咗！',o.he||'Rub the food off the fire truck');
   return{stop:()=>{timers.forEach(clearTimeout);f.removeEventListener('pointerdown',down);f.removeEventListener('pointermove',move);window.removeEventListener('pointerup',up);window.removeEventListener('pointercancel',up);},gain:s=>Math.ceil(s/3),emo:o.emo||'🚒🫧',msg:o.msg||'mud spots washed!'};},
 
 lights:api=>{const f=api.field;
   f.insertAdjacentHTML('beforeend',`<div class="tl-city" id="tlc"></div><div class="tl-road" id="tlr"></div><div class="tl-post"><div class="tl-box"><i class="tl-lamp r"></i><i class="tl-lamp a"></i><i class="tl-lamp g"></i></div></div><div class="tl-truck hold" id="tlt">${avatar('truck')}<span class="tl-holdtxt zh">按住</span></div>`);
   const box=f.querySelector('.tl-box'),road=f.querySelector('#tlr'),city=f.querySelector('#tlc'),trk=f.querySelector('#tlt');let state='g',timer=0,pos=0,hold=false,acc=0,redT=0,raf=0,last=performance.now();const t0=last;
   function set(s){state=s;box.dataset.s=s;if(s==='g')speak('綠燈，行！');if(s==='r'){speak('紅燈，停！');redT=0;setTimeout(()=>{if(api.alive()&&state==='r')parade();},900);}
-    const k=Math.max(.5,1-(performance.now()-t0)/60000);const d=s==='g'?(2600+Math.random()*2000)*k:s==='a'?900:4200+Math.random()*800;timer=setTimeout(()=>{if(api.alive())set(s==='g'?'a':s==='a'?'r':'g');},d);}
+    const k=Math.max(.5,1-(performance.now()-t0)/60000);const d=s==='g'?(2600+Math.random()*2000)*k*(EZ()?1.6:1):s==='a'?900:(EZ()?3600:4200+Math.random()*800);timer=setTimeout(()=>{if(api.alive())set(s==='g'?'a':s==='a'?'r':'g');},d);}
   const down=e=>{if(!api.alive())return;hold=true;trk.classList.add('pressed');if(state==='r'){redT=0;}};const up=()=>{hold=false;trk.classList.remove('pressed');};
   trk.addEventListener('pointerdown',down);window.addEventListener('pointerup',up);window.addEventListener('pointercancel',up);
   const PAR=[['🦆','鴨仔'],['🐘','大象'],['🐧','企鵝'],['🐱','貓仔'],['🐶','狗仔'],['🦖','恐龍']];
@@ -3128,12 +3222,12 @@ lights:api=>{const f=api.field;
   raf=requestAnimationFrame(loop);set('g');api.demo('hold',[30,78]);api.hint('綠燈按住架車，紅燈放手！','Hold the truck on green, let go on red');
   return{stop:()=>{clearTimeout(timer);cancelAnimationFrame(raf);trk.removeEventListener('pointerdown',down);window.removeEventListener('pointerup',up);window.removeEventListener('pointercancel',up);},gain:s=>Math.min(5,Math.ceil(s/8)),emo:'🚦🚒',msg:'green-light metres!'};},
 
-garden:api=>{const f=api.field,PL=['西瓜','粟米','紅蘿蔔','南瓜','士多啤梨','蘋果','香蕉'],POS=[[24,60],[46,60],[68,60],[89,60],[35,83],[57,83],[79,83]];
+garden:api=>{const f=api.field,PL=['西瓜','粟米','紅蘿蔔','南瓜','士多啤梨','蘋果','香蕉'],POS=EZ()?[[30,62],[56,62],[82,62],[56,84]]:[[24,60],[46,60],[68,60],[89,60],[35,83],[57,83],[79,83]];
   f.insertAdjacentHTML('beforeend',`<div class="gd-sun emo">☀️</div><div class="gd-grass"></div><div class="gd-girl" id="mh">${plainBuddy('princess')}</div>`);
   const hero=f.querySelector('#mh');let want=null,grown=0;
   const fl=POS.map(([x,y])=>{const el=document.createElement('div');el.className='gd-fl gd-sprout';el.style.left=x+'%';el.style.top=y+'%';f.appendChild(el);return{el,st:'ok',c:null};});
-  const tag=o=>{o.c=pick(PL);o.st='ok';o.el.innerHTML=`<span class="emo">🌱</span><span class="gd-tag">${fpic(o.c)}</span>`;};
-  const gwant=()=>{const here=[...new Set(fl.filter(o=>o.st==='ok').map(o=>o.c))];want=pick(here.length?here:PL);wantBadge(f,`淋 ${fpic(want)} ${want}`);speak('淋'+want+'！');};
+  const tag=o=>{o.c=pick(PL);o.st='ok';born(o.el,o.c);o.el.innerHTML=`<span class="emo">🌱</span><span class="gd-tag">${fpic(o.c)}</span>`;};
+  const gwant=()=>{const here=[...new Set(fl.filter(o=>o.st==='ok').map(o=>o.c))];want=pick(here.length?here:PL);setW(f,want);wantBadge(f,`淋 ${fpic(want)} ${want}`);speak('淋'+want+'！');};
   fl.forEach(tag);
   const down=e=>{if(!api.alive())return;const el=e.target.closest('.gd-fl');if(!el)return;const o=fl.find(q=>q.el===el);if(!o||o.st!=='ok')return;o.st='wet';
     const fr=f.getBoundingClientRect(),hr=hero.getBoundingClientRect(),br=el.getBoundingClientRect();
@@ -3154,7 +3248,7 @@ potion:api=>{const f=api.field,words=(lvl()>=3&&lvl()!==11),timers=[];let rec=[]
   const card=f.querySelector('#ptc'),pot=f.querySelector('#ptp'),shelf=f.querySelector('#pts');
   const pic=c=>`<svg class="pic" viewBox="0 0 100 100" aria-hidden="true">${artFor(c)||''}</svg>`;
   function newRecipe(){if(!api.alive())return;let pool=POTION.filter(c=>artFor(c));rec=round===0?shuffle(['紅豆冰','叉燒包',pick(pool.filter(c=>c!=='紅豆冰'&&c!=='叉燒包'))]):shuffle(pool).slice(0,3);
-    if(round>0&&Math.random()<.6&&!rec.includes('紅豆冰')&&!rec.includes('叉燒包'))rec[Math.floor(Math.random()*3)]=pick(['紅豆冰','叉燒包']);round++;step=0;
+    if(round>0&&Math.random()<.6&&!rec.includes('紅豆冰')&&!rec.includes('叉燒包'))rec[Math.floor(Math.random()*3)]=pick(['紅豆冰','叉燒包']);if(EZ())rec=rec.slice(0,2);round++;step=0;
     const decoy=shuffle(pool.filter(c=>!rec.includes(c))).slice(0,3);
     card.innerHTML=`<div class="pt-title zh">魔法藥水</div>`+rec.map((c,i)=>`<div class="pt-slot" data-i="${i}">${words?'':pic(c)}<span class="zh">${c}</span></div>`).join('');
     shelf.innerHTML=shuffle([...rec,...decoy]).map(c=>`<button class="pt-ing" data-c="${c}" aria-label="${c}">${pic(c)}</button>`).join('');
@@ -3180,7 +3274,7 @@ function catcherGame(api,o){const f=api.field;f.insertAdjacentHTML('beforeend',o
   const setX=x=>{cx=Math.max(8,Math.min(92,x));cat.style.left=cx+'%';};setX(50);
   const mv=e=>{if(!api.alive())return;const r=f.getBoundingClientRect();setX((e.clientX-r.left)/r.width*100);};
   f.addEventListener('pointerdown',mv);f.addEventListener('pointermove',e=>{if(e.buttons||e.pointerType!=='mouse')mv(e);});
-  function spawn(el){const k=o.pick(el),d=document.createElement('div');d.className='ct-fall emo';d.innerHTML=k.html;f.appendChild(d);items.push({d,k,x:o.x0?o.x0():8+Math.random()*84,y:o.y0||-6,vy:(o.v0+el*o.dv)*(.85+Math.random()*.3),done:false});}
+  function spawn(el){const k=o.pick(el),d=document.createElement('div');d.className='ct-fall emo';d.innerHTML=k.html;if(k.col)born(d,k.col);f.appendChild(d);items.push({d,k,x:o.x0?o.x0():8+Math.random()*84,y:o.y0||-6,vy:(o.v0+el*o.dv)*(.85+Math.random()*.3),done:false});}
   function loop(now){if(!api.alive())return;const dt=Math.min(.05,(now-last)/1000);last=now;const el=(now-t0)/1000,r=f.getBoundingClientRect(),cw=cat.offsetWidth/r.width*100;
     if(now>=next){spawn(el);next=now+Math.max(o.minGap,o.gap-el*o.dgap)+Math.random()*300;}
     items.forEach(it=>{if(it.done)return;it.y+=it.vy*dt;it.d.style.left=it.x+'%';it.d.style.top=it.y+'%';
@@ -3203,16 +3297,16 @@ const BASKETSVG=`<svg viewBox="0 0 120 60" aria-hidden="true"><path d="M30 20 Q6
 Object.assign(MINIS,{
 net:api=>{const f=api.field;
   const stop=catcherGame(api,{bg:`<div class="nt-bld">${Array.from({length:18},()=>'<i></i>').join('')}</div><div class="nt-grass"></div>`,catcher:NETSVG,
-    pick:()=>{if(Math.random()<.18)return{html:'🧦',sock:true};const z=pick(ZOO);return{html:z[0],n:z[1]};},cw:'clamp(170px,32%,320px)',v0:14,dv:.35,gap:1600,dgap:12,minGap:950,catchY:78,floorY:92,y0:20,x0:()=>12+Math.floor(Math.random()*6)*15.2,
+    pick:()=>{if(!EZ()&&Math.random()<.18)return{html:'🧦',sock:true};const z=pick(ZOO);return{html:z[0],n:z[1]};},cw:EZ()?'clamp(240px,48%,460px)':'clamp(170px,32%,320px)',v0:14,dv:.35,gap:1600,dgap:12,minGap:950,catchY:78,floorY:92,y0:20,x0:()=>12+Math.floor(Math.random()*6)*15.2,
     hit:(it,c)=>{if(it.k.sock){sfx('soft');speak('臭襪！');it.d.animate([{rotate:'0deg',translate:'0 0'},{rotate:'540deg',translate:'0 -140px',opacity:0}],{duration:700,fill:'forwards'});return;}api.add(1);sfx('star');burst(it.d,6);speak(it.k.n);it.d.textContent='💖';it.d.animate([{translate:'0 0'},{translate:'0 -120px',opacity:1},{translate:'0 -160px',opacity:0}],{duration:600,fill:'forwards'});c.animate([{scale:'1 1'},{scale:'1.1 .8'},{scale:'1 1'}],{duration:250});},
     miss:it=>{if(it.k.sock){it.d.style.opacity=0;return;}sfx('soft');it.d.animate([{translate:'0 0',opacity:1},{translate:'60px 0',opacity:0}],{duration:700,fill:'forwards'});}});
   api.hint('接住動物，唔好接臭襪！','Catch the animals, not the smelly socks');
   return{stop,gain:s=>Math.ceil(s/3),emo:'🐱🛟',msg:'kittens caught!'};},
 stars:api=>{const SC=[['黃色','#FFD23F'],['紅色','#E8203A'],['藍色','#3D8BFF'],['綠色','#2BB673']];let want=SC[0],got=0;
   const svgS=c=>`<svg viewBox="0 0 100 100" style="width:clamp(48px,9vh,74px)" aria-hidden="true"><path d="M50 6 L62 38 L96 38 L68 58 L78 92 L50 72 L22 92 L32 58 L4 38 L38 38 Z" fill="${c}" stroke="#23263A" stroke-width="5" stroke-linejoin="round"/></svg>`;
-  const swant=()=>{wantBadge(api.field,`接 ${svgS(want[1])} ${want[0]}星星`);speak('接'+want[0]+'星星！');};
+  const swant=()=>{setW(api.field,want[0]);wantBadge(api.field,`接 ${svgS(want[1])} ${want[0]}星星`);speak('接'+want[0]+'星星！');};
   const stop=catcherGame(api,{bg:`<div class="st-moon emo">🌙</div>`,catcher:BASKETSVG,
-    pick:el=>{const r=Math.random();if(r<.14)return{html:'🌧️',bad:true};const col=Math.random()<.5?want:pick(SC);return{html:svgS(col[1]),col:col[0]};},v0:24,dv:1.1,gap:800,dgap:14,minGap:380,catchY:78,floorY:92,
+    pick:el=>{const r=Math.random();if(!EZ()&&r<.14)return{html:'🌧️',bad:true};const col=Math.random()<.5?want:pick(SC);return{html:svgS(col[1]),col:col[0]};},v0:24,dv:1.1,gap:800,dgap:14,minGap:380,catchY:78,floorY:92,
     hit:(it,c)=>{it.d.style.opacity=0;if(it.k.bad){sfx('soft');wiggleEl(c);api.hint('落雨喇！','Oops, rain!');}else if(it.k.col!==want[0]){sfx('soft');speak('唔係'+it.k.col+'！');}else{api.add(1);sfx('star');burst(c,5);got++;if(got%3===0){want=pick(SC.filter(x=>x!==want));setTimeout(()=>{if(api.alive())swant();},500);}}},
     miss:it=>{it.d.animate([{opacity:1},{opacity:0}],{duration:500,fill:'forwards'});}});
   api.hint('聽吓接咩顏色！','Catch the colour that is named');setTimeout(()=>{if(api.alive())swant();},1400);
@@ -3231,7 +3325,7 @@ dance:api=>{const f=api.field,MOVES=[['clap','拍手','👏','#FF7AB6'],['spin',
   function show(){busy=true;inp=0;const spd=Math.max(420,800-seq.length*50);api.hint('睇住公主跳舞！','Watch the princess dance!');
     seq.forEach((k,i)=>timers.push(setTimeout(()=>{if(!api.alive())return;doMove(k,spd);speak(MOVES.find(m=>m[0]===k)[1]);},700+i*(spd+300))));
     timers.push(setTimeout(()=>{if(!api.alive())return;busy=false;api.hint('到你喇！','Your turn: copy her moves');},700+seq.length*(spd+300)));}
-  const grow=()=>{seq.push(pick(MOVES)[0]);show();};
+  const grow=()=>{if(EZ()&&seq.length>=2)seq=[pick(MOVES)[0],pick(MOVES)[0]];else seq.push(pick(MOVES)[0]);show();};
   const down=e=>{const p=e.target.closest('.dc-pad');if(!p||busy||!api.alive())return;const k=p.dataset.k;doMove(k,450);speak(MOVES.find(m=>m[0]===k)[1]);
     if(k===seq[inp]){inp++;if(inp===seq.length){busy=true;api.add(seq.length);sfx('correct');burst(girl,10);const fr=ZOO[(DJ.length)%ZOO.length];if(DJ.length<6){const a=document.createElement('div');a.className='dc-pal emo';a.textContent=fr[0];a.style.left=(DJ.length%2?62+Math.floor(DJ.length/2)*9:30-Math.floor(DJ.length/2)*9)+'%';f.appendChild(a);DJ.push(a);a.animate([{scale:'0'},{scale:'1.3'},{scale:'1'}],{duration:400});timers.push(setTimeout(()=>speak(fr[1]+'都嚟跳舞！'),400));}timers.push(setTimeout(grow,1900));}}
     else{busy=true;sfx('wrong');wiggleEl(girl);api.hint('再睇一次！','Watch again!');timers.push(setTimeout(show,900));}};
@@ -3244,13 +3338,13 @@ dressup:api=>{const f=api.field,words=(lvl()>=3&&lvl()!==11),DR=[['紅色','#E82
     <div class="du-rack left">${DR.map(([z,c])=>`<button class="du-btn" data-t="d" data-v="${c}" data-z="${z}"><svg viewBox="0 0 60 60"><path d="M22 6 H38 L40 18 L54 54 H6 L20 18 Z" fill="${c}" stroke="${K}" stroke-width="3" stroke-linejoin="round"/></svg>${words?`<span class="zh">${z}</span>`:''}</button>`).join('')}</div>
     <div class="du-rack right">${AC.map(([z,a])=>`<button class="du-btn" data-t="a" data-v="${a}" data-z="${z}"><svg viewBox="-20 -100 40 40">${ACCSVG[a]}</svg><span class="zh">${z}</span></button>`).join('')}</div>`);
   const draw=()=>{f.querySelector('#dum').innerHTML=model(cur.d,cur.a,1.1);};
-  var nDone=nDone||0;function newWant(){let d,a;do{d=pick(DR);a=pick(AC);}while(d[1]===want.d&&a[1]===want.a);want={d:d[1],a:a[1],z:d[0]+'裙，'+a[0]};cur={};draw();
-    const card=f.querySelector('.du-card'),hard=nDone>=5;card.classList.toggle('listen',hard);
+  var nDone=nDone||0;function newWant(){let d,a;do{d=pick(DR);a=EZ()?['','none']:pick(AC);}while(d[1]===want.d&&a[1]===want.a);want={d:d[1],a:a[1],z:EZ()?d[0]+'裙':d[0]+'裙，'+a[0]};if(EZ())cur.a='none';cur={};draw();
+    const card=f.querySelector('.du-card'),hard=nDone>=5&&!EZ();card.classList.toggle('listen',hard);
     if(hard){f.querySelector('#duw').innerHTML='<span class="emo du-ear">👂</span>';f.querySelector('#dul').textContent='聽吓！ Listen';f.querySelector('.du-ttl').textContent='聽清楚！';}
     else{f.querySelector('#duw').innerHTML=model(want.d,want.a,1);f.querySelector('#dul').textContent=words?want.z:'';}
     if(nDone===5){speak('而家要聽清楚喇！');setTimeout(()=>speak(want.z),1800);}else speak(want.z);}
   const down=e=>{if(e.target.closest('.du-card.listen')){speak(want.z);return;}const b=e.target.closest('.du-btn');if(!b||!api.alive()||cur.locked)return;if(b.dataset.t==='d')cur.d=b.dataset.v;else cur.a=b.dataset.v;sfx('pop');speak(b.dataset.z);draw();
-    if(cur.d===want.d&&cur.a===want.a){cur.locked=true;api.add(1);nDone++;sfx('correct');burst(f.querySelector('#dum'),12);speak('好靚呀！');timers.push(setTimeout(newWant,1300));}};
+    if(cur.d===want.d&&(cur.a===want.a||(EZ()&&want.a==='none'))){cur.locked=true;api.add(1);nDone++;sfx('correct');burst(f.querySelector('#dum'),12);speak('好靚呀！');timers.push(setTimeout(newWant,1300));}};
   f.addEventListener('pointerdown',down);newWant();api.demo('tap',[9,40]);api.hint('幫公主揀衫，要同張卡一樣！','Dress the princess to match the card');
   return{stop:()=>{timers.forEach(clearTimeout);f.removeEventListener('pointerdown',down);},gain:s=>Math.min(5,s),emo:'👗👑',msg:'outfits matched!'};}
 });
@@ -3268,14 +3362,16 @@ const MOUTHSVG=`<svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidde
 const TEETH=[[28.5,28],[44.5,28],[60.5,28],[76.5,28],[28.5,74],[44.5,74],[60.5,74],[76.5,74]];
 const germSVG=c=>`<svg viewBox="0 0 100 100" style="width:1em;height:1em" aria-hidden="true">${[0,45,90,135,180,225,270,315].map(a=>`<path d="M50 50 L${50+Math.cos(a*Math.PI/180)*46} ${50+Math.sin(a*Math.PI/180)*46}" stroke="#23263A" stroke-width="5"/><circle cx="${50+Math.cos(a*Math.PI/180)*44}" cy="${50+Math.sin(a*Math.PI/180)*44}" r="6" fill="${c}" stroke="#23263A" stroke-width="3"/>`).join('')}<circle cx="50" cy="50" r="30" fill="${c}" stroke="#23263A" stroke-width="5"/><circle cx="40" cy="46" r="6" fill="#FFFFFF"/><circle cx="60" cy="46" r="6" fill="#FFFFFF"/><circle cx="41" cy="47" r="3" fill="#23263A"/><circle cx="61" cy="47" r="3" fill="#23263A"/><path d="M40 62 Q50 56 60 62" fill="none" stroke="#23263A" stroke-width="4" stroke-linecap="round"/></svg>`;
 const NUMZ=['一','二','三','四','五','六','七','八','九','十'];
-function tapper(api,o){const f=api.field;f.insertAdjacentHTML('beforeend',o.bg);let timer=0,want=o.colors?pick(o.colors):null,hits=0;const t0=performance.now();
+function cnum(n,mw){const d=['零','一','二','三','四','五','六','七','八','九'];let t;if(n<10)t=(n===2&&mw)?'兩':d[n];else if(n<20)t='十'+(n%10?d[n%10]:'');else t=d[Math.floor(n/10)]+'十'+(n%10?d[n%10]:'');return t+(mw||'');}
+function cntPop(f,el,txt){const fr=f.getBoundingClientRect(),r=el.getBoundingClientRect(),d=document.createElement('div');d.className='cntpop zh';d.textContent=txt;d.style.left=(r.left-fr.left+r.width/2)+'px';d.style.top=(r.top-fr.top)+'px';f.appendChild(d);setTimeout(()=>d.remove(),1200);}
+function tapper(api,o){if(EZ()){o=Object.assign({},o,{colors:null,life:o.life*1.5,gap:o.gap*1.3,dLife:0,dGap:0});}const f=api.field;f.insertAdjacentHTML('beforeend',o.bg);let timer=0,want=o.colors?pick(o.colors):null,hits=0;const t0=performance.now();
   const cwant=()=>{wantBadge(f,`${o.verb} <span style="font-size:1.4em;line-height:0">${germSVG(want[1])}</span> ${want[0]}`);speak(o.verb+want[0]+'細菌！');};
   function spawn(){if(!api.alive())return;const el=(performance.now()-t0)/1000,b=document.createElement('button');b.className='tp-t emo';if(o.colors){const col=Math.random()<.45?want:pick(o.colors);b.dataset.col=col[0];b.innerHTML=germSVG(col[1]);}else b.textContent=pick(o.emoji);
     let x,y;if(o.spots){const sp=pick(o.spots);x=sp[0];y=sp[1];}else{x=o.area[0]+Math.random()*(o.area[1]-o.area[0]);y=o.area[2]+Math.random()*(o.area[3]-o.area[2]);}b.style.left=x+'%';b.style.top=y+'%';f.appendChild(b);
     b.onpointerdown=e=>{e.stopPropagation();if(b.dataset.hit||!api.alive())return;
       if(o.colors&&b.dataset.col!==want[0]){sfx('soft');speak('唔係'+b.dataset.col+'！');b.animate([{rotate:'0deg'},{rotate:'-20deg'},{rotate:'20deg'},{rotate:'0deg'}],{duration:350});return;}
       b.dataset.hit=1;api.add(1);sfx('pop');burst(b,5);b.textContent=o.hitFx||'✨';b.classList.add('hit');hits++;
-      if(o.count)speak(NUMZ[(hits-1)%10]+'隻！');else if(Math.random()<.35)speak(pick(o.say));
+      if(o.count){const t=cnum(hits,'隻');speak(t+'！');cntPop(f,b,t);}else if(Math.random()<.35)speak(pick(o.say));
       if(o.colors&&hits%3===0){want=pick(o.colors.filter(x=>x!==want));setTimeout(()=>{if(api.alive())cwant();},500);}setTimeout(()=>b.remove(),380);};
     setTimeout(()=>{if(!b.dataset.hit){b.classList.add('bye');setTimeout(()=>b.remove(),300);}},Math.max(o.minLife,o.life-el*o.dLife));
     timer=setTimeout(spawn,Math.max(o.minGap,o.gap-el*o.dGap)+Math.random()*300);}
@@ -3293,12 +3389,12 @@ germs:api=>tapper(api,{bg:`<div class="tp-hand"><svg viewBox="0 0 100 100" aria-
   area:[30,72,22,82],emoji:['🦠'],colors:[['綠色','#7CCB5A'],['紫色','#9B7BFF'],['藍色','#3D8BFF'],['紅色','#E8203A']],verb:'殺',life:3600,dLife:20,minLife:2400,gap:1000,dGap:10,minGap:700,hitFx:'✨',say:['殺細菌！','洗乾淨！'],demo:[50,50],hz:'聽吓殺邊隻細菌！',he:'Zap the colour of germ that is named',emo:'🦠✨',msg:'germs zapped!'}),
 bugs:api=>tapper(api,{bg:`<div class="tp-mouth">${MOUTHSVG}</div>`,spots:TEETH.map(([x,y])=>[12+x*.76,8+y*.84]),emoji:['🐛'],count:true,life:3400,dLife:20,minLife:2300,gap:1000,dGap:10,minGap:700,hitFx:'✨',say:['捉到蛀牙蟲！','牙齒白雪雪！'],demo:[34,32],hz:'捉蛀牙蟲！',he:'Tap the sugar bugs on the teeth',emo:'🐛🦷',msg:'sugar bugs caught!'}),
 ambulance:api=>MINIS.drive(api,{car:ambulanceSVG(),items:{star:'❤️',drop:'💊',cone:'🚧'},hz:'揀條路，接❤️！',he:'Tap a lane: grab hearts, dodge cones',emo:'🚑❤️',msg:'hearts collected!'}),
-brush:api=>MINIS.wash(api,{art:MOUTHSVG,cls:'ws-mouth',foods:['粟米','西蘭花','飯','肉','朱古力','糖'],spots:TEETH,hz:'刷走牙齒上面啲食物！',he:'Brush the food off the teeth',emo:'🪥😁',msg:'teeth brushed!',foam:'🫧'}),
+brush:api=>MINIS.wash(api,{art:MOUTHSVG,cls:'ws-mouth',listen:!EZ(),foods:['粟米','西蘭花','飯','肉','朱古力','襪','魚','雪糕','鉛筆'],spots:TEETH,hz:'聽吓要刷走咩！',he:'Brush off only the thing that is named',emo:'🪥😁',msg:'teeth brushed!',foam:'🫧'}),
 bandage:api=>{const f=api.field;f.insertAdjacentHTML('beforeend',`<div class="bd-teddy" id="bdt">${TEDDY}</div>`);const td=f.querySelector('#bdt');let sore=[],want=null,timers=[];
   const PARTS=[['頭',50,14],['耳',26,16],['鼻',50,37],['肚',50,70],['手',20,60],['腳',66,90],['眼',58,28]];
-  const setWant=()=>{want=pick(sore);wantBadge(f,`貼膠布喺 ${want[0]}`);speak('小熊個'+want[0]+'好痛！貼膠布喺'+want[0]+'！');};
+  const setWant=()=>{want=pick(sore);setW(f,want[0]);wantBadge(f,`貼膠布喺 ${want[0]}`);speak('小熊個'+want[0]+'好痛！貼膠布喺'+want[0]+'！');};
   function round(){td.querySelectorAll('.bd-boo,.bd-pl').forEach(x=>x.remove());sore=shuffle(PARTS).slice(0,3);const m=td.querySelector('.tdmouth');if(m)m.setAttribute('d','M45 44 Q50 40 55 44');
-    sore.forEach(pt=>{const [nm,x,y]=pt,b=document.createElement('button');b.className='bd-boo';b.style.left=x+'%';b.style.top=y+'%';b.innerHTML='<span></span>';td.appendChild(b);
+    sore.forEach(pt=>{const [nm,x,y]=pt,b=document.createElement('button');b.className='bd-boo';born(b,nm);b.style.left=x+'%';b.style.top=y+'%';b.innerHTML='<span></span>';td.appendChild(b);
       b.onpointerdown=e=>{e.stopPropagation();if(!api.alive()||b.dataset.done)return;
         if(pt!==want){sfx('soft');speak('哈哈！好癢呀！呢度係'+nm+'！');td.animate([{rotate:'0deg'},{rotate:'-4deg'},{rotate:'4deg'},{rotate:'0deg'}],{duration:400});return;}
         b.dataset.done=1;const pl=document.createElement('div');pl.className='bd-pl';pl.innerHTML=PLASTER;pl.style.left=x+'%';pl.style.top=y+'%';pl.style.rotate=(Math.random()*60-30)+'deg';td.appendChild(pl);pl.animate([{scale:'1.8',opacity:0},{scale:'1',opacity:1}],{duration:250});b.remove();
@@ -3312,7 +3408,7 @@ bandage:api=>{const f=api.field;f.insertAdjacentHTML('beforeend',`<div class="bd
 snack:api=>{const GOOD=['蘋果','西蘭花','紅蘿蔔','香蕉','牛奶','粟米','青瓜','雞蛋'],BAD=['糖','雪糕','朱古力'];
   const pic=c=>`<svg class="ct-pic" viewBox="0 0 100 100" aria-hidden="true">${artFor(c)||''}</svg>`;
   const stop=catcherGame(api,{bg:'',catcher:`<svg viewBox="-30 -30 60 50" aria-hidden="true">${toothBuddy(0,0,1.6)}</svg>`,cw:'clamp(120px,22%,220px)',
-    pick:()=>{const bad=Math.random()<.25,c=pick(bad?BAD:GOOD);return{html:pic(c),c,bad};},v0:14,dv:.35,gap:1500,dgap:12,minGap:900,catchY:76,floorY:92,
+    pick:()=>{const bad=!EZ()&&Math.random()<.25,c=pick(bad?BAD:GOOD);return{html:pic(c),c,bad};},v0:14,dv:.35,gap:1500,dgap:12,minGap:900,catchY:76,floorY:92,
     hit:(it,c)=>{it.d.style.opacity=0;if(it.k.bad){sfx('soft');api.hint('唔好食太多糖！','Too many sweets are bad for teeth!');wiggleEl(c);}else{api.add(1);sfx('star');burst(c,4);speak(it.k.c);}},
     miss:it=>{it.d.animate([{opacity:1},{opacity:0}],{duration:400,fill:'forwards'});}});
   api.hint('接住健康食物！','Catch the healthy food, skip the sweets');
@@ -3330,7 +3426,7 @@ const ALLMG=()=>[...new Set([...MG.truck,...MG.princess,...MG.doctor,...MG.denti
 function rFree(){const left=FREE?Math.max(0,FREE.until-Date.now())/1000:0;return `<div class="screen freeplay"><div class="topbar"><button class="btn icon-btn" data-act="freequit" aria-label="Back">⬅️</button><div class="who zh">🎮 自由玩 Free play</div><div class="sp"></div><div class="pill">⏱️ <b id="frt">${mmss(left)}</b></div></div>
  <div class="fscroll"><div class="frgrid">${ALLMG().map(g=>`<button class="frtile" data-act="freepick" data-g="${g}"><span class="emo">${MGICON[g]||'🎮'}</span><span class="zh">${(MGNAME[g]||g).split(' ')[0]}</span><span class="en">${(MGNAME[g]||'').split(' ').slice(1).join(' ')}</span></button>`).join('')}</div></div></div>`;}
 /* ---------- fair play: 3 rounds of the same mode in a row (same level) locks it for 10 minutes ---------- */
-const MODES=new Set(['xialuo','plfind','plread','famb','famm','mission','trace','memory','build','pop','fork','sort','body','words','read','fill','tf']),LOCKMIN=10;
+const MODES=new Set(['liangyi','xialuo','plfind','plread','famb','famm','mission','trace','memory','build','pop','fork','sort','body','words','read','fill','tf']),LOCKMIN=10;
 const modeKey=m=>m+'|'+lvl();
 const modeLeft=m=>{const p=cur();return Math.max(0,(((p&&p.mlock)||{})[modeKey(m)]||0)-Date.now());};
 function modeDone(m){const p=cur();if(!p||!MODES.has(m))return false;const k=modeKey(m);p.mrun=p.mrun||{k:null,n:0};if(p.mrun.k===k)p.mrun.n++;else p.mrun={k,n:1};
@@ -3354,15 +3450,16 @@ document.addEventListener('dblclick',e=>e.preventDefault(),{passive:false});
 function handHint(field,kind,a,b){const h=document.createElement('div');h.className='hhint hh-'+kind;h.innerHTML='<span class="hhring"></span><span class="hhand">👆</span>';h.style.left=a[0]+'%';h.style.top=a[1]+'%';field.appendChild(h);
   if(kind==='drag'&&b)h.animate([{left:a[0]+'%',top:a[1]+'%'},{left:a[0]+'%',top:a[1]+'%',offset:.15},{left:b[0]+'%',top:b[1]+'%',offset:.75},{left:b[0]+'%',top:b[1]+'%'}],{duration:1500,iterations:3});
   const kill=()=>{h.style.opacity=0;setTimeout(()=>h.remove(),300);field.removeEventListener('pointerdown',kill);};field.addEventListener('pointerdown',kill);setTimeout(kill,kind==='drag'?4500:3600);}
-function miniNew(done,g){closeOverlay();const p=cur(),DUR=MDUR[g]||30;let score=0,left=DUR,alive=true;
-  const el=document.createElement('div');el.className='mini m-'+BASE(p.theme)+' g-'+g;
+function miniNew(done,g){closeOverlay();const p=cur(),ez=EZ(),DUR=ez?Math.max(40,MDUR[g]||30):(MDUR[g]||30);let score=0,left=DUR,alive=true,lastT=Date.now();
+  const el=document.createElement('div');el.className='mini m-'+BASE(p.theme)+' g-'+g+(ez?' ez':'');
   el.innerHTML=`<div class="mbar"><span class="emo" style="font-size:34px">⏱️</span><div class="mtime"><i id="mt"></i></div><div class="mscore" id="ms">0</div></div><div class="mfield" id="mf"></div>`;
   document.body.appendChild(el);setTempo(150);const field=el.querySelector('#mf');
-  const api={field,alive:()=>alive,add:(n=1)=>{if(!alive)return;score=Math.max(0,score+n);el.querySelector('#ms').textContent=score;},
-    demo:(k,a,b)=>handHint(field,k,a,b),hint:(zh,en)=>{field.querySelectorAll('.mhint').forEach(h=>h.remove());const h=document.createElement('div');h.className='mhint';h.innerHTML=`<span class="zh">${zh}</span> <span class="en">${en}</span>`;field.appendChild(h);speak(zh);setTimeout(()=>{h.style.opacity=0;},2600);setTimeout(()=>h.remove(),3200);}};
-  const game=MINIS[g](api);
+  const api={field,alive:()=>alive,add:(n=1)=>{if(!alive||(ez&&n<0))return;score=Math.max(0,score+n);el.querySelector('#ms').textContent=score;},
+    demo:(k,a,b)=>{api._d=[k,a,b];handHint(field,k,a,b);},hint:(zh,en)=>{field.querySelectorAll('.mhint').forEach(h=>h.remove());const h=document.createElement('div');h.className='mhint';h.innerHTML=`<span class="zh">${zh}</span> <span class="en">${en}</span>`;field.appendChild(h);speak(zh);setTimeout(()=>{h.style.opacity=0;},2600);setTimeout(()=>h.remove(),3200);}};
+  const game=MINIS[g](api);field.addEventListener('pointerdown',()=>{lastT=Date.now();});
+  const ezk=ez?setInterval(()=>{if(!alive)return;ezTick(field);if(Date.now()-lastT>5000&&api._d){lastT=Date.now();handHint(field,...api._d);}},500):0;
   const tk=setInterval(()=>{left-=.1;el.querySelector('#mt').style.width=Math.max(0,left/DUR*100)+'%';if(left<=0)finish();},100);
-  function finish(){if(!alive)return;alive=false;clearInterval(tk);try{game.stop();}catch(e){}setTempo(104);const gain=Math.min(5,game.gain(score));p.stars+=gain;p.minigames++;save();const lb=lbAdd(p,g,score);
+  function finish(){if(!alive)return;alive=false;clearInterval(tk);clearInterval(ezk);try{game.stop();}catch(e){}setTempo(104);const gain=Math.min(5,game.gain(score));p.stars+=gain;p.minigames++;p.cuse=(p.cuse||0)+1;save();const lb=lbAdd(p,g,score);
     const r=document.createElement('div');r.className='overlay';r.innerHTML=`<div class="modal"><span class="bigemo emo">${game.emo}</span><h2>${score}</h2><p>${game.msg} ⭐ +${gain}</p>${lbHTML(lb)}<div class="row"><button class="btn big primary" id="mback">Keep going ▶️</button></div></div>`;
     el.appendChild(r);sfx('fanfare');r.querySelector('#mback').addEventListener('click',()=>{el.remove();bumpStars();done&&done();});}
 }
@@ -3556,8 +3653,14 @@ setInterval(()=>{if(document.hidden)return;const k=dayKey();if(screen==='home')m
   if(!p&&FAMSCR.includes(screen)){S.ftime=S.ftime||{};S.ftime[k]=(S.ftime[k]||0)+1;if(S.ftime[k]%10===0)save();if(famOver()){save();showFamRest();}}},1000);
 
 /* ================= EVENTS ================= */
+setTimeout(()=>PQ.forEach((q,i)=>{ACT['pq_'+q.id]=()=>pqStart(i);MODES.add('pq_'+q.id);}),0);
 const ACT={
- pick:d=>{curId=d.id;const p=cur();restShown=false;go('home');speak('你好！');if(overLimit(p))showRest();},
+ pick:d=>{curId=d.id;const p=cur();restShown=false;if(!p.age){suStart(p,false);return;}go('home');speak('你好，'+p.name+'！');if(overLimit(p))showRest();},
+ newp:()=>suStart(newProfile('p'+Date.now(),'','truck'),true),
+ suage:d=>{SU.p.age=d.a;SU.step='name';suShow();},
+ suname:()=>{const v=(($('#suname')||{}).value||'').trim();if(!v){toast('請打名字 Please type a name');return;}SU.p.name=v.slice(0,14);SU.step='char';suShow();},
+ suchar:d=>{const p=SU.p;p.theme=d.t;if(SU.isNew)S.profiles.push(p);save();closeOverlay();curId=p.id;SU=null;restShown=false;go('home');speak('你好，'+p.name+'！');},
+ chpick:()=>chShow(),chset:d=>{const p=cur();p.theme=d.t;p.cuse=0;save();closeOverlay();go('home');speak(THf(d.t).name.split(' ')[0]+'！');},chno:()=>{closeOverlay();},
  profiles:()=>{curId=null;M=null;restShown=false;go('profiles');},
  home:()=>{M=null;go('home');},
  mission:()=>l4Gate(startMission),
@@ -3567,7 +3670,7 @@ const ACT={
  plpin:(d,el)=>{const k=+d.k,U=PLACES[PL2.u];if(PL2.mode==='explore'){plCard(k);return;}if(PL2.mode==='find'){const want=PL2.q[PL2.i];plAnswer(k===want,el,U.items[want][0]);}},
  plopt:(d,el)=>{const U=PLACES[PL2.u],c=U.items[PL2.q[PL2.i]][0];plAnswer(PL2.opts[+d.j]===c,el,c);},
  unitsel:d=>{const p=cur(),L=lvl(),f=unitFrontier(p,L);if(+d.u>f){sfx('soft');toast('🔒 先完成之前嘅單元 Finish the earlier unit first');speak('先完成之前嘅單元！');return;}p.unit=p.unit||{};p.unit[L]=+d.u;save();go('home');},
- fam:()=>{FAM.ch=null;go('fam');},famch:d=>{FAM.ch=d.c;go('fam');speak(d.c);},famsay:d=>speak(d.c),famb:()=>famStart('b'),xialuo:()=>{if(modeLeft('xialuo')>0){lockMsg('xialuo');return;}FMG={mode:'x',qs:shuffle(WORDS.filter(w=>(w.c.includes('下')||w.c.includes('落'))&&[...w.c].length>=2&&[...w.c].length<=3&&w.lvl!==5&&artFor(w.art||w.c))).slice(0,8),i:0,first:true,lock:false};go('famg');},famm:()=>famStart('m'),fgsay:()=>{if(FMG)speak(FMG.qs[FMG.i].c);},fgpick:(d,el)=>fgPick(+d.k,el),
+ fam:()=>{FAM.ch=null;go('fam');},famch:d=>{FAM.ch=d.c;go('fam');speak(d.c);},famsay:d=>speak(d.c),pairs:()=>go('pairs'),pqgo:d=>pqStart(+d.i),pqbegin:()=>{closeOverlay();go('pairq');},pqpick:(d,el)=>pqPick(+d.k,el),pqsay:()=>pqSay(),pqrule:()=>{if(PQS){speak(PQS.q.r);toast(PQS.q.re);}},famb:()=>famStart('b'),liangyi:()=>liangStart(),lqgo:()=>{closeOverlay();if(LQGO)LQGO();},xialuo:()=>{if(modeLeft('xialuo')>0){lockMsg('xialuo');return;}FMG={mode:'x',qs:shuffle(WORDS.filter(w=>(w.c.includes('下')||w.c.includes('落'))&&[...w.c].length>=2&&[...w.c].length<=3&&w.lvl!==5&&artFor(w.art||w.c))).slice(0,8),i:0,first:true,lock:false};go('famg');},famm:()=>famStart('m'),fgsay:()=>{if(FMG)speak(FMG.qs[FMG.i].c);},fgpick:(d,el)=>fgPick(+d.k,el),
  herotap:(d,el)=>{const p=cur();if(!p)return;HTAP=(HTAP+1)%5;const k=HTAP,pop=(t)=>{const s=document.createElement('span');s.className='heropop emo';s.textContent=t;el.appendChild(s);setTimeout(()=>s.remove(),1100);};
   const A=[[{translate:'0 0',rotate:'0deg'},{translate:'0 -28%',rotate:'180deg'},{translate:'0 0',rotate:'360deg'}],[{scale:'1 1'},{scale:'1.25 .72'},{scale:'.8 1.22'},{scale:'1.12 .9'},{scale:'.96 1.04'},{scale:'1 1'}],[{rotate:'0deg'},{rotate:'-16deg'},{rotate:'14deg'},{rotate:'-10deg'},{rotate:'8deg'},{rotate:'-4deg'},{rotate:'0deg'}],[{scale:'1'},{scale:'.15'},{scale:'1.35'},{scale:'.92'},{scale:'1'}],[{translate:'0 0'},{translate:'-6px 2px'},{translate:'6px -2px'},{translate:'-6px -2px'},{translate:'6px 2px'},{translate:'-4px 0'},{translate:'4px 0'},{translate:'0 0'}]][k];
   el.animate(A,{duration:[900,800,1100,700,900][k],easing:'ease-in-out',iterations:k===4?2:1});
@@ -3625,7 +3728,7 @@ const ACT={
  sfcopy:()=>sfCopy(),sfclose:()=>closeOverlay(),
  build:()=>(lvl()===5?l4Gate(startBuild):startBuild()),btile:d=>buildTile(+d.k),bslot:d=>buildSlot(+d.k),
  sort:()=>startSort(),sortpick:(d,el)=>sortPick(+d.k,el),
- setlvl:d=>{const p=cur();p.level=+d.n;save();T.c=null;go('home');speak(['第一級','第二級','第三級','第四級','第五級'][+d.n-1]);},
+ setlvl:d=>{const p=cur();p.level=+d.n;save();T.c=null;go('home');speak(['第一級','第二級','第三級','第四級','第五級','第六級','第七級','第八級'][LORD.indexOf(+d.n)]);},
  body:()=>startBody(),pop:()=>startPop(),fork:()=>startFork(),
  sayb:()=>{if(B)speak(B.r[B.i].c);},sayw:d=>speak(d.c),
  bodytap:(d,el)=>bodyTap(d.part,el),forkpick:(d,el)=>forkPick(+d.k,el),

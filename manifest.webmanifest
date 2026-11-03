@@ -1,6 +1,6 @@
 {
-  "name": "中文樂 Chinese Fun",
-  "short_name": "中文樂",
+  "name": "CantoFun 中文樂",
+  "short_name": "CantoFun",
   "description": "Traditional Chinese (Cantonese) learning games for young children",
   "start_url": "./index.html",
   "scope": "./",

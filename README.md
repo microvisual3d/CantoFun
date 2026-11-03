@@ -1,4 +1,4 @@
-# 中文樂 v2.1: install guide
+# CantoFun 中文樂 v3.0: install guide
 
 A Cantonese / Traditional Chinese learning app for young children. It runs in Chrome on the tablet, installs like a normal app, and works **offline** after the first visit.
 
